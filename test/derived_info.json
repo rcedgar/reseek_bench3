@@ -1,0 +1,28 @@
+{
+  "ndom": 5,
+  "query_set_topfold": [
+    "da",
+    "db",
+    "dc",
+    "dd"
+  ],
+  "query_set_topsf": [
+    "da",
+    "db",
+    "dc"
+  ],
+  "N_possible_tp": {
+    "topfold": 4,
+    "topsf": 3,
+    "fold": 12,
+    "superfamily": 6,
+    "family": 2,
+    "superfamilyx": 6
+  },
+  "N_possible_fp": {
+    "fold": 8,
+    "superfamily": 14,
+    "family": 18,
+    "superfamilyx": 8
+  }
+}

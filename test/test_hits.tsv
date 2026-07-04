@@ -1,0 +1,13 @@
+# Synthetic hits for homval regression (scores: higher = better, --score)
+# Rows exercise: self-hit, unknown domain, same-SF TP, same-fold diff-SF, diff-fold FP
+# Score 80 tie: one TP (da dc) and one FP (db dd) at same score
+da	da	100
+da	db/extra	90
+da	dc	80
+db	dd	80
+da	dd	70
+da	de	60
+da	du	50
+db	da	85
+dc	dd	75
+dd	de	65

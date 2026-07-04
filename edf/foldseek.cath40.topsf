@@ -1,0 +1,6 @@
+# algo=foldseek
+# truth=topsf
+# fields=1,2,3
+# score_direction=lower_better
+# N_possible_tp=0
+domain	S_tp	S_xf

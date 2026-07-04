@@ -1,0 +1,11 @@
+# algo=brute_force_reference
+# truth=topfold
+# fields=1,2,3
+# score_direction=higher_better
+# N_possible_tp=4
+# TEPQ0.001=0.750 TEPQ0.01=0.750 TEPQ0.1=0.750 Top3=3.375
+domain	S_tp	S_xf
+da	70	60
+db	80	.
+dc	75	.
+dd	.	65
