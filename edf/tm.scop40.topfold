@@ -1,4 +1,5 @@
 # algo=tm
+# reference=scop40
 # truth=topfold
 # fields=1,2,3
 # score_direction=higher_better

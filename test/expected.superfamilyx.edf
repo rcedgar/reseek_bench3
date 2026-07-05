@@ -5,7 +5,7 @@
 # ndom=5
 # N_possible_tp=6
 # N_possible_fp=8
-# SEPQ0.1=0.500 SEPQ1=0.500 SEPQ10=0.500 Sum3=2.250 SFFP=0.500
+# SEPQ0.1=0.500 SEPQ1=0.500 SEPQ10=0.500 Sum3=2.250 SFFP=0.500 PR90=0.5
 score	n_tp	n_fp	cum_tp	cum_fp
 90	1	0	1	0
 85	1	0	2	0

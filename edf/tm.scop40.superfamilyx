@@ -6,7 +6,7 @@
 # ndom=11211
 # N_possible_tp=454766
 # N_possible_fp=124638772
-# SEPQ0.1=0.216 SEPQ1=0.361 SEPQ10=0.555 Sum3=1.529 SFFP=0.534
+# SEPQ0.1=0.216 SEPQ1=0.361 SEPQ10=0.555 Sum3=1.529 SFFP=0.534 PR90=0.406
 score	n_tp	n_fp	cum_tp	cum_fp
 0.971495	2	0	2	0
 0.96527	2	0	4	0

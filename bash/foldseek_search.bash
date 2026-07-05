@@ -10,7 +10,7 @@ do
 	tmpdir=../tmp_foldseek
 	rm -rf $tmpdir
 	mkdir -p $tmpdir
-	db=../foldseek_dbs/$ref
+	db=../foldseek_dbs/$ref/$ref
 
 	/bin/time -vo ../time/foldseek.$ref \
 	$foldseek \

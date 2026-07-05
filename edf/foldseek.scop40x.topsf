@@ -1,4 +1,5 @@
 # algo=foldseek
+# reference=scop40x
 # truth=topsf
 # fields=1,2,3
 # score_direction=lower_better
@@ -2966,7 +2967,7 @@ d1ujna_	2.997e-11	0.0143
 d1ujpa_	2.066e-08	1.95e-06
 d1ujva_	0.0003603	0.2787
 d1uk8a_	2.081e-18	0.004817
-d1ukca_	2.267e-41	0.02368
+d1ukca_	2.26702e-41	0.02368
 d1ukfa_	0.003979	0.06156
 d1ukka_	4.657e-06	0.006745
 d1ukua_	9.249e-05	0.0001613

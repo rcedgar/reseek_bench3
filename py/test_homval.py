@@ -131,7 +131,7 @@ def compare_edf_truth(truth: str) -> bool:
             )
             ok = False
 
-    for key in ("SEPQ0.1", "SEPQ1", "SEPQ10", "Sum3", "SFFP"):
+    for key in ("SEPQ0.1", "SEPQ1", "SEPQ10", "Sum3", "SFFP", "PR90"):
         if got_hdr.get(key) != exp_hdr.get(key):
             print(
                 f"{truth}: {key} mismatch got={got_hdr.get(key)!r} "

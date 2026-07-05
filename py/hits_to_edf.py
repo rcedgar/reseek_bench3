@@ -10,6 +10,7 @@ CVE error    = cum_fp / ndom   (NOT ROC FPR)
 
 Sum3 = 2*SEPQ0.1 + 1.5*SEPQ1 + SEPQ10  (coverage at error <= 0.1, 1, 10)
 SFFP = fraction of all possible TPs with score strictly better than first FP
+PR90 = recall at precision >= 0.9 from the precision-recall curve
 
 Example:
   python hits_to_edf.py --hits algo.scop40.tsv --lookup ../info/scop40x.lookup \
@@ -114,6 +115,30 @@ def compute_sffp(
     return total_tp_above / n_possible_tp
 
 
+def compute_pr90(
+    rows: List[Tuple[float, int, int]],
+    n_possible_tp: int,
+) -> Optional[float]:
+    """
+    Recall at 90% precision from EDF rows (score, cum_tp, cum_fp), best-first.
+
+    Return the maximum recall over operating points with precision >= 0.9.
+    """
+    if n_possible_tp <= 0 or not rows:
+        return None
+
+    best_recall = 0.0
+    for _score, cum_tp, cum_fp in rows:
+        denom = cum_tp + cum_fp
+        if denom == 0:
+            continue
+        if cum_tp / denom >= 0.9:
+            recall = cum_tp / n_possible_tp
+            if recall > best_recall:
+                best_recall = recall
+    return best_recall
+
+
 def sort_scores_best_first(
     scores: List[float], scores_are_evalues: bool
 ) -> List[float]:
@@ -202,6 +227,7 @@ def write_edf(
 
     sepq01, sepq1, sepq10, sum3 = compute_sum3(curve_rows, ndom, n_possible_tp)
     sffp = compute_sffp(per_query_hits, n_possible_tp, scores_are_evalues)
+    pr90 = compute_pr90(curve_rows, n_possible_tp)
 
     with open(out_path, "w", encoding="utf-8") as f:
         common.write_algo_reference_header(f, algo, reference)
@@ -212,7 +238,10 @@ def write_edf(
         f.write(f"# N_possible_tp={n_possible_tp}\n")
         f.write(f"# N_possible_fp={n_possible_fp}\n")
         if sepq01 is not None:
-            s = f"# SEPQ0.1={sepq01:.3f} SEPQ1={sepq1:.3f} SEPQ10={sepq10:.3f} Sum3={sum3:.3f} SFFP={sffp:.3f}\n"
+            s = (
+                f"# SEPQ0.1={sepq01:.3f} SEPQ1={sepq1:.3f} SEPQ10={sepq10:.3f} "
+                f"Sum3={sum3:.3f} SFFP={sffp:.3f} PR90={pr90:.4g}\n"
+            )
             sys.stderr.write(s)
             f.write(s)
         f.write("score\tn_tp\tn_fp\tcum_tp\tcum_fp\n")

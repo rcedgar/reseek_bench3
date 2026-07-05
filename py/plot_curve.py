@@ -3,7 +3,8 @@
 plot_curve.py -- Stage 2: one panel from .edf or .tcat summary files.
 
 Overlays multiple algorithms when each --input shares the same truth standard
-and curve type.  Metric definitions are in truth_standards.md.
+and curve type.  ROC plots use FPR on the x-axis and TPR on the y-axis.
+Metric definitions are in truth_standards.md.
 
 Examples:
   python plot_curve.py --type roc --input reseek.superfamily.edf \
@@ -118,8 +119,8 @@ def edf_curve_points(
             x = coverage
             y = cum_fp / ndom if ndom else 0.0
         elif curve_type == "roc":
-            x = coverage
-            y = cum_fp / n_possible_fp if n_possible_fp else 0.0
+            x = cum_fp / n_possible_fp if n_possible_fp else 0.0
+            y = coverage
         elif curve_type == "pr":
             denom = cum_tp + cum_fp
             if denom == 0:
@@ -167,7 +168,7 @@ def axis_labels(curve_type: CurveType, kind: SummaryKind) -> Tuple[str, str]:
         y = "Errors per query" if kind == "edf" else "Error (negative-control FPR)"
         return "Coverage", y
     if curve_type == "roc":
-        return "TPR", "FPR"
+        return "FPR", "TPR"
     if curve_type == "pr":
         return "Recall", "Precision"
     raise ValueError(f"unknown curve type: {curve_type!r}")
@@ -230,9 +231,9 @@ def main() -> int:
         elif file_kind != kind:
             raise ValueError(f"{path}: cannot mix .edf and .tcat inputs")
 
-        label = common.algo_label_from_header(hdr, path)
-        series.append((label, points))
-        sys.stderr.write(f"loaded {path} ({len(points)} points, algo={label})\n")
+        algo = common.algo_label_from_header(hdr, path)
+        series.append((algo, points))
+        sys.stderr.write(f"loaded {path} ({len(points)} points, algo={algo})\n")
 
     assert truth is not None and kind is not None
 
@@ -262,7 +263,7 @@ def main() -> int:
     ax.set_title(plot_title(args.type, truth))
     ax.grid(True, which="major", linewidth=0.5, alpha=0.5)
 
-    if len(series) > 1:
+    if len(series) > 1 or args.type == "roc":
         ax.legend(fontsize=10)
 
     fig.tight_layout()

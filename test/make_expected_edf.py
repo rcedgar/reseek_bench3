@@ -199,6 +199,23 @@ def compute_sffp(per_query, n_possible_tp):
     return total_tp_above / n_possible_tp
 
 
+def compute_pr90(curve_rows, n_possible_tp):
+    """Recall at 90% precision from best-first (score, cum_tp, cum_fp) rows."""
+    if n_possible_tp <= 0 or not curve_rows:
+        return None
+
+    best_recall = 0.0
+    for _score, cum_tp, cum_fp in curve_rows:
+        denom = cum_tp + cum_fp
+        if denom == 0:
+            continue
+        if cum_tp / denom >= 0.9:
+            recall = cum_tp / n_possible_tp
+            if recall > best_recall:
+                best_recall = recall
+    return best_recall
+
+
 def build_edf(truth, dom2fam, dom2sf, dom2fold, hist, per_query):
     ndom, n_possible_tp, n_possible_fp = count_pair_denominators(
         dom2fam, dom2sf, dom2fold, truth
@@ -217,6 +234,7 @@ def build_edf(truth, dom2fam, dom2sf, dom2fold, hist, per_query):
 
     sepq01, sepq1, sepq10, sum3 = compute_sum3(curve_rows, ndom, n_possible_tp)
     sffp = compute_sffp(per_query, n_possible_tp)
+    pr90 = compute_pr90(curve_rows, n_possible_tp)
     score_dir = "lower_better" if SCORES_ARE_EVALUES else "higher_better"
 
     lines = [
@@ -227,7 +245,7 @@ def build_edf(truth, dom2fam, dom2sf, dom2fold, hist, per_query):
         f"# ndom={ndom}",
         f"# N_possible_tp={n_possible_tp}",
         f"# N_possible_fp={n_possible_fp}",
-        f"# SEPQ0.1={sepq01:.3f} SEPQ1={sepq1:.3f} SEPQ10={sepq10:.3f} Sum3={sum3:.3f} SFFP={sffp:.3f}",
+        f"# SEPQ0.1={sepq01:.3f} SEPQ1={sepq1:.3f} SEPQ10={sepq10:.3f} Sum3={sum3:.3f} SFFP={sffp:.3f} PR90={pr90:.4g}",
         "score\tn_tp\tn_fp\tcum_tp\tcum_fp",
     ]
     lines.extend(body_lines)

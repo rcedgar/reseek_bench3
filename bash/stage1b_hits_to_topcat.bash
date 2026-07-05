@@ -26,7 +26,7 @@ python ../py/hits_to_topcat.py \
 	--output $algo.$db.$truth
 }
 
-foldseek_hits_cath40=$c/data/big_hits/foldseek.scop40	# q,t,E
+foldseek_hits_cath40=$c/data/big_hits/foldseek.cath40	# q,t,E
 
 foldseek_hits_scop40=$c/data/big_hits/foldseek.scop40	# q,t,E
 dali_hits_scop40=$c/data/big_hits/dali.scop40			# q,t,Z
@@ -55,7 +55,9 @@ do
 
 	run foldseek $foldseek_hits_scop40  1,2,3  evalue scop40  $truth
 	run foldseek $foldseek_hits_scop40  1,2,3  evalue scop40x $truth
-	run foldseek $foldseek_hits_cath40  1,2,3  evalue cath40  $truth
+	if [ "$truth" = topfold ] ; then
+		run foldseek $foldseek_hits_cath40  1,2,3  evalue cath40 topfold
+	fi
 
 	run reseek28 $reseek28_hits_scop40  1,2,3  evalue scop40  $truth
 done
@@ -66,5 +68,4 @@ run reseek3 $reseek3_kappa_hits_fold_scop40 1,2,3  evalue scop40 topfold
 run reseek3 $reseek3_kappa_hits_sf_scop40   1,2,3  evalue scop40x topsf
 run reseek3 $reseek3_kappa_hits_fold_scop40 1,2,3  evalue scop40x topfold
 
-run reseek3 $reseek3_kappa_hits_sf_cath40   1,2,3  evalue cath40 topsf
 run reseek3 $reseek3_kappa_hits_fold_cath40 1,2,3  evalue cath40 topfold
