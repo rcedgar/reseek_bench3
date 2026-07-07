@@ -1,0 +1,4 @@
+https://serratus-public.s3.us-east-1.amazonaws.com/rce/reseek_dbs/afdb50.bcb
+https://serratus-public.s3.us-east-1.amazonaws.com/rce/reseek_dbs/scop40.bcb
+https://serratus-public.s3.us-east-1.amazonaws.com/rce/reseek_dbs/cath40.bcb
+https://serratus-public.s3.us-east-1.amazonaws.com/rce/reseek_dbs/pdb.bcb

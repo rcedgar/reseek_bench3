@@ -1,6 +1,6 @@
 # Makefile for homval C++ tools (build under WSL/Linux).
 #
-#   make            # build hits_to_edf, hits_to_bin, hits_to_topcat
+#   make            # build hits_to_edf, hits_to_bin, hits_to_topcat, build_derived_info
 #   make test       # compare against golden .edf and .tcat fixtures
 #   make clean
 
@@ -12,31 +12,37 @@ BINDIR := bin
 EDF := $(BINDIR)/hits_to_edf
 BIN := $(BINDIR)/hits_to_bin
 TOPCAT := $(BINDIR)/hits_to_topcat
+DERIVED := $(BINDIR)/build_derived_info
+
+HEADERS := hits_bin.hpp taxonomy.hpp derived_info.hpp
 
 .PHONY: all test clean
 
-all: $(EDF) $(BIN) $(TOPCAT)
+all: $(EDF) $(BIN) $(TOPCAT) $(DERIVED)
 
 $(BINDIR):
 	mkdir -p $(BINDIR)
 
-$(EDF): hits_to_edf.cpp hits_bin.hpp | $(BINDIR)
+$(EDF): hits_to_edf.cpp $(HEADERS) | $(BINDIR)
 	$(CXX) $(CXXFLAGS) hits_to_edf.cpp -o $(EDF) $(LDFLAGS)
 
-$(BIN): hits_to_bin.cpp hits_bin.hpp | $(BINDIR)
+$(BIN): hits_to_bin.cpp $(HEADERS) | $(BINDIR)
 	$(CXX) $(CXXFLAGS) hits_to_bin.cpp -o $(BIN) $(LDFLAGS)
 
-$(TOPCAT): hits_to_topcat.cpp hits_bin.hpp | $(BINDIR)
+$(TOPCAT): hits_to_topcat.cpp $(HEADERS) | $(BINDIR)
 	$(CXX) $(CXXFLAGS) hits_to_topcat.cpp -o $(TOPCAT) $(LDFLAGS)
 
+$(DERIVED): build_derived_info.cpp $(HEADERS) | $(BINDIR)
+	$(CXX) $(CXXFLAGS) build_derived_info.cpp -o $(DERIVED) $(LDFLAGS)
+
 # Regression: text and bin pipelines must match test/expected.* fixtures
-test: $(EDF) $(BIN) $(TOPCAT)
+test: $(EDF) $(BIN) $(TOPCAT) $(DERIVED)
 	@set -e; \
+	./$(DERIVED) --lookup ../test/test.lookup --output ../test/derived_info.json; \
 	for truth in superfamily superfamilyx; do \
 	  out=$$(mktemp); \
 	  ./$(EDF) \
 	    --hits ../test/test_hits.tsv \
-	    --lookup ../test/test.lookup \
 	    --derived-info ../test/derived_info.json \
 	    --truth $$truth \
 	    --score \
@@ -52,7 +58,6 @@ test: $(EDF) $(BIN) $(TOPCAT)
 	  out=$$(mktemp); \
 	  ./$(TOPCAT) \
 	    --hits ../test/test_hits.tsv \
-	    --lookup ../test/test.lookup \
 	    --derived-info ../test/derived_info.json \
 	    --truth $$truth \
 	    --score \
@@ -73,7 +78,6 @@ test: $(EDF) $(BIN) $(TOPCAT)
 	  out=$$(mktemp); \
 	  ./$(EDF) \
 	    --bin $$cache.bin \
-	    --lookup ../test/test.lookup \
 	    --derived-info ../test/derived_info.json \
 	    --truth $$truth \
 	    --score \
@@ -89,7 +93,6 @@ test: $(EDF) $(BIN) $(TOPCAT)
 	  out=$$(mktemp); \
 	  ./$(TOPCAT) \
 	    --bin $$cache.bin \
-	    --lookup ../test/test.lookup \
 	    --derived-info ../test/derived_info.json \
 	    --truth $$truth \
 	    --score \
@@ -104,7 +107,6 @@ test: $(EDF) $(BIN) $(TOPCAT)
 	prefix=$$(mktemp); \
 	./$(EDF) \
 	  --bin $$cache.bin \
-	  --lookup ../test/test.lookup \
 	  --derived-info ../test/derived_info.json \
 	  --all-truths \
 	  --score \
@@ -121,7 +123,6 @@ test: $(EDF) $(BIN) $(TOPCAT)
 	tprefix=$$(mktemp); \
 	./$(TOPCAT) \
 	  --bin $$cache.bin \
-	  --lookup ../test/test.lookup \
 	  --derived-info ../test/derived_info.json \
 	  --all-truths \
 	  --score \
@@ -136,4 +137,4 @@ test: $(EDF) $(BIN) $(TOPCAT)
 	rm -f $$cache.bin $$prefix.* $$tprefix.*
 
 clean:
-	rm -f $(EDF) $(BIN) $(TOPCAT)
+	rm -f $(EDF) $(BIN) $(TOPCAT) $(DERIVED)

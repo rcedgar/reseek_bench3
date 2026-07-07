@@ -65,8 +65,17 @@ def build_summary(tax: lookup.Taxonomy) -> dict:
     qs_topfold = lookup.query_set_topfold(tax)
     qs_topsf = lookup.query_set_topsf(tax)
 
+    domain_ids = list(tax.dom2fam.keys())
+    dom_fold = [tax.dom2fold[d] for d in domain_ids]
+    dom_sf = [tax.dom2sf[d] for d in domain_ids]
+    dom_fam = [tax.dom2fam[d] for d in domain_ids]
+
     out = {
         "ndom": tax.ndom,
+        "domain_ids": domain_ids,
+        "dom_fold": dom_fold,
+        "dom_sf": dom_sf,
+        "dom_fam": dom_fam,
         "query_set_topfold": qs_topfold,
         "query_set_topsf": qs_topsf,
         "N_possible_tp": {

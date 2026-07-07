@@ -3,8 +3,8 @@
 mkdir -p ../results
 python ../py/report_summary.py \
 	../results/summary \
-	../edf/*
+	../edf/* \
+	../topcat/*
 
 head ../results/summary.txt
 ls -lh ../results/summary.txt
-echo SECONDS=$SECONDS

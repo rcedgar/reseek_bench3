@@ -1,0 +1,23 @@
+	Command being timed: "reseek -flat_search_kappa ../big_reseek_dbs/cath40.bcb -sensitive -stats sf -db ../big_reseek_dbs/cath40.bcb -output ../big_hits/reseek_sensitive_cath40_sf.hits -log ../big_hits/reseek_sensitive_cath40_sf.search.log"
+	User time (seconds): 26418.01
+	System time (seconds): 1448.19
+	Percent of CPU this job got: 5346%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:41.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 30016104
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 34209
+	Minor (reclaiming a frame) page faults: 12721724
+	Voluntary context switches: 2635296
+	Involuntary context switches: 35752
+	Swaps: 0
+	File system inputs: 24547992
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

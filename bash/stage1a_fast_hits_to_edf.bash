@@ -54,7 +54,6 @@ binpath=$(ensure_bin "$hits" "$db" "$fields")
 	--bin "$binpath" \
 	--$score_or_evalue \
 	--all-truths \
-	--lookup "../info/$db.lookup" \
 	--derived-info "../derived_info/$db.json" \
 	--algo "$algo" \
 	--reference "$db" \
@@ -83,29 +82,28 @@ binpath=$(ensure_bin "$hits" "$db" "$fields")
 	--bin "$binpath" \
 	--$score_or_evalue \
 	--truth "$truth" \
-	--lookup "../info/$db.lookup" \
 	--derived-info "../derived_info/$db.json" \
 	--algo "$algo" \
 	--reference "$db" \
 	--output "$algo.$db.$truth"
 }
 
-foldseek_hits_cath40=$c/data/big_hits/foldseek.cath40	# q,t,E
+foldseek_hits_cath40=$c/data/big_hits/foldseek.cath40.hits	# q,t,E
 
-foldseek_hits_scop40=$c/data/big_hits/foldseek.scop40	# q,t,E
+foldseek_hits_scop40=$c/data/big_hits/foldseek.scop40.hits	# q,t,E
 dali_hits_scop40=$c/data/big_hits/dali.scop40			# q,t,Z
 tm_hits_scop40=$c/data/big_hits/tm.scop40				# q,t,TM
 
 reseek28_hits_scop40=$c/data/big_hits/reseek28_sensitive.scop40	# q,t,P
 
-reseek3_kappa_hits_fam_scop40=../hits/reseek_kappa_scop40_fam.hits # q,t,P
-reseek3_kappa_hits_fam_cath40=../hits/reseek_kappa_cath40_fam.hits # q,t,P
+reseek3_kappa_hits_fam_scop40=../big_hits/reseek_kappa_scop40_fam.hits # q,t,P
+reseek3_kappa_hits_fam_cath40=../big_hits/reseek_kappa_cath40_fam.hits # q,t,P
 
-reseek3_kappa_hits_sf_scop40=../hits/reseek_kappa_scop40_sf.hits # q,t,P
-reseek3_kappa_hits_sf_cath40=../hits/reseek_kappa_cath40_sf.hits # q,t,P
+reseek3_kappa_hits_sf_scop40=../big_hits/reseek_kappa_scop40_sf.hits # q,t,P
+reseek3_kappa_hits_sf_cath40=../big_hits/reseek_kappa_cath40_sf.hits # q,t,P
 
-reseek3_kappa_hits_fold_scop40=../hits/reseek_kappa_scop40_fold.hits # q,t,P
-reseek3_kappa_hits_fold_cath40=../hits/reseek_kappa_cath40_fold.hits # q,t,P
+reseek3_kappa_hits_fold_scop40=../big_hits/reseek_kappa_scop40_fold.hits # q,t,P
+reseek3_kappa_hits_fold_cath40=../big_hits/reseek_kappa_cath40_fold.hits # q,t,P
 
 #       algo hits                  fields     s/e     db
 #===============================================================

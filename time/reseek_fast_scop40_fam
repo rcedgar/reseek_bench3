@@ -1,0 +1,23 @@
+	Command being timed: "reseek -flat_search_kappa ../big_reseek_dbs/scop40.bcb -fast -stats fam -db ../big_reseek_dbs/scop40.bcb -output ../big_hits/reseek_fast_scop40_fam.hits -log ../big_hits/reseek_fast_scop40_fam.search.log"
+	User time (seconds): 5430.27
+	System time (seconds): 20.42
+	Percent of CPU this job got: 5656%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:36.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8283644
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 99
+	Minor (reclaiming a frame) page faults: 2093987
+	Voluntary context switches: 307404
+	Involuntary context switches: 2649
+	Swaps: 0
+	File system inputs: 8136
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

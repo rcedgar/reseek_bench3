@@ -21,11 +21,22 @@
 #include <utility>
 #include <vector>
 
+#include "derived_info.hpp"
 #include "hits_bin.hpp"
+#include "taxonomy.hpp"
 
 namespace {
 
-enum class Truth { Fold, Superfamily, Family, SuperfamilyX };
+using homval::Denoms;
+using homval::Taxonomy;
+using homval::Truth;
+using homval::die_tax;
+using homval::load_denoms;
+using homval::load_reference;
+using homval::load_taxonomy_from_derived_info;
+using homval::lookup_domain;
+using homval::pair_ignore;
+using homval::pair_is_tp;
 
 enum class ScoreDir { HigherBetter, LowerBetter };
 
@@ -33,7 +44,6 @@ struct Config {
     std::string hits_path;
     std::string bin_path;
     bool use_bin = false;
-    std::string lookup_path;
     std::string derived_info_path;
     std::string output_path;
     std::string truth_str;
@@ -44,7 +54,6 @@ struct Config {
     int t_idx = 1;
     int s_idx = 2;
     std::string algo;
-    std::string reference;
     ScoreDir score_dir = ScoreDir::HigherBetter;
     unsigned threads = 0;
 };
@@ -67,46 +76,12 @@ struct QueryFp {
 using HistMap = std::unordered_map<double, Counts>;
 using FpMap = std::unordered_map<uint32_t, QueryFp>;
 
-struct Taxonomy {
-    std::unordered_map<std::string, uint32_t> dom_index;
-    std::vector<uint32_t> dom_fold;
-    std::vector<uint32_t> dom_sf;
-    std::vector<uint32_t> dom_fam;
-    uint32_t ndom_lookup = 0;
-};
-
-struct Denoms {
-    int ndom = 0;
-    uint64_t n_possible_tp = 0;
-    uint64_t n_possible_fp = 0;
-};
-
-// ---------------------------------------------------------------------------
-// Utilities
-// ---------------------------------------------------------------------------
-
 [[noreturn]] void die(const std::string& msg) {
-    std::cerr << "error: " << msg << '\n';
-    std::exit(1);
+    die_tax(msg);
 }
 
 void trim_inplace(std::string& s) {
-    while (!s.empty() && (s.back() == '\r' || s.back() == '\n' || s.back() == ' '))
-        s.pop_back();
-    size_t i = 0;
-    while (i < s.size() && (s[i] == ' ' || s[i] == '\t'))
-        ++i;
-    if (i > 0)
-        s.erase(0, i);
-}
-
-std::string read_file(const std::string& path) {
-    std::ifstream in(path, std::ios::binary);
-    if (!in)
-        die("cannot open " + path);
-    std::ostringstream ss;
-    ss << in.rdbuf();
-    return ss.str();
+    homval::trim_inplace(s);
 }
 
 bool better_score(double score, double best, ScoreDir dir) {
@@ -184,160 +159,6 @@ const char* truth_name(Truth truth) {
 std::vector<Truth> all_truth_values() {
     return {Truth::Family, Truth::Superfamily, Truth::SuperfamilyX, Truth::Fold};
 }
-
-uint32_t intern_string(
-    const std::string& s,
-    std::unordered_map<std::string, uint32_t>& pool,
-    std::vector<std::string>& strings) {
-    auto it = pool.find(s);
-    if (it != pool.end())
-        return it->second;
-    uint32_t id = static_cast<uint32_t>(strings.size());
-    strings.push_back(s);
-    pool.emplace(strings.back(), id);
-    return id;
-}
-
-// ---------------------------------------------------------------------------
-// Lookup + JSON
-// ---------------------------------------------------------------------------
-
-Taxonomy load_lookup(const std::string& path) {
-    Taxonomy tax;
-    std::ifstream in(path);
-    if (!in)
-        die("cannot open lookup " + path);
-
-    std::unordered_map<std::string, uint32_t> fold_pool, sf_pool, fam_pool;
-    std::vector<std::string> fold_strings, sf_strings, fam_strings;
-
-    std::string line;
-    int line_no = 0;
-    while (std::getline(in, line)) {
-        ++line_no;
-        trim_inplace(line);
-        if (line.empty())
-            continue;
-        size_t tab = line.find('\t');
-        if (tab == std::string::npos)
-            die(path + ":" + std::to_string(line_no) + ": expected 2 tab fields");
-
-        std::string dom = line.substr(0, tab);
-        std::string fam = line.substr(tab + 1);
-        if (tax.dom_index.count(dom))
-            die(path + ":" + std::to_string(line_no) + ": duplicate domain " + dom);
-
-        size_t d1 = fam.find('.');
-        size_t d2 = (d1 == std::string::npos) ? std::string::npos : fam.find('.', d1 + 1);
-        size_t d3 = (d2 == std::string::npos) ? std::string::npos : fam.find('.', d2 + 1);
-        if (d1 == std::string::npos || d2 == std::string::npos || d3 == std::string::npos)
-            die(path + ":" + std::to_string(line_no) + ": family_id must have 4 dot fields");
-
-        std::string fold = fam.substr(0, d2);
-        std::string sf = fam.substr(0, d3);
-
-        uint32_t id = static_cast<uint32_t>(tax.dom_fold.size());
-        tax.dom_index.emplace(dom, id);
-        tax.dom_fold.push_back(intern_string(fold, fold_pool, fold_strings));
-        tax.dom_sf.push_back(intern_string(sf, sf_pool, sf_strings));
-        tax.dom_fam.push_back(intern_string(fam, fam_pool, fam_strings));
-    }
-    tax.ndom_lookup = static_cast<uint32_t>(tax.dom_fold.size());
-    return tax;
-}
-
-int64_t json_int_after_key(const std::string& json, const std::string& key) {
-    const std::string needle = "\"" + key + "\"";
-    size_t pos = json.find(needle);
-    if (pos == std::string::npos)
-        die("derived_info missing key " + key);
-    pos = json.find(':', pos + needle.size());
-    if (pos == std::string::npos)
-        die("derived_info malformed at " + key);
-    ++pos;
-    while (pos < json.size() && (json[pos] == ' ' || json[pos] == '\t'))
-        ++pos;
-    size_t end = pos;
-    while (end < json.size() && (json[end] == '-' || std::isdigit(static_cast<unsigned char>(json[end]))))
-        ++end;
-    return std::stoll(json.substr(pos, end - pos));
-}
-
-int64_t json_truth_int(const std::string& json, const std::string& section, const std::string& truth) {
-    const std::string sec = "\"" + section + "\"";
-    size_t pos = json.find(sec);
-    if (pos == std::string::npos)
-        die("derived_info missing " + section);
-    pos = json.find('{', pos);
-    if (pos == std::string::npos)
-        die("derived_info malformed " + section);
-    size_t end = json.find('}', pos);
-    if (end == std::string::npos)
-        die("derived_info malformed " + section);
-    std::string block = json.substr(pos, end - pos + 1);
-    const std::string key = "\"" + truth + "\"";
-    size_t kpos = block.find(key);
-    if (kpos == std::string::npos)
-        die("derived_info missing " + section + " for truth " + truth);
-    kpos = block.find(':', kpos + key.size());
-    if (kpos == std::string::npos)
-        die("derived_info malformed " + section + " for truth " + truth);
-    ++kpos;
-    while (kpos < block.size() && (block[kpos] == ' ' || block[kpos] == '\t'))
-        ++kpos;
-    size_t e = kpos;
-    while (e < block.size() && (block[e] == '-' || std::isdigit(static_cast<unsigned char>(block[e]))))
-        ++e;
-    return std::stoll(block.substr(kpos, e - kpos));
-}
-
-Denoms load_denoms(const std::string& path, const std::string& truth) {
-    const std::string json = read_file(path);
-    Denoms d;
-    d.ndom = static_cast<int>(json_int_after_key(json, "ndom"));
-    d.n_possible_tp = static_cast<uint64_t>(json_truth_int(json, "N_possible_tp", truth));
-    d.n_possible_fp = static_cast<uint64_t>(json_truth_int(json, "N_possible_fp", truth));
-    return d;
-}
-
-// ---------------------------------------------------------------------------
-// Pair classification
-// ---------------------------------------------------------------------------
-
-bool pair_ignore(uint32_t q, uint32_t t, Truth truth, const Taxonomy& tax) {
-    if (q == t)
-        return true;
-    if (truth == Truth::SuperfamilyX) {
-        if (tax.dom_fold[q] == tax.dom_fold[t] && tax.dom_sf[q] != tax.dom_sf[t])
-            return true;
-    }
-    return false;
-}
-
-bool pair_is_tp(uint32_t q, uint32_t t, Truth truth, const Taxonomy& tax) {
-    switch (truth) {
-    case Truth::Fold:
-        return tax.dom_fold[q] == tax.dom_fold[t];
-    case Truth::Superfamily:
-    case Truth::SuperfamilyX:
-        return tax.dom_sf[q] == tax.dom_sf[t];
-    case Truth::Family:
-        return tax.dom_fam[q] == tax.dom_fam[t];
-    }
-    return false;
-}
-
-bool lookup_domain(const Taxonomy& tax, const std::string& label, uint32_t& out) {
-    auto it = tax.dom_index.find(label);
-    if (it == tax.dom_index.end())
-        return false;
-    out = it->second;
-    return true;
-}
-
-// ---------------------------------------------------------------------------
-// Hit processing
-// ---------------------------------------------------------------------------
 
 struct Pass1Local {
     HistMap hist;
@@ -615,10 +436,6 @@ void merge_fp(FpMap& dst, const FpMap& src, ScoreDir dir) {
     }
 }
 
-// ---------------------------------------------------------------------------
-// Summary statistics
-// ---------------------------------------------------------------------------
-
 void sort_scores(std::vector<double>& scores, ScoreDir dir) {
     if (dir == ScoreDir::LowerBetter)
         std::sort(scores.begin(), scores.end());
@@ -726,6 +543,7 @@ void format_g(FILE* f, double v) {
 void write_edf(
     const Config& cfg,
     const std::string& truth_str,
+    const std::string& reference,
     const Denoms& denoms,
     const HistMap& global_hist,
     uint64_t tp_above) {
@@ -742,8 +560,8 @@ void write_edf(
         die("cannot open output " + cfg.output_path);
 
     std::fprintf(out, "# algo=%s\n", cfg.algo.c_str());
-    if (!cfg.reference.empty())
-        std::fprintf(out, "# reference=%s\n", cfg.reference.c_str());
+    if (!reference.empty())
+        std::fprintf(out, "# reference=%s\n", reference.c_str());
     std::fprintf(out, "# truth=%s\n", truth_str.c_str());
     std::fprintf(out, "# fields=%s\n", cfg.fields_spec.c_str());
     std::fprintf(out, "# score_direction=%s\n",
@@ -831,10 +649,6 @@ void run_bin_passes(
     }
 }
 
-// ---------------------------------------------------------------------------
-// CLI
-// ---------------------------------------------------------------------------
-
 void parse_fields(const std::string& spec, int& q, int& t, int& s) {
     int q1 = 0, t1 = 0, s1 = 0;
     if (std::sscanf(spec.c_str(), "%d,%d,%d", &q1, &t1, &s1) != 3 || q1 < 1 || t1 < 1 || s1 < 1)
@@ -844,7 +658,7 @@ void parse_fields(const std::string& spec, int& q, int& t, int& s) {
     s = s1 - 1;
 }
 
-std::pair<std::string, std::string> parse_algo_reference(const std::string& hits_path) {
+std::string default_algo_from_hits(const std::string& hits_path) {
     std::string base = hits_path;
     const size_t slash = base.find_last_of("/\\");
     if (slash != std::string::npos)
@@ -858,8 +672,8 @@ std::pair<std::string, std::string> parse_algo_reference(const std::string& hits
     }
     const size_t dot = base.find('.');
     if (dot == std::string::npos)
-        return {base, ""};
-    return {base.substr(0, dot), base.substr(dot + 1)};
+        return base;
+    return base.substr(0, dot);
 }
 
 Config parse_args(int argc, char** argv) {
@@ -880,8 +694,6 @@ Config parse_args(int argc, char** argv) {
             cfg.bin_path = need("--bin");
             cfg.use_bin = true;
         }
-        else if (arg == "--lookup")
-            cfg.lookup_path = need("--lookup");
         else if (arg == "--derived-info")
             cfg.derived_info_path = need("--derived-info");
         else if (arg == "--truth")
@@ -894,8 +706,6 @@ Config parse_args(int argc, char** argv) {
             cfg.fields_spec = need("--fields");
         else if (arg == "--algo")
             cfg.algo = need("--algo");
-        else if (arg == "--reference")
-            cfg.reference = need("--reference");
         else if (arg == "--threads") {
             const long n = std::stol(need("--threads"));
             if (n < 1)
@@ -908,9 +718,9 @@ Config parse_args(int argc, char** argv) {
             have_score = true;
         else if (arg == "--help" || arg == "-h") {
             std::cout <<
-                "Usage: hits_to_edf (--hits PATH | --bin PATH.bin) --lookup PATH --derived-info PATH\n"
+                "Usage: hits_to_edf (--hits PATH | --bin PATH.bin) --derived-info PATH\n"
                 "       (--truth {fold,superfamily,family,superfamilyx} | --all-truths) --output PATH\n"
-                "       (--evalue | --score) [--fields 1,2,3] [--algo NAME] [--reference DB]\n"
+                "       (--evalue | --score) [--fields 1,2,3] [--algo NAME]\n"
                 "       [--threads N]\n"
                 "\n"
                 "With --all-truths, --output is a prefix; writes PREFIX.fold, PREFIX.superfamily, etc.\n";
@@ -923,8 +733,8 @@ Config parse_args(int argc, char** argv) {
     if (cfg.use_bin) {
         if (!cfg.hits_path.empty())
             die("use either --hits or --bin, not both");
-        if (cfg.lookup_path.empty() || cfg.derived_info_path.empty() || cfg.output_path.empty())
-            die("required: --bin --lookup --derived-info --output and (--evalue|--score)");
+        if (cfg.derived_info_path.empty() || cfg.output_path.empty())
+            die("required: --bin --derived-info --output and (--evalue|--score)");
         if (cfg.all_truths) {
             if (!cfg.truth_str.empty())
                 die("use either --truth or --all-truths, not both");
@@ -933,9 +743,8 @@ Config parse_args(int argc, char** argv) {
     } else {
         if (!cfg.bin_path.empty())
             die("internal: bin path set without --bin");
-        if (cfg.hits_path.empty() || cfg.lookup_path.empty() || cfg.derived_info_path.empty() ||
-            cfg.output_path.empty())
-            die("required: --hits --lookup --derived-info --truth --output and (--evalue|--score)");
+        if (cfg.hits_path.empty() || cfg.derived_info_path.empty() || cfg.output_path.empty())
+            die("required: --hits --derived-info --truth --output and (--evalue|--score)");
         if (cfg.all_truths)
             die("--all-truths requires --bin");
         if (cfg.truth_str.empty())
@@ -951,11 +760,8 @@ Config parse_args(int argc, char** argv) {
         parse_fields(cfg.fields_spec, cfg.q_idx, cfg.t_idx, cfg.s_idx);
 
     if (!cfg.use_bin) {
-        auto [def_algo, def_ref] = parse_algo_reference(cfg.hits_path);
         if (cfg.algo.empty())
-            cfg.algo = def_algo;
-        if (cfg.reference.empty())
-            cfg.reference = def_ref;
+            cfg.algo = default_algo_from_hits(cfg.hits_path);
     } else if (cfg.algo.empty())
         die("--bin mode requires --algo");
     if (cfg.threads == 0)
@@ -964,19 +770,15 @@ Config parse_args(int argc, char** argv) {
 }
 
 unsigned effective_threads(unsigned requested, size_t file_size) {
-    // Avoid 100+ threads on tiny inputs; ~2 MiB per thread minimum.
     const unsigned max_by_size =
         static_cast<unsigned>(std::max<size_t>(1, file_size / (2 * 1024 * 1024)));
     return std::max(1u, std::min(requested, max_by_size));
 }
 
-// ---------------------------------------------------------------------------
-// Main
-// ---------------------------------------------------------------------------
-
 int run_bin(const Config& cfg) {
-    std::cerr << "\n\nloading lookup " << cfg.lookup_path << "...\n";
-    const Taxonomy tax = load_lookup(cfg.lookup_path);
+    std::cerr << "\n\nloading derived_info " << cfg.derived_info_path << "...\n";
+    const Taxonomy tax = load_taxonomy_from_derived_info(cfg.derived_info_path);
+    const std::string reference = load_reference(cfg.derived_info_path);
 
     std::cerr << "loading bin " << cfg.bin_path << "...\n";
     const std::vector<homval::HitRecord> hits = homval::load_hbin(cfg.bin_path, tax.ndom_lookup);
@@ -1002,13 +804,14 @@ int run_bin(const Config& cfg) {
         Config out_cfg = cfg;
         if (cfg.all_truths)
             out_cfg.output_path = cfg.output_path + "." + truth_str;
-        write_edf(out_cfg, truth_str, denoms, global_hist, tp_above);
+        write_edf(out_cfg, truth_str, reference, denoms, global_hist, tp_above);
     }
     return 0;
 }
 
 int run_text(const Config& cfg) {
     const Denoms denoms = load_denoms(cfg.derived_info_path, cfg.truth_str);
+    const std::string reference = load_reference(cfg.derived_info_path);
 
     std::ifstream size_probe(cfg.hits_path, std::ios::binary | std::ios::ate);
     if (!size_probe)
@@ -1017,8 +820,8 @@ int run_text(const Config& cfg) {
     Config run_cfg = cfg;
     run_cfg.threads = effective_threads(cfg.threads, hits_size);
 
-    std::cerr << "\n\nloading lookup " << run_cfg.lookup_path << "...\n";
-    const Taxonomy tax = load_lookup(run_cfg.lookup_path);
+    std::cerr << "\n\nloading derived_info " << run_cfg.derived_info_path << "...\n";
+    const Taxonomy tax = load_taxonomy_from_derived_info(run_cfg.derived_info_path);
 
     const std::vector<ChunkJob> chunks = make_chunks(run_cfg.hits_path, run_cfg.threads);
     const unsigned nworkers = static_cast<unsigned>(chunks.size());
@@ -1066,7 +869,7 @@ int run_text(const Config& cfg) {
             tp_above += loc.tp_above;
     }
 
-    write_edf(run_cfg, run_cfg.truth_str, denoms, global_hist, tp_above);
+    write_edf(run_cfg, run_cfg.truth_str, reference, denoms, global_hist, tp_above);
     return 0;
 }
 

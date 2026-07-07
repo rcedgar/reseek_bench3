@@ -4,7 +4,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # RCE added
-hits/
+*.hits
+big_hits/
 big_*/
 gitver.txt
 o/
