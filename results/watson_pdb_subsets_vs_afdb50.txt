@@ -1,6 +1,11 @@
-  query   _______________Elapsed time____________
+  query   ____________Elapsed time_______________
 structs   foldseek  reseek-fast  reseek-sensitive
-    100         9m           
-   1000        19m           
-   4000                   
-  10000      2h33m        
+    100         9m          6m                23m
+   1000        19m         61m                 4h
+  10000      2h33m         12h                40h
+
+  query   _____________Max memory________________
+structs   foldseek  reseek-fast  reseek-sensitive
+    100      227Gb        4.4Gb             4.5Gb
+   1000      284Gb        6.6Gb             6.7Gb
+  10000      289Gb            -                 -
