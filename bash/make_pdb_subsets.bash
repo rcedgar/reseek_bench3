@@ -3,7 +3,7 @@
 db=../big_reseek_dbs/pdb.bcb
 mkdir -p ../logs
 
-for N in 100 1000 10000
+for N in 100 1000 4000 10000
 do
 	pdbcaoutdir=../big_pdb_subsets/$N
 	bcb=../big_reseek_dbs/pdb_subset$N.bcb

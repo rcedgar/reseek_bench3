@@ -24,6 +24,7 @@ do
 					-stats $truth \
 					-db $db \
 					-output $hits \
+					-columns query+target+pvalue \
 					-log ../logs/$name.search.log"
 
 			if [ -x /bin/time ] ; then

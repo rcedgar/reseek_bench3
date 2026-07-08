@@ -5,7 +5,7 @@
 # ref=$3
 for ref in scop40 cath40
 do
-	for mode in fast sensitive
+	for mode in fast sensitive verysensitive
 	do
 		for truth in family superfamily fold
 		do

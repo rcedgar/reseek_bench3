@@ -13,8 +13,11 @@ algos as columns (sorted by decreasing median rank), rank 1=best with
 competition tie-breaking (1, 2, 2, 4, ...), and a median footer row per algo.
 RankNoSFFP is the same but omits SFFP rows.
 
-MetricAgreement quantifies rank concordance between metrics: Spearman correlation
-(cell-pooled and per-algo median ranks) plus SFFP discordance vs Sum3/PR90.
+RankPValues and RankNoSFFPPValues give two-sided Wilcoxon signed-rank p-values
+for each unordered algo pair on paired competition ranks (same benchmark rows
+as the corresponding Rank table; only rows where both algos appear). The .txt
+tables are symmetric off-diagonal matrices: row vs column with > better,
+< worse, ~ if p>0.05; mirrored cells share the p-value with > and < reversed.
 
 Example:
   python report_summary.py bench_superfamily \\
@@ -50,8 +53,6 @@ TOP3_COLUMNS = ("TEPQ0.001", "TEPQ0.01", "TEPQ0.1", "Top3", "algo")
 TOP3_KEYS = ("TEPQ0.001", "TEPQ0.01", "TEPQ0.1", "Top3")
 
 GroupKey = Tuple[str, str]
-
-METRIC_LABELS = ("Sum3", "SFFP", "PR90", "Top3")
 
 
 @dataclass(frozen=True)
@@ -243,9 +244,22 @@ class RankTable:
     medians: Tuple[str, ...]
 
 
-def build_rank_table(
+@dataclass(frozen=True)
+class RankPairPValue:
+    algo_a: str
+    algo_b: str
+    n_cells: int
+    p_value: Optional[float]
+
+
+@dataclass(frozen=True)
+class RankPValueTable:
+    pairs: Tuple[RankPairPValue, ...]
+
+
+def collect_rank_rows(
     sections: Sequence[Tuple[str, Dict[GroupKey, List[Row]]]],
-) -> Optional[RankTable]:
+) -> Tuple[List[str], List[Dict[str, int]]]:
     row_labels: List[str] = []
     rank_rows: List[Dict[str, int]] = []
     for section, groups in sections:
@@ -253,7 +267,13 @@ def build_rank_table(
             rows = groups[(truth, reference)]
             row_labels.append(section_subhead(section, truth, reference))
             rank_rows.append(competition_ranks(rows))
+    return row_labels, rank_rows
 
+
+def build_rank_table(
+    sections: Sequence[Tuple[str, Dict[GroupKey, List[Row]]]],
+) -> Optional[RankTable]:
+    row_labels, rank_rows = collect_rank_rows(sections)
     if not row_labels:
         return None
 
@@ -282,323 +302,198 @@ def build_rank_table(
     )
 
 
-def _rank_values(values: Sequence[float]) -> List[float]:
+def _average_ranks(values: Sequence[float]) -> List[float]:
     """Average ranks for ties (1-based)."""
-    ranks = [0.0] * len(values)
-    indexed = sorted(enumerate(values), key=lambda t: t[1])
+    n = len(values)
+    order = sorted(range(n), key=lambda i: values[i])
+    ranks = [0.0] * n
     i = 0
-    while i < len(indexed):
+    while i < n:
         j = i + 1
-        while j < len(indexed) and indexed[j][1] == indexed[i][1]:
+        while j < n and values[order[j]] == values[order[i]]:
             j += 1
-        avg_rank = (i + 1 + j) / 2.0
+        avg = (i + 1 + j) / 2.0
         for k in range(i, j):
-            ranks[indexed[k][0]] = avg_rank
+            ranks[order[k]] = avg
         i = j
     return ranks
 
 
-def spearman_rho(xs: Sequence[float], ys: Sequence[float]) -> Optional[float]:
-    if len(xs) < 2 or len(xs) != len(ys):
+def _normal_sf(x: float) -> float:
+    return 0.5 * math.erfc(x / math.sqrt(2.0))
+
+
+def wilcoxon_signed_rank_pvalue(
+    xs: Sequence[float], ys: Sequence[float]
+) -> Optional[float]:
+    """Two-sided Wilcoxon signed-rank test; discards zero differences."""
+    if len(xs) != len(ys) or len(xs) == 0:
         return None
-    rx = _rank_values(xs)
-    ry = _rank_values(ys)
-    mx = statistics.mean(rx)
-    my = statistics.mean(ry)
-    num = sum((rx[i] - mx) * (ry[i] - my) for i in range(len(xs)))
-    den_x = math.sqrt(sum((r - mx) ** 2 for r in rx))
-    den_y = math.sqrt(sum((r - my) ** 2 for r in ry))
-    if den_x == 0.0 or den_y == 0.0:
+    diffs = [float(x) - float(y) for x, y in zip(xs, ys)]
+    nonzero = [(d) for d in diffs if d != 0.0]
+    n = len(nonzero)
+    if n == 0:
+        return 1.0
+    if n == 1:
+        return 1.0
+
+    abs_diffs = [abs(d) for d in nonzero]
+    ranks = _average_ranks(abs_diffs)
+    w_plus = sum(r for r, d in zip(ranks, nonzero) if d > 0.0)
+
+    tie_counts: Dict[float, int] = {}
+    for v in abs_diffs:
+        tie_counts[v] = tie_counts.get(v, 0) + 1
+    tie_term = sum(t ** 3 - t for t in tie_counts.values() if t > 1)
+
+    mu = n * (n + 1) / 4.0
+    var = n * (n + 1) * (2 * n + 1) / 24.0 - tie_term / 48.0
+    if var <= 0.0:
+        return 1.0
+    z = (abs(w_plus - mu) - 0.5) / math.sqrt(var)
+    return min(1.0, 2.0 * _normal_sf(z))
+
+
+def build_rank_pvalue_table(
+    sections: Sequence[Tuple[str, Dict[GroupKey, List[Row]]]],
+) -> Optional[RankPValueTable]:
+    _, rank_rows = collect_rank_rows(sections)
+    if not rank_rows:
         return None
-    return num / (den_x * den_y)
-
-
-def collect_cell_rank_pairs(
-    groups_a: Dict[GroupKey, List[Row]],
-    groups_b: Dict[GroupKey, List[Row]],
-) -> Tuple[List[float], List[float], int]:
-    """Pool (rank, rank) pairs across benchmark cells where both metrics exist."""
-    xs: List[float] = []
-    ys: List[float] = []
-    n_cells = 0
-    for key in sorted(set(groups_a) & set(groups_b)):
-        ranks_a = competition_ranks(groups_a[key])
-        ranks_b = competition_ranks(groups_b[key])
-        n_cells += 1
-        for algo in sorted(set(ranks_a) & set(ranks_b)):
-            xs.append(float(ranks_a[algo]))
-            ys.append(float(ranks_b[algo]))
-    return xs, ys, n_cells
-
-
-def per_algo_median_ranks(groups: Dict[GroupKey, List[Row]]) -> Dict[str, float]:
-    """Median competition rank per algo across all benchmark cells for one metric."""
-    by_algo: Dict[str, List[int]] = {}
-    for rows in groups.values():
-        for algo, rank in competition_ranks(rows).items():
-            by_algo.setdefault(algo, []).append(rank)
-    return {algo: statistics.median(ranks) for algo, ranks in by_algo.items()}
-
-
-@dataclass(frozen=True)
-class MetricPairStats:
-    metric_a: str
-    metric_b: str
-    n_cells: int
-    n_pairs: int
-    spearman: Optional[float]
-    mean_abs_rank_diff: Optional[float]
-
-
-@dataclass(frozen=True)
-class SffpDiscordanceRow:
-    algo: str
-    median_delta: float
-    pct_sffp_worse: float
-    n_cells: int
-
-
-@dataclass(frozen=True)
-class MetricAgreement:
-    cell_pairs: Tuple[MetricPairStats, ...]
-    algo_pairs: Tuple[MetricPairStats, ...]
-    sffp_discordance: Tuple[SffpDiscordanceRow, ...]
-
-
-def build_metric_agreement(
-    sum3: Dict[GroupKey, List[Row]],
-    sffp: Dict[GroupKey, List[Row]],
-    pr90: Dict[GroupKey, List[Row]],
-    top3: Dict[GroupKey, List[Row]],
-) -> Optional[MetricAgreement]:
-    groups = {
-        "Sum3": sum3,
-        "SFFP": sffp,
-        "PR90": pr90,
-        "Top3": top3,
-    }
-    active = [name for name in METRIC_LABELS if groups[name]]
-    if len(active) < 2:
+    algos = sorted({algo for row in rank_rows for algo in row})
+    if len(algos) < 2:
         return None
 
-    cell_pairs: List[MetricPairStats] = []
-    algo_pairs: List[MetricPairStats] = []
-    for i, name_a in enumerate(active):
-        for name_b in active[i + 1:]:
-            xs, ys, n_cells = collect_cell_rank_pairs(
-                groups[name_a], groups[name_b]
-            )
-            rho = spearman_rho(xs, ys) if xs else None
-            mad = (
-                statistics.mean(abs(xs[j] - ys[j]) for j in range(len(xs)))
-                if xs
+    pairs: List[RankPairPValue] = []
+    for i, algo_a in enumerate(algos):
+        for algo_b in algos[i + 1:]:
+            xs: List[float] = []
+            ys: List[float] = []
+            for row in rank_rows:
+                if algo_a in row and algo_b in row:
+                    xs.append(float(row[algo_a]))
+                    ys.append(float(row[algo_b]))
+            p_value = (
+                wilcoxon_signed_rank_pvalue(xs, ys)
+                if len(xs) >= 2
                 else None
             )
-            cell_pairs.append(MetricPairStats(
-                metric_a=name_a,
-                metric_b=name_b,
-                n_cells=n_cells,
-                n_pairs=len(xs),
-                spearman=rho,
-                mean_abs_rank_diff=mad,
+            pairs.append(RankPairPValue(
+                algo_a=algo_a,
+                algo_b=algo_b,
+                n_cells=len(xs),
+                p_value=p_value,
             ))
-
-            med_a = per_algo_median_ranks(groups[name_a])
-            med_b = per_algo_median_ranks(groups[name_b])
-            algos = sorted(set(med_a) & set(med_b))
-            ax = [med_a[a] for a in algos]
-            ay = [med_b[a] for a in algos]
-            algo_pairs.append(MetricPairStats(
-                metric_a=name_a,
-                metric_b=name_b,
-                n_cells=len(algos),
-                n_pairs=len(algos),
-                spearman=spearman_rho(ax, ay),
-                mean_abs_rank_diff=(
-                    statistics.mean(abs(ax[j] - ay[j]) for j in range(len(ax)))
-                    if ax
-                    else None
-                ),
-            ))
-
-    sffp_rows: List[SffpDiscordanceRow] = []
-    if sffp:
-        deltas_by_algo: Dict[str, List[float]] = {}
-        worse_by_algo: Dict[str, List[bool]] = {}
-        for key in sorted(sffp):
-            ranks_sffp = competition_ranks(sffp[key])
-            ranks_sum3 = (
-                competition_ranks(sum3[key]) if key in sum3 else {}
-            )
-            ranks_pr90 = (
-                competition_ranks(pr90[key]) if key in pr90 else {}
-            )
-            for algo, rank_sffp in ranks_sffp.items():
-                others: List[int] = []
-                if algo in ranks_sum3:
-                    others.append(ranks_sum3[algo])
-                if algo in ranks_pr90:
-                    others.append(ranks_pr90[algo])
-                if not others:
-                    continue
-                consensus = statistics.median(others)
-                delta = float(rank_sffp) - consensus
-                deltas_by_algo.setdefault(algo, []).append(delta)
-                worse_by_algo.setdefault(algo, []).append(delta > 0)
-
-        for algo in sorted(deltas_by_algo):
-            deltas = deltas_by_algo[algo]
-            worse = worse_by_algo[algo]
-            sffp_rows.append(SffpDiscordanceRow(
-                algo=algo,
-                median_delta=statistics.median(deltas),
-                pct_sffp_worse=sum(worse) / len(worse),
-                n_cells=len(deltas),
-            ))
-
-    return MetricAgreement(
-        cell_pairs=tuple(cell_pairs),
-        algo_pairs=tuple(algo_pairs),
-        sffp_discordance=tuple(sffp_rows),
-    )
+    return RankPValueTable(pairs=tuple(pairs))
 
 
-def _fmt_rho(rho: Optional[float]) -> str:
-    if rho is None:
+def _fmt_pvalue(p_value: Optional[float]) -> str:
+    if p_value is None:
         return "."
-    return f"{rho:.3f}"
+    return f"{p_value:.4g}"
 
 
-def _fmt_float(value: Optional[float]) -> str:
-    if value is None:
-        return "."
-    return f"{value:.3f}"
-
-
-def write_metric_agreement_tsv(f, agreement: MetricAgreement) -> None:
-    f.write("# RankCorrCells\n")
-    f.write("\t".join((
-        "metric_a", "metric_b", "n_cells", "n_pairs",
-        "spearman", "mean_abs_rank_diff",
-    )) + "\n")
-    for row in agreement.cell_pairs:
+def write_rank_pvalue_tsv(f, section: str, table: RankPValueTable) -> None:
+    f.write(f"# {section}\n")
+    f.write("\t".join(("algo_a", "algo_b", "n_cells", "p_value")) + "\n")
+    for row in table.pairs:
         f.write("\t".join((
-            row.metric_a,
-            row.metric_b,
+            row.algo_a,
+            row.algo_b,
             str(row.n_cells),
-            str(row.n_pairs),
-            _fmt_rho(row.spearman),
-            _fmt_float(row.mean_abs_rank_diff),
+            _fmt_pvalue(row.p_value),
         )) + "\n")
     f.write("\n")
 
-    f.write("# RankCorrAlgos\n")
-    f.write("\t".join((
-        "metric_a", "metric_b", "n_algos", "spearman", "mean_abs_rank_diff",
-    )) + "\n")
-    for row in agreement.algo_pairs:
-        f.write("\t".join((
-            row.metric_a,
-            row.metric_b,
-            str(row.n_pairs),
-            _fmt_rho(row.spearman),
-            _fmt_float(row.mean_abs_rank_diff),
-        )) + "\n")
-    f.write("\n")
 
-    if agreement.sffp_discordance:
-        f.write("# SFFPDiscordance\n")
-        f.write("\t".join((
-            "algo", "median_delta", "pct_sffp_worse", "n_cells",
-        )) + "\n")
-        for row in agreement.sffp_discordance:
-            f.write("\t".join((
-                row.algo,
-                _fmt_float(row.median_delta),
-                f"{row.pct_sffp_worse:.3f}",
-                str(row.n_cells),
-            )) + "\n")
-        f.write("\n")
+def _rank_pvalue_lookup(
+    table: RankPValueTable,
+) -> Dict[Tuple[str, str], Optional[float]]:
+    return {(p.algo_a, p.algo_b): p.p_value for p in table.pairs}
 
 
-def format_metric_agreement_txt(agreement: MetricAgreement) -> List[str]:
-    lines: List[str] = []
+def _directional_pvalue_cell(
+    row_algo: str,
+    col_algo: str,
+    pmap: Dict[Tuple[str, str], Optional[float]],
+    rank_rows: Sequence[Dict[str, int]],
+) -> str:
+    """Prefix p-value: row>col better, row<col worse, ~ if p>0.05."""
+    a, b = (
+        (row_algo, col_algo)
+        if row_algo < col_algo
+        else (col_algo, row_algo)
+    )
+    p_value = pmap.get((a, b))
+    if p_value is None:
+        return "."
 
-    lines.append("RankCorrCells")
-    cols = ("metric_a", "metric_b", "n_cells", "n_pairs", "spearman", "mad")
-    widths = [len(c) for c in cols]
-    rows = [
-        (
-            p.metric_a,
-            p.metric_b,
-            str(p.n_cells),
-            str(p.n_pairs),
-            _fmt_rho(p.spearman),
-            _fmt_float(p.mean_abs_rank_diff),
-        )
-        for p in agreement.cell_pairs
-    ]
-    for row in rows:
+    diffs: List[float] = []
+    for row in rank_rows:
+        if row_algo in row and col_algo in row:
+            diffs.append(float(row[row_algo]) - float(row[col_algo]))
+    if not diffs:
+        return "."
+
+    if p_value > 0.05:
+        prefix = "~"
+    else:
+        med_diff = statistics.median(diffs)
+        if med_diff < 0:
+            prefix = ">"
+        elif med_diff > 0:
+            prefix = "<"
+        else:
+            prefix = "~"
+
+    return f"{prefix}{_fmt_pvalue(p_value)}"
+
+
+def format_rank_pvalue_table(
+    table: RankPValueTable,
+    algos: Sequence[str],
+    rank_rows: Sequence[Dict[str, int]],
+) -> List[str]:
+    """Symmetric off-diagonal: row vs col; mirror cell swaps > and <."""
+    if len(algos) < 2:
+        return []
+
+    pmap = _rank_pvalue_lookup(table)
+    columns = ("", *algos)
+    widths = [len(c) for c in columns]
+    matrix: List[Tuple[str, ...]] = []
+
+    for i, row_algo in enumerate(algos):
+        cells: List[str] = [row_algo]
+        for j, col_algo in enumerate(algos):
+            if i == j:
+                cells.append("")
+            else:
+                cells.append(_directional_pvalue_cell(
+                    row_algo, col_algo, pmap, rank_rows
+                ))
+        matrix.append(tuple(cells))
+
+    for row in matrix:
         for i, cell in enumerate(row):
-            widths[i] = max(widths[i], len(cell))
-    lines.append("  ".join(c.ljust(widths[i]) for i, c in enumerate(cols)))
-    for row in rows:
-        lines.append("  ".join(
-            (row[0].ljust(widths[0]), row[1].ljust(widths[1]),
-             row[2].rjust(widths[2]), row[3].rjust(widths[3]),
-             row[4].rjust(widths[4]), row[5].rjust(widths[5]))
-        ))
-    lines.append("")
-
-    lines.append("RankCorrAlgos")
-    cols = ("metric_a", "metric_b", "n_algos", "spearman", "mad")
-    widths = [len(c) for c in cols]
-    rows = [
-        (
-            p.metric_a,
-            p.metric_b,
-            str(p.n_pairs),
-            _fmt_rho(p.spearman),
-            _fmt_float(p.mean_abs_rank_diff),
-        )
-        for p in agreement.algo_pairs
-    ]
-    for row in rows:
-        for i, cell in enumerate(row):
-            widths[i] = max(widths[i], len(cell))
-    lines.append("  ".join(c.ljust(widths[i]) for i, c in enumerate(cols)))
-    for row in rows:
-        lines.append("  ".join(
-            (row[0].ljust(widths[0]), row[1].ljust(widths[1]),
-             row[2].rjust(widths[2]), row[3].rjust(widths[3]),
-             row[4].rjust(widths[4]))
-        ))
-    lines.append("")
-
-    if agreement.sffp_discordance:
-        lines.append("SFFPDiscordance")
-        cols = ("algo", "median_delta", "pct_worse", "n_cells")
-        widths = [len(c) for c in cols]
-        rows = [
-            (
-                r.algo,
-                _fmt_float(r.median_delta),
-                f"{r.pct_sffp_worse:.3f}",
-                str(r.n_cells),
-            )
-            for r in agreement.sffp_discordance
-        ]
-        for row in rows:
-            for i, cell in enumerate(row):
+            if cell:
                 widths[i] = max(widths[i], len(cell))
-        lines.append("  ".join(c.ljust(widths[i]) for i, c in enumerate(cols)))
-        for row in rows:
-            lines.append("  ".join(
-                (row[0].ljust(widths[0]), row[1].rjust(widths[1]),
-                 row[2].rjust(widths[2]), row[3].rjust(widths[3]))
-            ))
-        lines.append("")
+    for i, algo in enumerate(algos, start=1):
+        widths[i] = max(widths[i], len(algo))
 
+    lines = [
+        "  ".join(
+            columns[i].ljust(widths[i]) if i == 0 else columns[i].rjust(widths[i])
+            for i in range(len(columns))
+        ),
+    ]
+    for row in matrix:
+        cells = [row[0].ljust(widths[0])]
+        cells.extend(
+            cell.rjust(widths[i + 1]) if cell else " " * widths[i + 1]
+            for i, cell in enumerate(row[1:])
+        )
+        lines.append("  ".join(cells))
     return lines
 
 
@@ -691,7 +586,12 @@ def write_tsv(
     rank_no_sffp = build_rank_table(
         rank_sections(sum3, sffp, pr90, top3, include_sffp=False)
     )
-    agreement = build_metric_agreement(sum3, sffp, pr90, top3)
+    rank_pvalues = build_rank_pvalue_table(
+        rank_sections(sum3, sffp, pr90, top3, include_sffp=True)
+    )
+    rank_no_sffp_pvalues = build_rank_pvalue_table(
+        rank_sections(sum3, sffp, pr90, top3, include_sffp=False)
+    )
     with open(out_path, "w", encoding="utf-8", newline="\n") as f:
         if sum3:
             write_section_tsv(f, "Sum3", SUM3_COLUMNS, sum3)
@@ -705,8 +605,10 @@ def write_tsv(
             write_rank_tsv(f, "Rank", rank_table)
         if rank_no_sffp is not None:
             write_rank_tsv(f, "RankNoSFFP", rank_no_sffp)
-        if agreement is not None:
-            write_metric_agreement_tsv(f, agreement)
+        if rank_pvalues is not None:
+            write_rank_pvalue_tsv(f, "RankPValues", rank_pvalues)
+        if rank_no_sffp_pvalues is not None:
+            write_rank_pvalue_tsv(f, "RankNoSFFPPValues", rank_no_sffp_pvalues)
 
 
 def column_widths(
@@ -767,13 +669,18 @@ def write_txt(
         write_section_txt(lines, "PR90", PR90_COLUMNS, pr90)
     if top3:
         write_section_txt(lines, "Top3", TOP3_COLUMNS, top3)
-    rank_table = build_rank_table(
-        rank_sections(sum3, sffp, pr90, top3, include_sffp=True)
+    rank_sections_with_sffp = rank_sections(
+        sum3, sffp, pr90, top3, include_sffp=True
     )
-    rank_no_sffp = build_rank_table(
-        rank_sections(sum3, sffp, pr90, top3, include_sffp=False)
+    rank_sections_no_sffp = rank_sections(
+        sum3, sffp, pr90, top3, include_sffp=False
     )
-    agreement = build_metric_agreement(sum3, sffp, pr90, top3)
+    rank_table = build_rank_table(rank_sections_with_sffp)
+    rank_no_sffp = build_rank_table(rank_sections_no_sffp)
+    rank_pvalues = build_rank_pvalue_table(rank_sections_with_sffp)
+    rank_no_sffp_pvalues = build_rank_pvalue_table(rank_sections_no_sffp)
+    _, rank_rows_with_sffp = collect_rank_rows(rank_sections_with_sffp)
+    _, rank_rows_no_sffp = collect_rank_rows(rank_sections_no_sffp)
     if rank_table is not None:
         lines.append("Rank")
         lines.extend(format_rank_table(rank_table))
@@ -782,8 +689,18 @@ def write_txt(
         lines.append("RankNoSFFP")
         lines.extend(format_rank_table(rank_no_sffp))
         lines.append("")
-    if agreement is not None:
-        lines.extend(format_metric_agreement_txt(agreement))
+    if rank_pvalues is not None and rank_table is not None:
+        lines.append("RankPValues")
+        lines.extend(format_rank_pvalue_table(
+            rank_pvalues, rank_table.algos, rank_rows_with_sffp
+        ))
+        lines.append("")
+    if rank_no_sffp_pvalues is not None and rank_no_sffp is not None:
+        lines.append("RankNoSFFPPValues")
+        lines.extend(format_rank_pvalue_table(
+            rank_no_sffp_pvalues, rank_no_sffp.algos, rank_rows_no_sffp
+        ))
+        lines.append("")
     with open(out_path, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines).rstrip() + "\n")
 

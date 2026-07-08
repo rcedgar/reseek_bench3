@@ -10,8 +10,8 @@ if [ "$score_or_evalue" != score -a "$score_or_evalue" != evalue ] ; then
 	exit 1
 fi
 
-if [ "$mode" != fast -a "$mode" != sensitive ] ; then
-	echo "mode must be fast or sensitive"
+if [ "$mode" != fast -a "$mode" != sensitive -a "$mode" != verysensitive ] ; then
+	echo "mode must be fast, sensitive or verysensitive"
 	exit 1
 fi
 

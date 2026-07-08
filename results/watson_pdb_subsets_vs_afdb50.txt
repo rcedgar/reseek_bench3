@@ -1,0 +1,6 @@
+  query   _______________Elapsed time____________
+structs   foldseek  reseek-fast  reseek-sensitive
+    100         9m           
+   1000        19m           
+   4000                   
+  10000      2h33m        
