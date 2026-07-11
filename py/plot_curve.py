@@ -15,13 +15,19 @@ Examples:
 
   python plot_curve.py --type cve --input reseek.topfold.tcat \
       --output cve_topfold.svg
+
+  python plot_curve.py --type roc --input reseek.superfamily.edf \
+      --input foldseek.superfamily.edf --title "SCOP40 superfamily" \
+      --colors algo_styles.txt --output roc_superfamily.svg
+
+  # algo_styles.txt: reseek3=#d62728,2,dashed,ReSeek3
 """
 
 from __future__ import annotations
 
 import argparse
 import sys
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, NamedTuple, Optional, Tuple
 
 import matplotlib
 matplotlib.use("Agg")
@@ -43,6 +49,15 @@ SERIES_COLORS = (
     "#e377c2",
     "#7f7f7f",
 )
+
+DEFAULT_LINEWIDTH = 1.5
+
+
+class SeriesStyle(NamedTuple):
+    color: str
+    linewidth: float
+    linestyle: str
+    legend_label: Optional[str]
 
 
 def parse_header_line(content: str) -> List[Tuple[str, str]]:
@@ -178,6 +193,60 @@ def plot_title(curve_type: CurveType, truth: str) -> str:
     return f"{curve_type.upper()} ({truth})"
 
 
+def parse_series_style(spec: str) -> SeriesStyle:
+    """Parse color[,lw][,ls][,label]; lw defaults to 1, ls to solid."""
+    parts = [p.strip() for p in spec.split(",", 3)]
+    color = parts[0]
+    if not color:
+        raise ValueError("expected color[,lw][,ls][,label]")
+    lw_s = parts[1] if len(parts) > 1 else ""
+    ls_s = parts[2] if len(parts) > 2 else ""
+    legend_s = parts[3] if len(parts) > 3 else ""
+    linewidth = float(lw_s) if lw_s else 1.0
+    linestyle = ls_s if ls_s else "solid"
+    legend_label = legend_s if legend_s else None
+    return SeriesStyle(color, linewidth, linestyle, legend_label)
+
+
+def load_series_styles(path: Optional[str]) -> Dict[str, SeriesStyle]:
+    """Load algo_name=color[,lw][,ls][,label]; extra or missing names ignored."""
+    styles: Dict[str, SeriesStyle] = {}
+    if path is None:
+        return styles
+    with open(path, encoding="utf-8") as f:
+        for lineno, line in enumerate(f, start=1):
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if "=" not in line:
+                raise ValueError(
+                    f"{path}:{lineno}: expected algo_name=color[,lw][,ls][,label]"
+                )
+            name, spec = line.split("=", 1)
+            name = name.strip()
+            spec = spec.strip()
+            if not name or not spec:
+                raise ValueError(
+                    f"{path}:{lineno}: expected algo_name=color[,lw][,ls][,label]"
+                )
+            try:
+                styles[name] = parse_series_style(spec)
+            except ValueError as exc:
+                raise ValueError(f"{path}:{lineno}: {exc}") from exc
+    return styles
+
+
+def series_style(label: str, idx: int, styles: Dict[str, SeriesStyle]) -> SeriesStyle:
+    if label in styles:
+        return styles[label]
+    return SeriesStyle(
+        SERIES_COLORS[idx % len(SERIES_COLORS)],
+        DEFAULT_LINEWIDTH,
+        "solid",
+        None,
+    )
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(
         description="Plot one CVE / ROC / PR panel from homval summary files."
@@ -210,7 +279,21 @@ def main() -> int:
     )
     ap.add_argument("--xlim", help="X axis limits as LO,HI")
     ap.add_argument("--ylim", help="Y axis limits as LO,HI")
+    ap.add_argument(
+        "--title",
+        help="Plot title (default: CURVE_TYPE (truth standard))",
+    )
+    ap.add_argument(
+        "--colors",
+        metavar="PATH",
+        help=(
+            "Text file with algo_name=color[,lw][,ls][,label] per line; "
+            "missing names use defaults"
+        ),
+    )
     args = ap.parse_args()
+
+    styles = load_series_styles(args.colors)
 
     series: List[Tuple[str, List[Tuple[float, float]]]] = []
     truth: Optional[str] = None
@@ -237,15 +320,23 @@ def main() -> int:
 
     assert truth is not None and kind is not None
 
-    fig, ax = plt.subplots(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(4, 3))
 
     for idx, (label, points) in enumerate(series):
         if not points:
             continue
         xs = [p[0] for p in points]
         ys = [p[1] for p in points]
-        color = SERIES_COLORS[idx % len(SERIES_COLORS)]
-        ax.plot(xs, ys, color=color, linewidth=1.5, label=label)
+        style = series_style(label, idx, styles)
+        legend_label = style.legend_label if style.legend_label is not None else label
+        ax.plot(
+            xs,
+            ys,
+            color=style.color,
+            linewidth=style.linewidth,
+            linestyle=style.linestyle,
+            label=legend_label,
+        )
 
     ax.set_xscale(args.xscale)
     ax.set_yscale(args.yscale)
@@ -260,7 +351,8 @@ def main() -> int:
     xlabel, ylabel = axis_labels(args.type, kind)
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
-    ax.set_title(plot_title(args.type, truth))
+    title = args.title if args.title is not None else plot_title(args.type, truth)
+    ax.set_title(title)
     ax.grid(True, which="major", linewidth=0.5, alpha=0.5)
 
     if len(series) > 1 or args.type == "roc":
