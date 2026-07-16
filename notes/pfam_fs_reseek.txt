@@ -1,0 +1,4 @@
+1000 reseek_search_pdbsubset1000_pdb.log:Elapsed time 02:28 = 148 = 5 / sec
+100 reseek_search_pdbsubset100_pdb.log:Elapsed time 00:19 = 19 = 5 / sec
+
+5*5 = 25
