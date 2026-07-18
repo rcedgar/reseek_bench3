@@ -1,0 +1,13 @@
+
+reseek v3.0.i86linux64 [3334afa]
+reseek -fast_bench_hits qdx.hits -truth sf -log bench_qdx.log 
+Started Fri Jul 17 17:28:51 2026
+lookup: doms=8291 SFs=1538 NT=277680 NF=68454710
+E-values(1,2,3)
+78884 hits (0.229% of triangle), 64114 TPs
+SEPQ0.1=0.298 SEPQ1=0.407 SEPQ10=0.462 Sum3=1.667 sf qdx
+
+Elapsed time 00:01
+Max memory 143Mb
+Finished Fri Jul 17 17:28:52 2026
+Peak mem 414Mb, avg. CPU 40.1%

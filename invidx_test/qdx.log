@@ -1,0 +1,69 @@
+
+reseek v3.0.i86linux64 [3334afa]
+reseek -flat_search_kappa ../big_reseek_dbs/scop40x.bcb -db ../big_reseek_dbs/scop40x.bcb -columns query+target+pvalue -stats sf -fast -log qdx.log -output qdx.hits 
+Started Fri Jul 17 17:27:10 2026
+[default_alphadir]: aa20+angle32+mendist32+nendist32+nensec32+pack32+pendist32+pm2+pmdd32+ppack32+rendist32+sec32+turnd32
+fast sf
+
+      0.89  open
+     0.089  ext
+      0.95  self_w
+      0.64  rev_w
+     0.045  lddt_w
+         0  lddtx_w
+  0.000175  dali_w
+         0  dalix_w
+       0.5  nu_filter_self_w
+      0.29  nu_filter_rev_w
+       114  nu_filter_min_fwd_score
+        40  nu_filter_min_combined_score
+         4  kappa_kmer_nrones
+         7  kappa_kmer_width
+   1048576  kappa_dict_size
+        65  kappa_min_kmerpairscore
+         0  kappa_min_diagscore
+        32  kappa_min_chainlength
+      1500  rsb_size
+         0  kappa_hsp_rsb_prune
+        33  kappa_max_pos_logodds
+         0  kappa_onehitdiag
+         0  kappa_twohitdiag
+           kappa_diag_mode  unique_fine
+        12  nn_min_offset
+       256  distmx_bandwidth
+         5  turnd_w
+         4  angle_n
+LDDT: R0=15 thresholds 0.5 1.0 2.0 4.0
+
+13 alphas, sum_sizes=374
+      aa20    0.528  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ nendist32    0.118  ■■■■■■■■■
+    pack32    0.088  ■■■■■■■
+   angle32    0.087  ■■■■■■
+     sec32    0.059  ■■■■
+   turnd32    0.035  ■■
+ rendist32    0.022  ■
+  nensec32    0.016  ■
+ pendist32    0.015  ■
+       pm2    0.014  ■
+ mendist32    0.008  o
+    pmdd32    0.008  o
+   ppack32    0.002  o
+     TOTAL    1.000
+Index query k-mer neighborhoods
+Kappa diag mode unique_fine
+Kappa prefilter hits  12.4M
+Kappa filter 13 secs
+         0  Nu filter max accepts
+  12432906  Nu filter npair
+   6590358  Nu filter nreject_fwd
+   2175219  Nu filter nreject_cmb
+   3667329  Nu filter pass
+   1207884  Mega filter reject
+   1386534  Mega filter pass
+Nu filter 76 secs
+
+Elapsed time 01:40
+Max memory 8.41Gb
+Finished Fri Jul 17 17:28:50 2026
+Peak mem 8.41Gb, avg. CPU 98.4%
