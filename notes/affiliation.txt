@@ -1,0 +1,62 @@
+biorxiv recently introduced a policy which rejects a new preprint unless the authors have an academic affiliation, which I currently do not have, and this is a serious handicap for me in publishing my work. I need to find a solution to this, so the first step is to define the contours of their policy -- does it apply to corresponding author only? do they accept preprints from companies who do research? in practice, how do they check -- I'm guessing I would need an email address at an institution in a database somewhere? is there a path for me to get an academic affiliation such as a visiting scholar which gets me an email address without becoming a full-time employee?
+
+Hi Joanna,
+
+Congratulations on the CLOAK publication.
+
+I'm writing because I just ran into a problem and I'm hoping you might be able to help. Biorxiv recently introduced a policy which rejects a new preprint unless the authors have an academic affiliation. I discovered this because they rejected my last submission a couple of days ago, which describes a major update to the Reseek protein structure alignment algorithm (attached, feedback welcome).  Best I can tell, the new policy is not described, probably by design to hinder AI paper mills from working around the gate, and an email to their helpdesk received a biolerplate response. I could submit to a different preprint server, but IMO there is no substitute for biorxiv for promoting new work in this field. Would it be possible for you to get me something like an unpaid Visiting Scholar appointment to your lab that includes an arizona.edu address? If it helps, I'd be glad to help with any on-going projects which fit my skills; authorship is not important unless I'm really making a decisive contribution. If this doesn't work for you, maybe you can think of another PI who might be up for this kind of arrangement?
+
+Best,
+Robert.
+
+Hi Arend,
+
+I'm guessing that no news is bad news with TensorBio; if so, very unfortunate, I thought this idea had a good chance of working. 
+
+Would be great to catch up, but I'm also writing because I just ran into a problem and I'm hoping you might be able to help. Biorxiv recently introduced a policy which rejects a new preprint unless the authors have an academic affiliation. I discovered this because they rejected my last submission a couple of days ago. Best I can tell, details are not described, probably by design to hinder AI paper mills from working around the gate (an email to their helpdesk received an un-helpful biolerplate response). I could submit to a different preprint server, but IMO there is no substitute for biorxiv for promoting new work in this field. To fix this, I will probably need a .edu or .org address from an instution in their database, so I'm wondering if it's possible to score an unpaid appointment to a lab at Stanford or elsewhere -- Visiting Scholar, or something like that. By all means, I'd be interesting in collaborating or donating informal pro bono time if there is a fit for my skills somewhere. Any ideas will be appreciated.
+
+Best,
+Robert.
+
+
+https://igdore.org/researchers/
+
+Lisa Hsu
+Academic Title: PhD (Molecular Microbiology)
+Research Areas: Molecular Microbiology; Bioinformatics; Analytical Chemistry
+Geographical Location: Taiwan
+URL: bit.ly/Lisagoogle
+Contact: lisa.hsu@igdore.org
+
+Alex Lancaster
+Academic Title: PhD (Integrative Biology)
+Research Areas: Evolutionary Biology & Complex Systems
+Other Affiliations: Ronin Institute & Amber Biology
+Geographical Locations: USA
+URL: Ronin Profile
+Contact: alex.lancaster@igdore.org
+Twitter: @LancasterSci
+
+Gabriel Schweizer
+Academic Title: PhD (Biology, Bioinformatics, Data Science)
+Research Areas: Genomics and transcriptomics in plants, fungi and related species
+Geographical Location: Germany
+Social media: LinkedIn
+ORCID: 0000-0002-8679-4598
+Contact: gabriel.schweizer@igdore.org
+
+Ralf Stephan
+Academic Title: N.A.
+Research Areas: Computer science; Bioinformatics; Discrete Mathematics
+Geographical Location: Germany
+Social media: Twitter
+ORCID: 0000-0002-4650-631X
+Contact: ralf.stephan@igdore.org
+
+Gaia Zaffaroni
+Academic Title: PhD (Computational Biology)
+Research Areas: Computational Biology; Systems Biology;
+Bioinformatics; Data Analysis
+Geographical Location: Luxembourg
+Contact: gaia.zaffaroni@igdore.org 
+Twitter: @gaiazaff

@@ -1,7 +1,7 @@
 
 reseek v3.0.i86linux64 [db12372]
-reseek -createindex ../big_reseek_dbs/scop40x.bcb -output ../big_invidx_test/scop40x.kdx -log createindex.log 
-Started Sat Jul 18 16:39:01 2026
+reseek -idx_search_kappa ../big_reseek_dbs/scop40x.bcb -db ../big_reseek_dbs/scop40x.bcb -columns query+target+pvalue -stats sf -fast -threads 64 -log search_max.log -output max.hits -unique_kmer -max_seqs 1500 
+Started Sat Jul 18 16:40:50 2026
 [default_alphadir]: aa20+angle32+mendist32+nendist32+nensec32+pack32+pendist32+pm2+pmdd32+ppack32+rendist32+sec32+turnd32
 fast sf
 
@@ -50,12 +50,23 @@ LDDT: R0=15 thresholds 0.5 1.0 2.0 4.0
     pmdd32    0.008  o
    ppack32    0.002  o
      TOTAL    1.000
-kappa_dex parallel build  threads=80  nseq=8291  unique_kmer=F
-RowSizes: N=1048576, Min=0, LoQ=0, Med=0, HiQ=0, Max=1696, Avg=1.07812
-Total = 1.1M
-Wrote kappa_dex ../big_invidx_test/scop40x.kdx  nseq=8291  postings=1.1M (6.8Mb)  dict=1048576
+Kappa diag mode unique_fine
+Building kappa_dex on the fly from ../big_reseek_dbs/scop40x.bcb  (-unique_kmer)
+kappa_dex unique_kmer=yes (one posting per kmer per seq)
+kappa_dex parallel build  threads=80  nseq=8291  unique_kmer=T
+On-the-fly index ready  nseq=8291  postings=1.1M
+Kappa DB-index filter threads 80  queries 8291  seed_buf 1000000  max_seqs 1500
+Kappa DB-index filter 3 secs  prehsp=309.9M  rsb_pairs=12432906  hsp_targets=12432906  hsp_skip=146756595  flushes=8291
+         0  Nu filter max accepts
+  12432906  Nu filter npair
+   6604234  Nu filter nreject_fwd
+   2163086  Nu filter nreject_cmb
+   3665586  Nu filter pass
+   1206618  Mega filter reject
+   1386349  Mega filter pass
+Nu filter 75 secs
 
-Elapsed time 00:00
-Max memory 217Mb
-Finished Sat Jul 18 16:39:01 2026
-Peak mem 217Mb, avg. CPU 3.0%
+Elapsed time 01:25
+Max memory 8.15Gb
+Finished Sat Jul 18 16:42:15 2026
+Peak mem 8.15Gb, avg. CPU 113.4%

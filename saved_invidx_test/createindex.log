@@ -1,7 +1,7 @@
 
-reseek v3.0.i86linux64 [db12372]
+reseek v3.0.i86linux64 [3334afa]
 reseek -createindex ../big_reseek_dbs/scop40x.bcb -output ../big_invidx_test/scop40x.kdx -log createindex.log 
-Started Sat Jul 18 16:39:01 2026
+Started Fri Jul 17 17:25:42 2026
 [default_alphadir]: aa20+angle32+mendist32+nendist32+nensec32+pack32+pendist32+pm2+pmdd32+ppack32+rendist32+sec32+turnd32
 fast sf
 
@@ -50,12 +50,15 @@ LDDT: R0=15 thresholds 0.5 1.0 2.0 4.0
     pmdd32    0.008  o
    ppack32    0.002  o
      TOTAL    1.000
-kappa_dex parallel build  threads=80  nseq=8291  unique_kmer=F
 RowSizes: N=1048576, Min=0, LoQ=0, Med=0, HiQ=0, Max=1696, Avg=1.07812
-Total = 1.1M
-Wrote kappa_dex ../big_invidx_test/scop40x.kdx  nseq=8291  postings=1.1M (6.8Mb)  dict=1048576
+Total = 1130494 (1.1M)
+Wrote kappa_dex ../big_invidx_test/scop40x.kdx  nseq=8291  postings=1130494 (6.8Mb)  dict=1048576
+Read kappa_dex ../big_invidx_test/scop40x.kdx  nseq=8291  postings=1130494 (6.8Mb)  dict=1048576
+Round-trip OK
+RowSizes: N=1048576, Min=0, LoQ=0, Med=0, HiQ=0, Max=1696, Avg=1.07812
+Total = 1130494 (1.1M)
 
-Elapsed time 00:00
-Max memory 217Mb
-Finished Sat Jul 18 16:39:01 2026
-Peak mem 217Mb, avg. CPU 3.0%
+Elapsed time 00:01
+Max memory 25Mb
+Finished Fri Jul 17 17:25:43 2026
+Peak mem 57Mb, avg. CPU 0.7%

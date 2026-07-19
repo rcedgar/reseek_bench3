@@ -1,0 +1,13 @@
+
+reseek v3.0.i86linux64 [db12372]
+reseek -fast_bench_hits shards.hits -truth sf -log bench_shards.log 
+Started Sat Jul 18 16:48:09 2026
+lookup: doms=8291 SFs=1538 NT=277680 NF=68454710
+E-values(1,2,3)
+78936 hits (0.23% of triangle), 64150 TPs
+SEPQ0.1=0.298 SEPQ1=0.407 SEPQ10=0.462 Sum3=1.668 sf shards
+
+Elapsed time 00:00
+Max memory 143Mb
+Finished Sat Jul 18 16:48:09 2026
+Peak mem 414Mb, avg. CPU 45.6%

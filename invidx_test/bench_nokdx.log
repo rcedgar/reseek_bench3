@@ -1,0 +1,13 @@
+
+reseek v3.0.i86linux64 [db12372]
+reseek -fast_bench_hits nokdx.hits -truth sf -log bench_nokdx.log 
+Started Sat Jul 18 16:48:12 2026
+lookup: doms=8291 SFs=1538 NT=277680 NF=68454710
+E-values(1,2,3)
+78875 hits (0.229% of triangle), 64104 TPs
+SEPQ0.1=0.298 SEPQ1=0.407 SEPQ10=0.462 Sum3=1.667 sf nokdx
+
+Elapsed time 00:00
+Max memory 143Mb
+Finished Sat Jul 18 16:48:12 2026
+Peak mem 413Mb, avg. CPU 54.3%
