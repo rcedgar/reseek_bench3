@@ -1,0 +1,3 @@
+reseek_qidx
+n=5 slope=5.04809 intercept=-38.3867
+seconds = 5.04809 * N + -38.3867

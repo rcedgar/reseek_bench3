@@ -1,0 +1,3 @@
+foldseek
+n=5 slope=0.898793 intercept=509.481
+seconds = 0.898793 * N + 509.481

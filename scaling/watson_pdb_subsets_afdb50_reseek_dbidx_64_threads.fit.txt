@@ -1,0 +1,3 @@
+reseek_dbidx
+n=5 slope=4.98708 intercept=112.991
+seconds = 4.98708 * N + 112.991
