@@ -11,7 +11,7 @@ mkdir -p ../time
 for ref in scop40 cath40
 do
 	db=../big_reseek_dbs/$ref.bcb
-	for mode in fast sensitive
+	for mode in fast sensitive verysensitive
 	do
 		for truth in family superfamily fold
 		do
