@@ -1,0 +1,11 @@
+
+reseek v2.8.win64 [17268ee]
+C:\src\reseek\github_releases\reseek-v2.8-win64.exe -search ../big_reseek_dbs/scop40x.bca -fast -db ../big_reseek_dbs/scop40x.bca -output ../big_hits/reseek28_cygwin_fast.scop40x.hits -columns query+target+evalue -log ../logs/reseek28_cygwin_fast.scop40x.search.log 
+Started Sun Jul 26 17:53:18 2026
+MuFilterTsvFN=./rce.3c2bc011.tmp
+g_QueryNeighborhood=F
+Post-mu 101 secs
+
+Elapsed time 02:12
+Max memory 4.8Gb
+Finished Sun Jul 26 17:55:30 2026

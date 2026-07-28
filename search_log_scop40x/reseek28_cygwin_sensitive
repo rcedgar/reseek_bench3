@@ -1,0 +1,19 @@
+
+reseek v2.8.win64 [17268ee]
+C:\src\reseek\github_releases\reseek-v2.8-win64.exe -search ../big_reseek_dbs/scop40x.bca -sensitive -db ../big_reseek_dbs/scop40x.bca -output ../big_hits/reseek28_cygwin_sensitive.scop40x.hits -columns query+target+evalue -log ../logs/reseek28_cygwin_sensitive.scop40x.search.log 
+Started Sun Jul 26 17:55:30 2026
+
+     03:04  Search time
+    989.4k  Hits (max E-value 10)
+      8291  DB chains
+      8291  Query chains
+      45.0  Chains/sec
+    373.6k  Comparisons/sec
+    5837.3  Comparisons/sec/thread (64 threads)
+DSSAligner::Stats() alns 67.8M, mufil 67790522/60439146 89.2% (sat 29190) xfil 0.0%
+MKF 958508 pairs, 113442 with HSPs (11.8%), box alns 0 fract 0, hsps/chain 1.2
+QP cache hits 0, misses 0
+
+Elapsed time 03:05
+Max memory 240Mb
+Finished Sun Jul 26 17:58:35 2026

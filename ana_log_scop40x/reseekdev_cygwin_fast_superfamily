@@ -1,0 +1,13 @@
+
+reseek v3.0.win64 [a85616f-dirty]
+C:\src\reseek\src\Release\reseek.exe -fast_bench_hits ../big_hits/reseekdev_cygwin_fast_superfamily.scop40x.hits -truth superfamily -log ../ana_log/reseekdev_cygwin_fast_superfamily.scop40x 
+Started Sun Jul 26 17:50:43 2026
+lookup: doms=8291 SFs=1538 NT=277680 NF=68454710
+E-values(1,2,3)
+78786 hits (0.229% of triangle), 64038 TPs
+SEPQ0.1=0.298 SEPQ1=0.407 SEPQ10=0.461 Sum3=1.668 sf reseekdev_cygwin_fast_superfamily.scop40x
+
+Elapsed time 00:01
+Max memory 142Mb
+Finished Sun Jul 26 17:50:44 2026
+Peak mem 423Mb, avg. CPU 99.5%

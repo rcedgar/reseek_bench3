@@ -1,0 +1,57 @@
+
+==== time fast
+   Secs      Pct  Method
+     77  +18.46%  reseek301.cygwin.fast.superfamily
+     74  +13.85%  reseek301.cygwin.fast.fold
+     70   +7.69%  reseek301.cygwin.fast.family
+     69   +6.15%  reseekdev.cygwin.fast.fold
+     69   +6.15%  reseekdev.cygwin.fast.superfamily
+     65           reseekdev.cygwin.fast.family
+
+==== time sensitive
+   Secs      Pct  Method
+    142  +33.96%  reseek301.cygwin.sensitive.superfamily
+    140  +32.08%  reseek301.cygwin.sensitive.fold
+    136  +28.30%  reseek301.cygwin.sensitive.family
+    114   +7.55%  reseekdev.cygwin.sensitive.superfamily
+    112   +5.66%  reseekdev.cygwin.sensitive.fold
+    106           reseekdev.cygwin.sensitive.family
+
+==== memory fast
+     Gb      Pct  Method
+     12  +45.01%  reseekdev.cygwin.fast.superfamily
+     11  +35.73%  reseekdev.cygwin.fast.fold
+     11  +29.93%  reseekdev.cygwin.fast.family
+      9  +14.85%  reseek301.cygwin.fast.superfamily
+      9   +5.68%  reseek301.cygwin.fast.fold
+      8           reseek301.cygwin.fast.family
+
+==== memory sensitive
+     Gb      Pct  Method
+     17  +82.38%  reseekdev.cygwin.sensitive.superfamily
+     16  +74.09%  reseekdev.cygwin.sensitive.fold
+     16  +68.91%  reseekdev.cygwin.sensitive.family
+     10  +12.95%  reseek301.cygwin.sensitive.superfamily
+     10   +4.66%  reseek301.cygwin.sensitive.fold
+      9           reseek301.cygwin.sensitive.family
+
+====  fam
+SEPQ0.1=0.171 SEPQ1=0.367 SEPQ10=0.784 Sum3=1.677 reseek28.cygwin
+SEPQ0.1=0.222 SEPQ1=0.474 SEPQ10=0.669 Sum3=1.824 reseekdev.cygwin.fast.family
+SEPQ0.1=0.222 SEPQ1=0.474 SEPQ10=0.669 Sum3=1.824 reseek301.cygwin.fast.family
+SEPQ0.1=0.222 SEPQ1=0.474 SEPQ10=0.685 Sum3=1.840 reseek301.cygwin.sensitive.family
+SEPQ0.1=0.222 SEPQ1=0.473 SEPQ10=0.686 Sum3=1.840 reseekdev.cygwin.sensitive.family
+
+====  fold
+SEPQ0.1=0.155 SEPQ1=0.207 SEPQ10=0.292 Sum3=0.914 reseek28.cygwin
+SEPQ0.1=0.197 SEPQ1=0.306 SEPQ10=0.374 Sum3=1.227 reseekdev.cygwin.fast.fold
+SEPQ0.1=0.198 SEPQ1=0.306 SEPQ10=0.375 Sum3=1.229 reseek301.cygwin.fast.fold
+SEPQ0.1=0.204 SEPQ1=0.325 SEPQ10=0.414 Sum3=1.311 reseek301.cygwin.sensitive.fold
+SEPQ0.1=0.207 SEPQ1=0.334 SEPQ10=0.440 Sum3=1.356 reseekdev.cygwin.sensitive.fold
+
+====  sf
+SEPQ0.1=0.252 SEPQ1=0.381 SEPQ10=0.501 Sum3=1.575 reseek28.cygwin
+SEPQ0.1=0.298 SEPQ1=0.407 SEPQ10=0.461 Sum3=1.668 reseekdev.cygwin.fast.superfamily
+SEPQ0.1=0.298 SEPQ1=0.407 SEPQ10=0.462 Sum3=1.668 reseek301.cygwin.fast.superfamily
+SEPQ0.1=0.302 SEPQ1=0.422 SEPQ10=0.490 Sum3=1.726 reseek301.cygwin.sensitive.superfamily
+SEPQ0.1=0.304 SEPQ1=0.427 SEPQ10=0.503 Sum3=1.750 reseekdev.cygwin.sensitive.superfamily

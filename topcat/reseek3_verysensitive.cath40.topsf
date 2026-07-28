@@ -1,0 +1,8 @@
+# algo=reseek3_verysensitive
+# reference=cath40
+# truth=topsf
+# fields=1,2,3
+# score_direction=lower_better
+# N_possible_tp=0
+# TEPQ0.001=0.000 TEPQ0.01=0.000 TEPQ0.1=0.000 Top3=0.000
+domain	S_tp	S_xf

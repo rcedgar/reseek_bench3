@@ -1,101 +1,115 @@
 # Sum3>family>cath40
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
-0.028	0.117	0.188	0.420	reseek3_fast
-0.028	0.117	0.202	0.434	reseek3_sensitive
+0.028	0.116	0.188	0.420	reseek3_fast
+0.028	0.116	0.211	0.441	reseek3_sensitive
+0.028	0.115	0.217	0.444	reseek3_verysensitive
 0.060	0.144	0.278	0.613	foldseek
 
 # Sum3>family>scop40
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.019	0.130	0.507	0.741	dali
 0.022	0.149	0.613	0.882	foldseek
-0.022	0.259	0.630	1.062	reseek3_fast
+0.022	0.259	0.629	1.061	reseek3_fast
 0.022	0.224	0.685	1.064	tm
-0.022	0.259	0.654	1.087	reseek3_sensitive
+0.022	0.259	0.660	1.091	reseek3_sensitive
+0.022	0.259	0.662	1.094	reseek3_verysensitive
 
 # Sum3>family>scop40x
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.068	0.207	0.627	1.074	dali
 0.094	0.260	0.725	1.303	foldseek
 0.174	0.404	0.762	1.716	tm
-0.222	0.475	0.663	1.820	reseek3_fast
-0.222	0.475	0.681	1.838	reseek3_sensitive
+0.222	0.474	0.662	1.818	reseek3_fast
+0.222	0.474	0.685	1.839	reseek3_sensitive
+0.222	0.473	0.686	1.840	reseek3_verysensitive
 
 # Sum3>fold>cath40
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.003	0.009	0.022	0.041	foldseek
 0.004	0.012	0.015	0.042	reseek3_fast
-0.004	0.013	0.017	0.045	reseek3_sensitive
+0.004	0.014	0.021	0.051	reseek3_sensitive
+0.004	0.015	0.023	0.055	reseek3_verysensitive
 
 # Sum3>fold>scop40
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.081	0.174	0.293	0.718	foldseek
 0.075	0.223	0.364	0.850	dali
-0.132	0.235	0.309	0.925	reseek3_fast
+0.133	0.235	0.309	0.927	reseek3_fast
 0.101	0.208	0.436	0.951	tm
-0.136	0.247	0.347	0.991	reseek3_sensitive
+0.141	0.256	0.381	1.047	reseek3_sensitive
+0.143	0.259	0.399	1.072	reseek3_verysensitive
 
 # Sum3>fold>scop40x
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.150	0.226	0.363	1.003	foldseek
-0.191	0.291	0.344	1.163	reseek3_fast
-0.199	0.313	0.384	1.251	reseek3_sensitive
+0.191	0.290	0.343	1.161	reseek3_fast
 0.145	0.288	0.543	1.264	tm
+0.204	0.328	0.424	1.323	reseek3_sensitive
 0.199	0.303	0.478	1.330	dali
+0.207	0.335	0.443	1.360	reseek3_verysensitive
 
 # Sum3>superfamily>cath40
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.060	0.144	0.278	0.613	foldseek
-0.087	0.200	0.282	0.756	reseek3_fast
-0.089	0.209	0.309	0.800	reseek3_sensitive
+0.088	0.200	0.282	0.757	reseek3_fast
+0.090	0.214	0.328	0.828	reseek3_sensitive
+0.090	0.218	0.338	0.845	reseek3_verysensitive
 
 # Sum3>superfamily>scop40
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.075	0.171	0.432	0.837	dali
 0.105	0.227	0.413	0.963	foldseek
 0.115	0.237	0.418	1.004	tm
-0.218	0.354	0.421	1.388	reseek3_fast
-0.221	0.369	0.454	1.450	reseek3_sensitive
+0.219	0.354	0.421	1.390	reseek3_fast
+0.223	0.375	0.475	1.484	reseek3_sensitive
+0.224	0.377	0.486	1.499	reseek3_verysensitive
 
 # Sum3>superfamily>scop40x
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.102	0.193	0.493	0.987	dali
 0.122	0.265	0.452	1.092	tm
 0.132	0.269	0.469	1.136	foldseek
-0.294	0.396	0.442	1.624	reseek3_fast
-0.298	0.413	0.471	1.687	reseek3_sensitive
+0.295	0.395	0.441	1.623	reseek3_fast
+0.302	0.423	0.493	1.732	reseek3_sensitive
+0.304	0.427	0.504	1.753	reseek3_verysensitive
 
 # Sum3>superfamilyx>cath40
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.078	0.236	0.395	0.905	foldseek
-0.121	0.259	0.282	0.912	reseek3_fast
-0.125	0.279	0.309	0.977	reseek3_sensitive
+0.121	0.259	0.282	0.913	reseek3_fast
+0.127	0.294	0.337	1.032	reseek3_sensitive
+0.128	0.303	0.356	1.067	reseek3_verysensitive
 
 # Sum3>superfamilyx>scop40
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.176	0.330	0.466	1.314	foldseek
 0.156	0.366	0.549	1.409	dali
 0.216	0.361	0.555	1.529	tm
-0.285	0.393	0.421	1.580	reseek3_fast
-0.293	0.417	0.454	1.665	reseek3_sensitive
+0.286	0.393	0.421	1.583	reseek3_fast
+0.295	0.424	0.475	1.701	reseek3_sensitive
+0.295	0.427	0.486	1.717	reseek3_verysensitive
 
 # Sum3>superfamilyx>scop40x
 SEPQ0.1	SEPQ1	SEPQ10	Sum3	algo
 0.303	0.405	0.530	1.743	foldseek
 0.290	0.434	0.601	1.832	tm
-0.368	0.438	0.442	1.835	reseek3_fast
-0.382	0.463	0.471	1.931	reseek3_sensitive
+0.368	0.437	0.441	1.833	reseek3_fast
+0.389	0.477	0.493	1.987	reseek3_sensitive
 0.334	0.466	0.630	1.997	dali
+0.391	0.483	0.504	2.009	reseek3_verysensitive
 
 # SFFP>family>cath40
 SFFP	algo
 0.153	reseek3_fast
-0.160	reseek3_sensitive
+0.164	reseek3_sensitive
+0.166	reseek3_verysensitive
 0.217	foldseek
 
 # SFFP>family>scop40
 SFFP	algo
 0.304	reseek3_fast
-0.310	reseek3_sensitive
+0.311	reseek3_sensitive
+0.311	reseek3_verysensitive
 0.337	foldseek
 0.357	dali
 0.360	tm
@@ -103,7 +117,8 @@ SFFP	algo
 # SFFP>family>scop40x
 SFFP	algo
 0.527	reseek3_fast
-0.535	reseek3_sensitive
+0.536	reseek3_sensitive
+0.536	reseek3_verysensitive
 0.588	foldseek
 0.615	tm
 0.634	dali
@@ -112,13 +127,15 @@ SFFP	algo
 SFFP	algo
 0.012	reseek3_fast
 0.013	foldseek
-0.013	reseek3_sensitive
+0.015	reseek3_sensitive
+0.016	reseek3_verysensitive
 
 # SFFP>fold>scop40
 SFFP	algo
 0.230	foldseek
 0.239	reseek3_fast
-0.261	reseek3_sensitive
+0.276	reseek3_sensitive
+0.285	reseek3_verysensitive
 0.338	tm
 0.346	dali
 
@@ -126,7 +143,8 @@ SFFP	algo
 SFFP	algo
 0.257	foldseek
 0.271	reseek3_fast
-0.293	reseek3_sensitive
+0.312	reseek3_sensitive
+0.322	reseek3_verysensitive
 0.378	tm
 0.397	dali
 
@@ -134,50 +152,57 @@ SFFP	algo
 SFFP	algo
 0.208	reseek3_fast
 0.217	foldseek
-0.221	reseek3_sensitive
+0.231	reseek3_sensitive
+0.238	reseek3_verysensitive
 
 # SFFP>superfamily>scop40
 SFFP	algo
 0.363	reseek3_fast
 0.385	foldseek
-0.385	reseek3_sensitive
+0.396	reseek3_sensitive
+0.401	reseek3_verysensitive
 0.447	tm
 0.486	dali
 
 # SFFP>superfamily>scop40x
 SFFP	algo
-0.399	reseek3_fast
+0.398	reseek3_fast
 0.419	foldseek
-0.420	reseek3_sensitive
+0.434	reseek3_sensitive
+0.441	reseek3_verysensitive
 0.493	tm
 0.541	dali
 
 # SFFP>superfamilyx>cath40
 SFFP	algo
 0.252	reseek3_fast
-0.274	reseek3_sensitive
+0.294	reseek3_sensitive
+0.307	reseek3_verysensitive
 0.309	foldseek
 
 # SFFP>superfamilyx>scop40
 SFFP	algo
 0.390	reseek3_fast
-0.419	reseek3_sensitive
 0.432	foldseek
+0.432	reseek3_sensitive
+0.438	reseek3_verysensitive
 0.534	tm
 0.555	dali
 
 # SFFP>superfamilyx>scop40x
 SFFP	algo
-0.426	reseek3_fast
-0.452	reseek3_sensitive
+0.425	reseek3_fast
+0.469	reseek3_sensitive
 0.475	foldseek
+0.476	reseek3_verysensitive
 0.587	tm
 0.626	dali
 
 # PR90>family>cath40
 PR90	algo
-0.1729	reseek3_fast
-0.179	reseek3_sensitive
+0.1728	reseek3_fast
+0.1791	reseek3_verysensitive
+0.1796	reseek3_sensitive
 0.2013	foldseek
 
 # PR90>family>scop40
@@ -185,6 +210,7 @@ PR90	algo
 0	foldseek
 0	reseek3_fast
 0	reseek3_sensitive
+0	reseek3_verysensitive
 0	tm
 0.0002575	dali
 
@@ -193,57 +219,65 @@ PR90	algo
 0.05771	dali
 0.09115	foldseek
 0.2449	tm
-0.3472	reseek3_fast
-0.3475	reseek3_sensitive
+0.3467	reseek3_fast
+0.3469	reseek3_sensitive
+0.3469	reseek3_verysensitive
 
 # PR90>fold>cath40
 PR90	algo
-0.01542	reseek3_fast
-0.01746	reseek3_sensitive
+0.0154	reseek3_fast
+0.02087	reseek3_sensitive
 0.02242	foldseek
+0.02336	reseek3_verysensitive
 
 # PR90>fold>scop40
 PR90	algo
 0.2051	foldseek
 0.281	dali
-0.2924	reseek3_fast
+0.2919	reseek3_fast
 0.3047	tm
-0.3221	reseek3_sensitive
+0.3432	reseek3_sensitive
+0.3521	reseek3_verysensitive
 
 # PR90>fold>scop40x
 PR90	algo
 0.2639	foldseek
-0.3442	reseek3_fast
+0.3435	reseek3_fast
 0.3806	dali
-0.3832	reseek3_sensitive
+0.4161	reseek3_sensitive
 0.4221	tm
+0.4312	reseek3_verysensitive
 
 # PR90>superfamily>cath40
 PR90	algo
 0.2013	foldseek
-0.2507	reseek3_fast
-0.2702	reseek3_sensitive
+0.2506	reseek3_fast
+0.2846	reseek3_sensitive
+0.2933	reseek3_verysensitive
 
 # PR90>superfamily>scop40
 PR90	algo
 0.1503	dali
 0.2288	foldseek
 0.2429	tm
-0.3758	reseek3_fast
-0.3969	reseek3_sensitive
+0.3755	reseek3_fast
+0.406	reseek3_sensitive
+0.4097	reseek3_verysensitive
 
 # PR90>superfamily>scop40x
 PR90	algo
 0.1668	dali
 0.2636	tm
 0.2694	foldseek
-0.4128	reseek3_fast
-0.4341	reseek3_sensitive
+0.4124	reseek3_fast
+0.4475	reseek3_sensitive
+0.4534	reseek3_verysensitive
 
 # PR90>superfamilyx>cath40
 PR90	algo
-0.2817	reseek3_fast
-0.3094	reseek3_sensitive
+0.2815	reseek3_fast
+0.337	reseek3_sensitive
+0.3556	reseek3_verysensitive
 0.3558	foldseek
 
 # PR90>superfamilyx>scop40
@@ -251,156 +285,173 @@ PR90	algo
 0.3556	foldseek
 0.406	tm
 0.4091	dali
-0.4172	reseek3_fast
-0.4476	reseek3_sensitive
+0.4169	reseek3_fast
+0.4606	reseek3_sensitive
+0.4658	reseek3_verysensitive
 
 # PR90>superfamilyx>scop40x
 PR90	algo
 0.4275	foldseek
-0.4416	reseek3_fast
-0.4715	reseek3_sensitive
+0.4412	reseek3_fast
 0.4757	tm
+0.4932	reseek3_sensitive
+0.5039	reseek3_verysensitive
 0.5126	dali
 
 # Top3>topfold>cath40
 TEPQ0.001	TEPQ0.01	TEPQ0.1	Top3	algo
 0.002	0.011	0.254	0.274	foldseek
-0.003	0.022	0.320	0.358	reseek3_fast
-0.003	0.022	0.322	0.361	reseek3_sensitive
+0.003	0.022	0.320	0.359	reseek3_fast
+0.003	0.023	0.327	0.367	reseek3_sensitive
+0.003	0.023	0.331	0.372	reseek3_verysensitive
 
 # Top3>topfold>scop40
 TEPQ0.001	TEPQ0.01	TEPQ0.1	Top3	algo
 0.003	0.020	0.202	0.237	foldseek
 0.005	0.033	0.191	0.250	dali
 0.005	0.039	0.294	0.363	tm
-0.005	0.060	0.277	0.376	reseek3_fast
-0.005	0.062	0.278	0.380	reseek3_sensitive
+0.009	0.061	0.277	0.386	reseek3_fast
+0.009	0.062	0.274	0.386	reseek3_sensitive
+0.009	0.063	0.275	0.387	reseek3_verysensitive
 
 # Top3>topfold>scop40x
 TEPQ0.001	TEPQ0.01	TEPQ0.1	Top3	algo
 0.030	0.106	0.219	0.437	dali
 0.032	0.089	0.253	0.451	foldseek
 0.014	0.098	0.299	0.475	tm
-0.045	0.112	0.310	0.568	reseek3_fast
-0.047	0.114	0.306	0.571	reseek3_sensitive
+0.047	0.109	0.301	0.559	reseek3_sensitive
+0.047	0.109	0.302	0.560	reseek3_verysensitive
+0.044	0.112	0.309	0.565	reseek3_fast
 
 # Top3>topsf>scop40
 TEPQ0.001	TEPQ0.01	TEPQ0.1	Top3	algo
 0.083	0.255	0.597	1.146	dali
 0.162	0.307	0.578	1.362	foldseek
 0.176	0.340	0.591	1.452	tm
-0.192	0.440	0.689	1.732	reseek3_fast
-0.192	0.439	0.690	1.734	reseek3_sensitive
+0.192	0.439	0.688	1.730	reseek3_fast
+0.192	0.439	0.690	1.732	reseek3_sensitive
+0.192	0.439	0.691	1.733	reseek3_verysensitive
 
 # Top3>topsf>scop40x
 TEPQ0.001	TEPQ0.01	TEPQ0.1	Top3	algo
 0.019	0.161	0.503	0.783	tm
 0.067	0.156	0.568	0.937	dali
 0.096	0.208	0.510	1.014	foldseek
-0.194	0.455	0.647	1.717	reseek3_sensitive
-0.202	0.458	0.645	1.735	reseek3_fast
+0.194	0.455	0.649	1.719	reseek3_sensitive
+0.194	0.454	0.650	1.719	reseek3_verysensitive
+0.201	0.458	0.645	1.735	reseek3_fast
 
 # Rank
-metric	dali	foldseek	reseek3_fast	tm	reseek3_sensitive
-Sum3>family>cath40		1	3		2
-Sum3>family>scop40	5	4	3	2	1
-Sum3>family>scop40x	5	4	2	3	1
-Sum3>fold>cath40		3	2		1
-Sum3>fold>scop40	4	5	3	2	1
-Sum3>fold>scop40x	1	5	4	2	3
-Sum3>superfamily>cath40		3	2		1
-Sum3>superfamily>scop40	5	4	2	3	1
-Sum3>superfamily>scop40x	5	3	2	4	1
-Sum3>superfamilyx>cath40		3	2		1
-Sum3>superfamilyx>scop40	4	5	2	3	1
-Sum3>superfamilyx>scop40x	1	5	3	4	2
-SFFP>family>cath40		1	3		2
-SFFP>family>scop40	2	3	5	1	4
-SFFP>family>scop40x	1	3	5	2	4
-SFFP>fold>cath40		1	3		1
-SFFP>fold>scop40	1	5	4	2	3
-SFFP>fold>scop40x	1	5	4	2	3
-SFFP>superfamily>cath40		2	3		1
-SFFP>superfamily>scop40	1	3	5	2	3
-SFFP>superfamily>scop40x	1	4	5	2	3
-SFFP>superfamilyx>cath40		1	3		2
-SFFP>superfamilyx>scop40	1	3	5	2	4
-SFFP>superfamilyx>scop40x	1	3	5	2	4
-PR90>family>cath40		1	3		2
-PR90>family>scop40	1	2	2	2	2
-PR90>family>scop40x	5	4	2	3	1
-PR90>fold>cath40		1	3		2
-PR90>fold>scop40	4	5	3	2	1
-PR90>fold>scop40x	3	5	4	1	2
-PR90>superfamily>cath40		3	2		1
-PR90>superfamily>scop40	5	4	2	3	1
-PR90>superfamily>scop40x	5	3	2	4	1
-PR90>superfamilyx>cath40		1	3		2
-PR90>superfamilyx>scop40	3	5	2	4	1
-PR90>superfamilyx>scop40x	1	5	4	2	3
-Top3>topfold>cath40		3	2		1
-Top3>topfold>scop40	4	5	2	3	1
-Top3>topfold>scop40x	5	4	2	3	1
-Top3>topsf>scop40	5	4	2	3	1
-Top3>topsf>scop40x	4	3	1	5	2
-median	3.5	3	3	2	1
+metric	dali	foldseek	reseek3_fast	tm	reseek3_sensitive	reseek3_verysensitive
+Sum3>family>cath40		1	4		3	2
+Sum3>family>scop40	6	5	4	3	2	1
+Sum3>family>scop40x	6	5	3	4	2	1
+Sum3>fold>cath40		4	3		2	1
+Sum3>fold>scop40	5	6	4	3	2	1
+Sum3>fold>scop40x	2	6	5	4	3	1
+Sum3>superfamily>cath40		4	3		2	1
+Sum3>superfamily>scop40	6	5	3	4	2	1
+Sum3>superfamily>scop40x	6	4	3	5	2	1
+Sum3>superfamilyx>cath40		4	3		2	1
+Sum3>superfamilyx>scop40	5	6	3	4	2	1
+Sum3>superfamilyx>scop40x	2	6	4	5	3	1
+SFFP>family>cath40		1	4		3	2
+SFFP>family>scop40	2	3	6	1	4	4
+SFFP>family>scop40x	1	3	6	2	4	4
+SFFP>fold>cath40		3	4		2	1
+SFFP>fold>scop40	1	6	5	2	4	3
+SFFP>fold>scop40x	1	6	5	2	4	3
+SFFP>superfamily>cath40		3	4		2	1
+SFFP>superfamily>scop40	1	5	6	2	4	3
+SFFP>superfamily>scop40x	1	5	6	2	4	3
+SFFP>superfamilyx>cath40		1	4		3	2
+SFFP>superfamilyx>scop40	1	4	6	2	4	3
+SFFP>superfamilyx>scop40x	1	4	6	2	5	3
+PR90>family>cath40		1	4		2	3
+PR90>family>scop40	1	2	2	2	2	2
+PR90>family>scop40x	6	5	3	4	1	1
+PR90>fold>cath40		2	4		3	1
+PR90>fold>scop40	5	6	4	3	2	1
+PR90>fold>scop40x	4	6	5	2	3	1
+PR90>superfamily>cath40		4	3		2	1
+PR90>superfamily>scop40	6	5	3	4	2	1
+PR90>superfamily>scop40x	6	4	3	5	2	1
+PR90>superfamilyx>cath40		1	4		3	2
+PR90>superfamilyx>scop40	4	6	3	5	2	1
+PR90>superfamilyx>scop40x	1	6	5	4	3	2
+Top3>topfold>cath40		4	3		2	1
+Top3>topfold>scop40	5	6	2	4	2	1
+Top3>topfold>scop40x	6	5	1	4	3	2
+Top3>topsf>scop40	6	5	3	4	2	1
+Top3>topsf>scop40x	5	4	1	6	2	2
+median	4.5	4	4	4	2	1
 
 # RankNoSFFP
-metric	dali	foldseek	tm	reseek3_fast	reseek3_sensitive
-Sum3>family>cath40		1		3	2
-Sum3>family>scop40	5	4	2	3	1
-Sum3>family>scop40x	5	4	3	2	1
-Sum3>fold>cath40		3		2	1
-Sum3>fold>scop40	4	5	2	3	1
-Sum3>fold>scop40x	1	5	2	4	3
-Sum3>superfamily>cath40		3		2	1
-Sum3>superfamily>scop40	5	4	3	2	1
-Sum3>superfamily>scop40x	5	3	4	2	1
-Sum3>superfamilyx>cath40		3		2	1
-Sum3>superfamilyx>scop40	4	5	3	2	1
-Sum3>superfamilyx>scop40x	1	5	4	3	2
-PR90>family>cath40		1		3	2
-PR90>family>scop40	1	2	2	2	2
-PR90>family>scop40x	5	4	3	2	1
-PR90>fold>cath40		1		3	2
-PR90>fold>scop40	4	5	2	3	1
-PR90>fold>scop40x	3	5	1	4	2
-PR90>superfamily>cath40		3		2	1
-PR90>superfamily>scop40	5	4	3	2	1
-PR90>superfamily>scop40x	5	3	4	2	1
-PR90>superfamilyx>cath40		1		3	2
-PR90>superfamilyx>scop40	3	5	4	2	1
-PR90>superfamilyx>scop40x	1	5	2	4	3
-Top3>topfold>cath40		3		2	1
-Top3>topfold>scop40	4	5	3	2	1
-Top3>topfold>scop40x	5	4	3	2	1
-Top3>topsf>scop40	5	4	3	2	1
-Top3>topsf>scop40x	4	3	5	1	2
-median	4	4	3	2	1
+metric	dali	foldseek	tm	reseek3_fast	reseek3_sensitive	reseek3_verysensitive
+Sum3>family>cath40		1		4	3	2
+Sum3>family>scop40	6	5	3	4	2	1
+Sum3>family>scop40x	6	5	4	3	2	1
+Sum3>fold>cath40		4		3	2	1
+Sum3>fold>scop40	5	6	3	4	2	1
+Sum3>fold>scop40x	2	6	4	5	3	1
+Sum3>superfamily>cath40		4		3	2	1
+Sum3>superfamily>scop40	6	5	4	3	2	1
+Sum3>superfamily>scop40x	6	4	5	3	2	1
+Sum3>superfamilyx>cath40		4		3	2	1
+Sum3>superfamilyx>scop40	5	6	4	3	2	1
+Sum3>superfamilyx>scop40x	2	6	5	4	3	1
+PR90>family>cath40		1		4	2	3
+PR90>family>scop40	1	2	2	2	2	2
+PR90>family>scop40x	6	5	4	3	1	1
+PR90>fold>cath40		2		4	3	1
+PR90>fold>scop40	5	6	3	4	2	1
+PR90>fold>scop40x	4	6	2	5	3	1
+PR90>superfamily>cath40		4		3	2	1
+PR90>superfamily>scop40	6	5	4	3	2	1
+PR90>superfamily>scop40x	6	4	5	3	2	1
+PR90>superfamilyx>cath40		1		4	3	2
+PR90>superfamilyx>scop40	4	6	5	3	2	1
+PR90>superfamilyx>scop40x	1	6	4	5	3	2
+Top3>topfold>cath40		4		3	2	1
+Top3>topfold>scop40	5	6	4	2	2	1
+Top3>topfold>scop40x	6	5	4	1	3	2
+Top3>topsf>scop40	6	5	4	3	2	1
+Top3>topsf>scop40x	5	4	6	1	2	2
+median	5	5	4	3	2	1
 
 # RankPValues
 algo_a	algo_b	n_cells	p_value
-dali	foldseek	28	0.0144
-dali	reseek3_fast	28	0.6024
-dali	reseek3_sensitive	28	0.02977
-dali	tm	28	0.1154
-foldseek	reseek3_fast	41	0.2971
-foldseek	reseek3_sensitive	41	1.12e-05
-foldseek	tm	28	0.0001329
-reseek3_fast	reseek3_sensitive	41	1.628e-08
-reseek3_fast	tm	28	0.1764
-reseek3_sensitive	tm	28	0.06496
+dali	foldseek	28	0.01204
+dali	reseek3_fast	28	0.4917
+dali	reseek3_sensitive	28	0.07026
+dali	reseek3_verysensitive	28	0.003369
+dali	tm	28	0.2628
+foldseek	reseek3_fast	41	0.3401
+foldseek	reseek3_sensitive	41	2.91e-05
+foldseek	reseek3_verysensitive	41	7.094e-07
+foldseek	tm	28	9.375e-05
+reseek3_fast	reseek3_sensitive	41	5.864e-07
+reseek3_fast	reseek3_verysensitive	41	2.568e-08
+reseek3_fast	tm	28	0.3308
+reseek3_sensitive	reseek3_verysensitive	41	6.483e-08
+reseek3_sensitive	tm	28	0.1912
+reseek3_verysensitive	tm	28	0.0009843
 
 # RankNoSFFPPValues
 algo_a	algo_b	n_cells	p_value
-dali	foldseek	20	0.4991
-dali	reseek3_fast	20	0.01988
-dali	reseek3_sensitive	20	0.0007144
-dali	tm	20	0.02211
-foldseek	reseek3_fast	29	0.002765
-foldseek	reseek3_sensitive	29	1.198e-05
-foldseek	tm	20	0.003588
-reseek3_fast	reseek3_sensitive	29	2.705e-06
-reseek3_fast	tm	20	0.2619
-reseek3_sensitive	tm	20	0.0005855
+dali	foldseek	20	0.4992
+dali	reseek3_fast	20	0.02328
+dali	reseek3_sensitive	20	0.0005675
+dali	reseek3_verysensitive	20	0.0001745
+dali	tm	20	0.1097
+foldseek	reseek3_fast	29	0.007489
+foldseek	reseek3_sensitive	29	2.333e-05
+foldseek	reseek3_verysensitive	29	8.555e-06
+foldseek	tm	20	0.004027
+reseek3_fast	reseek3_sensitive	29	9.445e-05
+reseek3_fast	reseek3_verysensitive	29	4.084e-06
+reseek3_fast	tm	20	0.06472
+reseek3_sensitive	reseek3_verysensitive	29	7.215e-06
+reseek3_sensitive	tm	20	0.0002263
+reseek3_verysensitive	tm	20	0.0001174
 

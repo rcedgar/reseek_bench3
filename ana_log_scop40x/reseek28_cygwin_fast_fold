@@ -1,0 +1,13 @@
+
+reseek v3.0.win64 [a85616f-dirty]
+C:\src\reseek\src\Release\reseek.exe -fast_bench_hits ../big_hits/reseek28_cygwin_fast.scop40x.hits -truth fold -log ../ana_log/reseek28_cygwin_fast_fold.scop40x 
+Started Sun Jul 26 17:59:13 2026
+lookup: doms=8291 SFs=1538 NT=635774 NF=68096616
+E-values(1,2,3)
+354576 hits (1.03% of triangle), 117166 TPs
+SEPQ0.1=0.151 SEPQ1=0.199 SEPQ10=0.278 Sum3=0.879 fold reseek28_cygwin_fast.scop40x
+
+Elapsed time 00:01
+Max memory 142Mb
+Finished Sun Jul 26 17:59:14 2026
+Peak mem 423Mb, avg. CPU 71.3%
