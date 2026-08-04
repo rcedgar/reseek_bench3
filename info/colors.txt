@@ -8,3 +8,4 @@ dali=cyan,1.5,dashdot,DALI
 reseek3_sensitive_family=gray,1.5,dotted,train:fam
 reseek3_sensitive_superfamily=darkgray,1.5,dashed,train:sf
 reseek3_sensitive_fold=black,1.5,solid,train:fold
+embed=green,1.5,dashed
