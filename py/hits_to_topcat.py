@@ -35,6 +35,39 @@ def is_tp_at_threshold(
     return common.at_least_as_good(s_tp, s_xf, scores_are_evalues)
 
 
+def is_fp_pos_at_threshold(
+    s_tp: Optional[float],
+    s_xf: Optional[float],
+    threshold: float,
+    scores_are_evalues: bool,
+) -> bool:
+    """Positive-control FP at threshold T (truth_standards.md section 8, case A3)."""
+    if not common.passes_threshold(s_xf, threshold, scores_are_evalues):
+        return False
+    if not common.passes_threshold(s_tp, threshold, scores_are_evalues):
+        return True
+    return not common.at_least_as_good(s_tp, s_xf, scores_are_evalues)
+
+
+def classify_counts_at_threshold(
+    scores: Dict[str, Tuple[Optional[float], Optional[float]]],
+    threshold: float,
+    scores_are_evalues: bool,
+) -> Tuple[int, int, int]:
+    """Return (n_tp, n_fp_pos, n_fp_neg) at threshold T."""
+    n_tp = 0
+    n_fp_pos = 0
+    n_fp_neg = 0
+    for s_tp, s_xf in scores.values():
+        if is_tp_at_threshold(s_tp, s_xf, threshold, scores_are_evalues):
+            n_tp += 1
+        elif is_fp_pos_at_threshold(s_tp, s_xf, threshold, scores_are_evalues):
+            n_fp_pos += 1
+        if common.passes_threshold(s_xf, threshold, scores_are_evalues):
+            n_fp_neg += 1
+    return n_tp, n_fp_pos, n_fp_neg
+
+
 def classify_at_threshold(
     scores: Dict[str, Tuple[Optional[float], Optional[float]]],
     threshold: float,
@@ -50,15 +83,22 @@ def classify_at_threshold(
     if n_q <= 0:
         return 0.0, 0.0
 
-    n_tp = 0
-    n_fp_neg = 0
-    for s_tp, s_xf in scores.values():
-        if is_tp_at_threshold(s_tp, s_xf, threshold, scores_are_evalues):
-            n_tp += 1
-        if common.passes_threshold(s_xf, threshold, scores_are_evalues):
-            n_fp_neg += 1
-
+    n_tp, _n_fp_pos, n_fp_neg = classify_counts_at_threshold(
+        scores, threshold, scores_are_evalues
+    )
     return n_tp / n_q, n_fp_neg / n_q
+
+
+def sweep_thresholds(
+    scores: Dict[str, Tuple[Optional[float], Optional[float]]],
+    scores_are_evalues: bool,
+) -> List[float]:
+    """Distinct S_tp / S_xf values, strict-first, then a fully-loose threshold."""
+    taus = sort_thresholds_strict_first(
+        collect_thresholds(scores), scores_are_evalues
+    )
+    taus.append(loose_threshold(scores_are_evalues))
+    return taus
 
 
 def topcat_cve_curve(
@@ -67,14 +107,42 @@ def topcat_cve_curve(
     scores_are_evalues: bool,
 ) -> List[Tuple[float, float]]:
     """Return (coverage, error) points sweeping thresholds strict-first."""
-    taus = sort_thresholds_strict_first(
-        collect_thresholds(scores), scores_are_evalues
-    )
-    taus.append(loose_threshold(scores_are_evalues))
     points: List[Tuple[float, float]] = []
-    for tau in taus:
+    for tau in sweep_thresholds(scores, scores_are_evalues):
         cov, err = classify_at_threshold(scores, tau, n_q, scores_are_evalues)
         points.append((cov, err))
+    return points
+
+
+def topcat_roc_curve(
+    scores: Dict[str, Tuple[Optional[float], Optional[float]]],
+    n_q: int,
+    scores_are_evalues: bool,
+) -> List[Tuple[float, float]]:
+    """Return (FPR, TPR) = (error, coverage); CVE with axes swapped."""
+    return [
+        (err, cov)
+        for cov, err in topcat_cve_curve(scores, n_q, scores_are_evalues)
+    ]
+
+
+def topcat_pr_curve(
+    scores: Dict[str, Tuple[Optional[float], Optional[float]]],
+    n_q: int,
+    scores_are_evalues: bool,
+) -> List[Tuple[float, float]]:
+    """Return (recall, precision) = (TP/|Q|, TP/(TP+FP_A3)); skip empty denom."""
+    if n_q <= 0:
+        return []
+    points: List[Tuple[float, float]] = []
+    for tau in sweep_thresholds(scores, scores_are_evalues):
+        n_tp, n_fp_pos, _n_fp_neg = classify_counts_at_threshold(
+            scores, tau, scores_are_evalues
+        )
+        denom = n_tp + n_fp_pos
+        if denom == 0:
+            continue
+        points.append((n_tp / n_q, n_tp / denom))
     return points
 
 
@@ -117,10 +185,7 @@ def compute_top3(
     if n_q <= 0:
         return None, None, None, None
 
-    taus = sort_thresholds_strict_first(
-        collect_thresholds(scores), scores_are_evalues
-    )
-    taus.append(loose_threshold(scores_are_evalues))
+    taus = sweep_thresholds(scores, scores_are_evalues)
 
     tepq0001: Optional[float] = None
     tepq001: Optional[float] = None

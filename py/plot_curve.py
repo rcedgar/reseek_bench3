@@ -16,6 +16,12 @@ Examples:
   python plot_curve.py --type cve --input reseek.topfold.tcat \
       --output cve_topfold.svg
 
+  python plot_curve.py --type roc --input reseek.topsf.tcat \
+      --output roc_topsf.svg
+
+  python plot_curve.py --type pr --input reseek.topsf.tcat \
+      --output pr_topsf.svg
+
   python plot_curve.py --type roc --input reseek.superfamily.edf \
       --input foldseek.superfamily.edf --title "SCOP40 superfamily" \
       --colors algo_styles.txt --output roc_superfamily.svg
@@ -32,6 +38,8 @@ from typing import Dict, List, NamedTuple, Optional, Tuple
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+from matplotlib.ticker import FuncFormatter, LogLocator, NullFormatter
 
 import common
 import hits_to_topcat
@@ -148,11 +156,19 @@ def edf_curve_points(
     return points
 
 
-def tcat_cve_curve_points(hdr: dict, body: List[str]) -> List[Tuple[float, float]]:
+def tcat_curve_points(
+    hdr: dict, body: List[str], curve_type: CurveType
+) -> List[Tuple[float, float]]:
     n_q = int(hdr["N_possible_tp"])
     scores = parse_tcat_scores(body)
     scores_are_evalues = scores_are_evalues_from_header(hdr)
-    return hits_to_topcat.topcat_cve_curve(scores, n_q, scores_are_evalues)
+    if curve_type == "cve":
+        return hits_to_topcat.topcat_cve_curve(scores, n_q, scores_are_evalues)
+    if curve_type == "roc":
+        return hits_to_topcat.topcat_roc_curve(scores, n_q, scores_are_evalues)
+    if curve_type == "pr":
+        return hits_to_topcat.topcat_pr_curve(scores, n_q, scores_are_evalues)
+    raise ValueError(f"unknown curve type: {curve_type!r}")
 
 
 def curve_points_for_input(
@@ -162,12 +178,7 @@ def curve_points_for_input(
     if kind == "edf":
         points = edf_curve_points(hdr, body, curve_type)
     else:
-        if curve_type != "cve":
-            raise ValueError(
-                f"{path}: curve type {curve_type!r} is not defined for .tcat "
-                "(only cve is supported)"
-            )
-        points = tcat_cve_curve_points(hdr, body)
+        points = tcat_curve_points(hdr, body, curve_type)
     return hdr, kind, points
 
 
@@ -247,15 +258,72 @@ def series_style(label: str, idx: int, styles: Dict[str, SeriesStyle]) -> Series
     )
 
 
+def format_decimal_tick(x: float, _pos: Optional[int] = None) -> str:
+    """Tick label as a decimal (0.001, 0.01, 0.1), not scientific notation."""
+    if x == 0:
+        return "0"
+    if abs(x) >= 1:
+        if float(x).is_integer():
+            return str(int(x))
+        return f"{x:g}"
+    return f"{x:.10f}".rstrip("0").rstrip(".")
+
+
+def apply_decimal_ticks(axis, is_log: bool) -> None:
+    axis.set_major_formatter(FuncFormatter(format_decimal_tick))
+    if is_log:
+        axis.set_major_locator(LogLocator(base=10))
+        axis.set_minor_formatter(NullFormatter())
+
+
+def display_label(algo: str, idx: int, styles: Dict[str, SeriesStyle]) -> str:
+    style = series_style(algo, idx, styles)
+    return style.legend_label if style.legend_label is not None else algo
+
+
+def write_legend_svg(
+    series_algos: List[str],
+    styles: Dict[str, SeriesStyle],
+    output: str,
+) -> None:
+    """Horizontal legend strip matching three (4 in, 3 in) panels stacked in a row."""
+    handles: List[Line2D] = []
+    labels: List[str] = []
+    for idx, algo in enumerate(series_algos):
+        style = series_style(algo, idx, styles)
+        label = display_label(algo, idx, styles)
+        handles.append(
+            Line2D(
+                [0],
+                [0],
+                color=style.color,
+                linewidth=style.linewidth,
+                linestyle=style.linestyle,
+            )
+        )
+        labels.append(label)
+
+    fig = plt.figure(figsize=(12, 0.55))
+    fig.legend(
+        handles,
+        labels,
+        loc="center",
+        ncol=max(len(handles), 1),
+        frameon=False,
+        fontsize=10,
+    )
+    fig.savefig(output)
+    plt.close(fig)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(
         description="Plot one CVE / ROC / PR panel from homval summary files."
     )
     ap.add_argument(
         "--type",
-        required=True,
         choices=("cve", "roc", "pr"),
-        help="Curve type to plot",
+        help="Curve type to plot (not required with --legend-only)",
     )
     ap.add_argument(
         "--input",
@@ -283,6 +351,7 @@ def main() -> int:
         "--title",
         help="Plot title (default: CURVE_TYPE (truth standard))",
     )
+    ap.add_argument("--ylabel", help="Y axis label (default depends on curve type)")
     ap.add_argument(
         "--colors",
         metavar="PATH",
@@ -291,7 +360,30 @@ def main() -> int:
             "missing names use defaults"
         ),
     )
+    ap.add_argument(
+        "--nolegend",
+        action="store_true",
+        help="Do not draw a legend on the panel",
+    )
+    ap.add_argument(
+        "--legend-only",
+        action="store_true",
+        help="Write a horizontal legend SVG from --input / --colors (no curves)",
+    )
+    ap.add_argument(
+        "--decimal-xticks",
+        action="store_true",
+        help="Format x-axis ticks as decimals (0.001 not 10^-3)",
+    )
+    ap.add_argument(
+        "--decimal-yticks",
+        action="store_true",
+        help="Format y-axis ticks as decimals (0.001 not 10^-3)",
+    )
     args = ap.parse_args()
+
+    if not args.legend_only and args.type is None:
+        ap.error("--type is required unless --legend-only is set")
 
     styles = load_series_styles(args.colors)
 
@@ -300,7 +392,11 @@ def main() -> int:
     kind: Optional[SummaryKind] = None
 
     for path in args.input:
-        hdr, file_kind, points = curve_points_for_input(path, args.type)
+        if args.legend_only:
+            hdr, file_kind, _body = read_summary(path)
+            points: List[Tuple[float, float]] = []
+        else:
+            hdr, file_kind, points = curve_points_for_input(path, args.type)
         file_truth = hdr.get("truth")
         if file_truth is None:
             raise ValueError(f"{path}: missing truth in header")
@@ -317,6 +413,11 @@ def main() -> int:
         algo = common.algo_label_from_header(hdr, path)
         series.append((algo, points))
         sys.stderr.write(f"loaded {path} ({len(points)} points, algo={algo})\n")
+
+    if args.legend_only:
+        write_legend_svg([algo for algo, _ in series], styles, args.output)
+        sys.stderr.write(f"wrote {args.output}\n")
+        return 0
 
     assert truth is not None and kind is not None
 
@@ -347,15 +448,21 @@ def main() -> int:
         ax.set_xlim(xlim)
     if ylim is not None:
         ax.set_ylim(ylim)
+    if args.decimal_xticks:
+        apply_decimal_ticks(ax.xaxis, args.xscale == "log")
+    if args.decimal_yticks:
+        apply_decimal_ticks(ax.yaxis, args.yscale == "log")
 
     xlabel, ylabel = axis_labels(args.type, kind)
+    if args.ylabel is not None:
+        ylabel = args.ylabel
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
     title = args.title if args.title is not None else plot_title(args.type, truth)
     ax.set_title(title)
     ax.grid(True, which="major", linewidth=0.5, alpha=0.5)
 
-    if len(series) > 1 or args.type == "roc":
+    if not args.nolegend and (len(series) > 1 or args.type == "roc"):
         ax.legend(fontsize=10)
 
     fig.tight_layout()

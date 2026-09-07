@@ -1,0 +1,2 @@
+Do not test under Windows, python is broken.
+Test and run under WSL, use conda environment null_model for user bob

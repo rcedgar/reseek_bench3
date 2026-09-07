@@ -1,0 +1,185 @@
+>1CNO_A STRUCTURE OF PSEUDOMONAS NAUTICA CYTOCHROME C552, BY MAD METHOD
+A-------------------------------------------------------------------------------
+----------------------------GDIEAGKAKA--AVCAACHGQNGI-SQ-----VPIYPNLAGQKE--------
+-------------------------QYLVAALKAYKAGQRQG------GQ-------AP--VMQGQAT-AL---SDADIA
+NLAAYYASN--------PAA---------------A
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME SUBUNIT OF SULFIDE DEHYDROGENASE (P20958)
+APEQ----------------------------------------------------------------------------
+---------------------------SKSIPRGEILS--LSCAGCHGTDGK--S-----ESIIPTIYGRSA--------
+-------------------------EYIESALLDFKSGAR-P------ST-------VM--G--RHAK-GY---SDEEIH
+QIAEYFGSLS-------TMN---------------N
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME SUBUNIT OF SULFIDE DEHYDROGENASE (Q8KAS5)
+MLAAAP-LLLA-----------------------------------------------------SGNGFAT-TG-PAA-K
+----P----------A---------VKPVTESRGEILS--LSCAGCHGTDGN--S-----SSVIPSIYGKSP--------
+-------------------------EYIETALIDFKNGSR-T------ST-------VM--G--RHAK-GY---TGEEIH
+LIAEYFGNLS-------KKN---------------H
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 (P00098)
+--------------------------------------------------------------------------------
+-------------------------------ADESALAQTKGCLACHNPEK---------KVVGPAYGWVAKKYAG----
+--------------------QAGAEAKLVAKVMAGGQG-V-W--AKQLGA------EIP--M---PAN-NV---TKEEAT
+RLVKWVLSLKQ------IDY---------------K
+>1A56_A PRIMARY SEQUENCE AND SOLUTION CONFORMATION OF FERRICYTOCHROME C-552 FROM NITROSOMONAS EUROPAEA, NMR, MEAN STRUCTURE REFINED WITH EXPLICIT HYDROGEN BOND CONSTRAINTS
+--------------------------------------------------------------------------------
+---------------------------------DADLAKKNNCIACHQVET---------KVVGPALKDIAAKYAD----
+--------------------KDDAATYLAGKIKGGSSG-V-W------GQ-------IP--M---PPNVNV---SDADAK
+ALADWILT-----------L---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 (P00097)
+--------------------------------------------------------------------------------
+-------------------------------ATPAELATKAGCAVCHQPTA---------KGLGPSYQEIAKKYKG----
+--------------------QAGAPALMAERVRKGSVG-I-F------GK-------LP--M---TPT-PPARISDADLK
+LVIDWILK-----------T---------------P
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-552 (P15452)
+MKKFLL-VAVV--------------------------------------------------------------------G
+----L----------------------AGITFANEQLAKQKGCMACHDLKA---------KKVGPAYADVAKKYAG----
+--------------------RKDAVDYLAGKIKKGGSG-V-W------GS-------VP--M---PPQ-NV---TDAEAK
+QLAQWILS-----------I---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-551 (P00099)
+MKPYAL-LSLL-----------------------------------------------------A-------TG-TLL-A
+----Q----------------------GAWAEDPEVLFKNKGCVACHAIDT---------KMVGPAYKDVAAKFAG----
+--------------------QAGAEAELAQRIKNGSQG-V-W------GP-------IP--M---PPN-AV---SDDEAQ
+TLAKWVLS-----------Q---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-551 (P00101)
+MKKILI-PMLA-----------------------------------------------------L-------GG-ALA-M
+----Q----------------------PALAQDGEALFKSKPCAACHSVDT---------KMVGPALKEVAAKNAG----
+--------------------VEGAADTLALHIKNGSQG-V-W------GP-------IP--M---PPN-PV---TEEEAK
+ILAEWVLS-----------L---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-551 (P00103)
+--------------------------------------------------------------------------------
+-------------------------------STGEELFKAKACVACHSVDK---------KLVGPAFHDVAAKYGA----
+--------------------QGDGVAHITNSIKTGSKG-N-W------GP-------IP--M---PPN-AV---SPEEAK
+TLAEWIVT-----------L---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-551 (P00104)
+--------------------------------------------------------------------------------
+-------------------------------ETGEELYKTKGCTVCHAIDS---------KLVGPSFKEVTAKYAG----
+--------------------QAGIADTLAAKIKAGGSG-N-W------GQ-------IP--M---PPN-PV---SEAEAK
+TLAEWVLT-----------H---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-551 (P00100)
+--------------------------------------------------------------------------------
+-------------------------------EDGAALFKSKPCAACHTIDS---------KMVGPALKEVAAKNAG----
+--------------------VKDADKTLAGHIKNGTQG-N-W------GP-------IP--M---PPN-QV---TDAEAL
+TLAQWVLS-----------L---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C (P00079)
+--------------------------------------------------------------------------------
+----GPK----EPEVT---------VPEGDASAGRDIFD-SQCSACHAIEG---D-----STAAPVLGGVIGRKAGQ-E-
+KFAYSKGMK-----G---SGITWNEKHLFVFLKNPSKH-V-P------GT-------KM--A---FAG-LP---ADKDRA
+DLIAYLK------------S---------------V
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-552 (P54820)
+MFDTMTVTKAAGALIGSLLFLLLMSWAASGIFHVG---TSGHGAEGEEHA---Q---------AYTYPVESAGG-AEGEA
+VDE-GPD-----FATV---------LASADPAAGEKVF--GKCKACHKLDG---N-----DGVGPHLNGVVGRTVAG-VD
+GFNYSDPMK-----A---HGGDWTPEALQEFLTNPKAV-V-K------GT-------KM--A---FAG-LP---KIEDRA
+NLIAYLE-----------GQ---------------Q
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 ISO-2 (P00089)
+--------------------------------------------------------------------------------
+-------------------------------ADAPPAF--GMCKACHSVEAG--K-----NGVGPSLAGVYGRKAGT-LA
+GFKFSDPHA-----K---SGLTWDEPTLTKYLADPKGV-I-P------GN-------KM--V---FAG-LK---NPADVA
+AVIAYLK------------S---------------L
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 ISO-1 (P00086)
+--------------------------------------------------------------------------------
+-------------------------------ADAPTAF--NQCKACHSIEAG--K-----NGVGPSLSGAYGRKVGL-AP
+NYKYSAAHL-----A---SGMTIDEAMLTNYLANPKAT-I-P------GN-------KMGAS---FGG-LK---KPEDVK
+AVIEYLK-----------TV---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-TYPE CYT CY (Q05389)
+MLVKTHITKIGVTLFAVALFYGFIYMLSNSLFATRPATAVAVGADGKALLPSVDEAAMPAKAPAAAAPAAETAE-AAAPA
+EPAAPPPPAYVEVDPA---------TITGDAKAGEEKFN-KTCKACHKIDG---K-----NAVGPHLNGVIGRATAT-VE
+GFKYSTAMK-----N---HVGNWTPERLDIYLVSPKAE-V-P------GT-------KM--S---FVG-LP---EAADRA
+NVIAYLNT----------LP---------------R
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C (P00076)
+--------------------------------------------------------------------------------
+----------------------------GDAERGKKLFE-SRAAQCHSAQKG--V-----NSTGPSLWGVYGRTSGS-VP
+GYAYSNANK-----N---AAIVWEEETLHKFLENPKKY-V-P------GT-------KM--A---FAG-IK---AKKDRQ
+DIIAYMKT----------LK---------------D
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C (P00030)
+--------------------------------------------------------------------------------
+----G----------G---------IPAGDVEKGKTIFK-QRCAQCHTVDKG-GP-----HKTGPNLHGIFGRATGQ-AA
+GFAYTDANK-----S---KGITWTKDTLYEYLENPKKY-I-P------GT-------KM--V---FAG-LK---NEKQRA
+NLIAYLEQ----------ET---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C (P00041)
+--------------------------------------------------------------------------------
+----P---------AP---------FEQGSAKKGATLFK-TRCAQCHTIEAG-GP-----HKVGPNLHGIFSRHSGQ-AE
+GYSYTDANK-----R---AGVEWAEPTMSDYLENPKKY-I-P------GT-------KM--A---FGG-LK---KAKDRN
+DLVTYMLE----------AS---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C (P00049)
+--------------------------------------------------------------------------------
+----G--------------------FEDGDAKKGARIFK-TRCAQCHTLGAG-EP-----NKVGPNLHGLFGRKSGT-VE
+GFSYTDANK-----K---AGQVWEEETFLEYLENPKKY-I-P------GT-------KM--A---FGG-LK---KEKDRN
+DLVTYLRE----------ET---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C (P00047)
+--------------------------------------------------------------------------------
+----AKG-------GS---------FEPGDASKGANLFK-TRCAQCHSVEQG-GA-----NKIGPNLHGLFGRKTGS-VE
+GYSYTDANK-----Q---AGITWNEDTLFEYLENPKKF-I-P------GT-------KM--A---FGG-LK---KNKDRN
+DLITYLKE----------AT---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C (P56205)
+--------------------------------------------------------------------------------
+----GKD-------AS---------FAPGDSAKGAKLFQ-TRCAQCHTVEAG-GP-----HKVGPNLHGLFGRKTGQ-SE
+GYAYTDANK-----Q---AGVTWDENTLFSYLENPKKF-I-P------GT-------KM--A---FGG-LK---KGKERN
+DLITYLKE----------ST---------------A
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE CYTOCHROME C 2.2 (Q23240)
+MGKK------------------------------------------------------------------K-SD-TAS-G
+----G----------A---------IPEGDNEKGKKIFK-QRCEQCHVVNSL--Q-----TKTGPTLNGVIGRQSGQ-VA
+GFDYSAANK-----N---KGVVWDRQTLFDYLADPKKY-I-P------GT-------KM--V---FAG-LK---KADERA
+DLIKFIEVEAAK-----KPS---------------A
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 (P00080)
+--------------------------------------------------------------------------------
+----G----------S---------APPGDPVEGKHLFH-TICILCHTDIKG--R-----NKVGPSLYGVVGRHSGI-EP
+GYNYSEANI-----K---SGIVWTPDVLFKYIEHPQKI-V-P------GT-------KM--G---YPG-QP---DPQKRA
+DIIAYLE-----------TL---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-550 (P23021)
+--------------------------------------------------------------------------------
+------------------------------PAKGANVF--WKCMACHAVGEG-AK-----NKVGPELNGIIGRKMGS-IE
+GFNYSDTLK-----EHNAKGDVWTAEILSQYLANPKGY-M-P------GV-------KM--V---FAG-LP---KEIRAD
+DLEAYLKTFNA------DGT---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C HOMOLOG (P30323)
+MDSFEL-NKILGAVLGTCLILLVTSFTANALFSPK---MPE--KPGF------E---------IAVKEDAG-HGKEGG--
+A---A----------AAASEPIEKLLQTASVEKGAAAA--KKCGACHTFEKG-GP-----NRVGPNLYGVVGEARGEGRN
+GFNFSAAMK-----G---KGGTWTFDDLNKFIANPKGF-I-P------GT-------AM--G---FAG-IP---KDSERA
+DVIAYLNSLSEHPKPLPTAS---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-550 (P00085)
+--------------------------------------------------------------------------------
+----------------------------GDVEAGKAAF--NKCKACHEIGES-AK-----NKVGPELDGLDGRHSGA-VE
+GYAYSPANK-----A---SGITWTEAEFKEYIKDPKAK-V-P------GT-------KM--V---FAG-IK---KDSELD
+NLWAYVSQFDKDG---KVKA---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-550 (Q45233)
+MTKLTF-GALV-----------------------------------------------------ALAMTAA-AS-TAM-S
+----S----------K---------AMAQDAAAGKTSF--NKCLACHAIGEG-AK-----NKVGPELNGLNGRKSGT-AP
+DYSYSDANK-----N---SGITWDEATFKEYIKDPKAK-I-P------GT-------KM--A---FAG-IK---NETEIN
+NLWTFVSQFDKDG----KIK---------------Q
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 (P00083)
+MRKLVF-GLFV-----------------------------------------------------L-------A---AS-V
+----A----------P---------AAAQDAASGEQVF--KQCLVCHSIGPG-AK-----NKVGPVLNGLFGRHSGT-IE
+GFAYSDANK-----N---SGITWTEEVFREYIRDPKAK-I-P------GT-------KM--I---FAG-VK---DEQKVS
+DLIAYIKQFNAD-----GSK---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 (P00084)
+--------------------------------------------------------------------------------
+---------------------------AGDPDAGQKVF--LKCAACHKIGPG-AK-----NGVGPSLNGVANRKAGQ-AE
+GFAYSDANK-----N---SGLTWDEATFKEYITAPQKK-V-P------GT-------KM--T---FPG-LP---NEADRD
+NIWAYLSQFKA------DGS---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 ISO-1 (P81153)
+--------------------------------------------------------------------------------
+--------------------------QDGDPVKGEAVF--KKCMACHRIGPD-AK-----NLVGPVLTGVVGRQAGV-AP
+GFSYSALNHAA--GE---AGLHWTAENIMAYLPDPNAF-L-RKFVTDAGNPEAAKGSTK--M---VFK-LP---NEQERK
+DVVAYLKT----------FS---------------N
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 (P00093)
+--------------------------------------------------------------------------------
+---------------------------AGDAAVGEKIAK-AKCTACHDLNKG-GP-----IKVGPPLFGVFGRTTGT-FA
+GYSYSPGYTVM--GQ---KGHTWDDNALKAYLLDPKGY-V-Q---AKSGDP---KANSK--M---IFR-LE---KDDDVA
+NVIAYLHT-----------M---------------K
+>3C2C_A REFINEMENT OF THE CRYSTAL STRUCTURE OF OXIDIZED RHODOSPIRILLUM RUBRUM CYTOCHROME C2
+--------------------------------------------------------------------------------
+---------------------------EGDAAAGEKVS--KKCLACHTFDQG-GA-----NKVGPNLFGVFENTAAH-KD
+NYAYSESYTEM--KA---KGLTWTEANLAAYVKNPKAF-V-L---EKSGDP---KAKSK--M---TFK-LT---KDDEIE
+NVIAYLKT-----------L---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-550 (P12832)
+--------------------------------------------------------------------------------
+----------------------------GDAAKGANVA--KSCGTCHSFEQG-GA-----KKQGPNLFGITTRGPGK-AE
+GFNYSPSYKAA--AA---KGFAWDAATLQDYITDPTAF-L-S---NKTGDA---AARDK--M---TFK-LA---KPDERA
+DVIAYLAT-----------L---------------K
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-550 (P00096)
+MKISIY-ATLA-------------------------------------------------------------A--ITL-A
+LP--A----------A---------AQDGDAAKGEKEF--NKCKACHMIQAPDGTDIIKGGKTGPNLYGVVGRKIAS-EE
+GFKYGEGILEVAEKN---PDLTWTEADLIEYVTDPKPW-L-V---KMTDDK---GAKTK--M---TFK-M-----GKNQA
+DVVAFLAQ----------NSPDAGGDGEAAAEGESN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 (P00094)
+MKISLT-AATV-----------------------------------------------------A-------A--LVL-A
+----A----------P---------AFAGDAAKGEKEF--NKCKTCHSIIAPDGTEIVKGAKTGPNLYGVVGRTAGT-YP
+EFKYKDSIVAL--GA---SGFAWTEEDIATYVKDPGAF-L-K---EKLDDK---KAKTG--M---AFK-L-----AKGGE
+DVAAYLAS----------VV---------------K

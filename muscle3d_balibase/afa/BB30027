@@ -1,0 +1,75 @@
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-550 (P80288)
+Q--------------------------EGDAAKGEK-EF-NKCKACHMVQAPDGTDIVKGGKTGPNLYGVVGRKIASEEG
+FKYGDGILEVAEKNPDLVWTEADLIEYVTDP-KPWL---VEKTGDSA---A-----------------------------
+----------------------------------------------------------------------K--TK-MTF-
+-KLGKNQADVVAFLAQ--NSPDAGAEAAPAEDAAD
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 ISO-1 (P81153)
+Q--------------------------DGDPVKGEA-VF-KKCMACHRIGPD-A-KN----LVGPVLTGVVGRQAGVAPG
+FSYSALNHAAG--EAGLHWTAENIMAYLPDP-NAFLRKFVTDAGNPEAAKG-----------------------------
+----------------------------------------------------------------------S--TK-MVFK
+LPNEQERKDVVAYLK---TF-------------SN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C (P56205)
+GKDA--------------------SFAPGDSAKGAK-LFQTRCAQCHTVEAG-G-PH----KVGPNLHGLFGRKTGQSEG
+YAYTDANK-----QAGVTWDENTLFSYLENP-KKF---------IP----G-----------------------------
+----------------------------------------------------------------------T--KM-AFGG
+LKKGKERNDLITYLK---ES-------------TA
+>1AKK_A SOLUTION STRUCTURE OF OXIDIZED HORSE HEART CYTOCHROME C, NMR, MINIMIZED AVERAGE STRUCTURE
+----------------------------GDVEKGKK-IFVQKCAQCHTVEKG-G-KH----KTGPNLHGLFGRKTGQAPG
+FTYTDANK-----NKGITWKEETLMEYLENP-KKY---------IP----G-----------------------------
+----------------------------------------------------------------------T--KM-IFAG
+IKKKTEREDLIAYLKK--AT-------------NE
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 ISO-2 (P00089)
+A-------------------------------DAPP-AF-GMCKACHSVEAG-K-N-----GVGPSLAGVYGRKAGTLAG
+FKFSDPHA-----KSGLTWDEPTLTKYLADP-KGV---------IP----G-----------------------------
+----------------------------------------------------------------------N--KM-VFAG
+LKNPADVAAVIAYL-----K-------------SL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C2 (P00080)
+GSA-----------------------PPGDPVEGKH-LFHTICILCHTDIKG-R-N-----KVGPSLYGVVGRHSGIEPG
+YNYSEANI-----KSGIVWTPDVLFKYIEHP-QKI---------VP----G-----------------------------
+----------------------------------------------------------------------T--KM-GYPG
+QPDPQKRADIIAYLE----T-------------LK
+>1B7V_A STRUCTURE OF THE C-553 CYTOCHROME FROM BACILLUS PASTERUII TO 1.7 A RESOLUTION
+-------------------------------VDAEAVVQ-QKCISCHGGDLT-G-AS------APAIDKAGAN-------
+------------------YSEEEILDII---LN-G---------QG----G-----------------------------
+-------------------------------------------------------------------------MPGGI--
+-AKGAEAEAVAAWLA----E-------------KK
+>1H1O_A ACIDITHIOBACILLUS FERROOXIDANS CYTOCHROME C4 STRUCTURE SUPPORTS A COMPLEX-INDUCED TUNING OF ELECTRON TRANSFER
+-------------------------------------VS-SDCMVCHGMTGR-D-TL---YPIVPRLAGQHK--------
+---------------------SYMEAQLKAYKDHS---------RA----DQNGEIYMWPVAQALDSAKITALADYFNAQ
+KPPMQSSGIKHAGAKEGKAIFNQGVTNEQIPACMECHGSDGQGAGPFPRLAGQRYGYIIQQLTYFHNGTRVNTLMNQIAK
+NITVAQMKDVAAYL-----S-------------SL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME SUBUNIT OF SULFIDE DEHYDROGENASE (P20958)
+APE-----------------------QSKSIPRGEI-LS-LSCAGCHGTDGK-S-ES-----IIPTIYGRSA--------
+---------------------EYIESALLDFKSGA---------RP----S-----------------------------
+------------------------------------------------------------------------TVMGRHAK
+GYSDEEIHQIAEYFGSLSTM-------------NN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME SUBUNIT OF SULFIDE DEHYDROGENASE (Q8KAS5)
+MLAAAPLLLASGNGFATTGPAAKPAVKPVTESRGEI-LS-LSCAGCHGTDGN-S-SS-----VIPSIYGKSP--------
+---------------------EYIETALIDFKNGS---------RT----S-----------------------------
+------------------------------------------------------------------------TVMGRHAK
+GYTGEEIHLIAEYFGNLSKK-------------NH
+>1CNO_A STRUCTURE OF PSEUDOMONAS NAUTICA CYTOCHROME C552, BY MAD METHOD
+A---------------------------GDIEAGKA-KA-AVCAACHGQNGI-S-QV----PIYPNLAGQKE--------
+---------------------QYLVAALKAYKAGQ---------RQ----G-----------------------------
+---------------------------------------------------------------------GQAPVMQGQAT
+ALSDADIANLAAYYAS-NPA-------------AA
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-554(548) (P00105)
+A---------------------------GDAAAGED-KI-GTCVACHGTDGQ-G-LA----PIYPNLTGQSA--------
+---------------------TYLESSIKAYRDGQ---------RK----G-----------------------------
+---------------------------------------------------------------------GNAALMTPMAQ
+GLSDEDIADIAAYYS----S-------------QE
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-553 (P31330)
+S---------------------------G--DLGAERYA-KMCKSCHGADGS-N-AA-----MSRALKGLPA--------
+---------------------EEVKAALIGYKEQT---------YG----G-----------------------------
+---------------------------------------------------------------------KKKGMMERVVK
+SLTDEDIEVLATHI-----G-------------TF
+>1DVH_A STRUCTURE AND DYNAMICS OF FERROCYTOCHROME C553 FROM DESULFOVIBRIO VULGARIS STUDIED BY NMR SPECTROSCOPY AND RESTRAINED MOLECULAR DYNAMICS
+-------------------------------ADGAA-LY-KSCIGCHGADGS-K-AA---MGSAKPVKGQGA--------
+---------------------EELYKKMKGYADGS---------YG----G-----------------------------
+---------------------------------------------------------------------ERKAMMTNAVK
+KYSDEELKALADYM-----S-------------KL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR CYTOCHROME C-553 (P00120)
+MKRILVVMSIC--------AALAFGVSAAMAADGAA-LY-KSCVGCHGADGS-K-QA---MGVGHAVKGQKA--------
+---------------------DELFKKLKGYADGS---------YG----G-----------------------------
+---------------------------------------------------------------------EKKAVMTNLVK
+RYSDEEMKAMADYM-----S-------------KL

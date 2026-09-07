@@ -1,0 +1,531 @@
+>1BIF_A 6-PHOSPHOFRUCTO-2-KINASE/FRUCTOSE-2,6-BISPHOSPHATASE BIFUNCTIONAL ENZYME COMPLEXED WITH ATP-G-S AND PHOSPHATE
+-----------C--------------PTLIVMVGLPARGKTYISKKLTRYL----NFI--G--V-PTREFNVGQ------
+--YRR--DM-----------VKTYKSFEFFLPDN-----EEG-LKIRKQC-------ALAAL-NDVRK--FLS--EEGGH
+VAVFDATNTTR---------E---R----RAMIFNFGEQ----N--GYKTFFVESICVDPEVIAANIVQV----------
+----------------K--L-------GSP---------DYVN--RDSDEATEDFMRRI----ECYENSYESLDEEQDRD
+LSYIKIMDVGQSYVVNRVADHIQSRIVYYLMNIHVTPRSIYLCRHGESELNLKGRIGGDPGLSPRGREFSKHLAQFISD-
+---Q--NIK-DLKVFTSQMKRTIQTAEALSVPYEQFKVLNEIDAGVCEEMTYEEIQDHYPLEFALRDQDKYRYRYPKGES
+YEDLVQRLEPVIMELERQENVLVICHQAVMRCLLAYFLDKAAEELPYLKCPLHTVLKLTPVAYGCKVESIFLNVAAVNTH
+RDRPQNVDISR-PSEEA-------LVTV----------------------PAHQ
+>1KGD_A CRYSTAL STRUCTURE OF THE GUANYLATE KINASE-LIKE DOMAIN OF HUMAN CASK
+-----------H------------M-RKTLVLLGAHGVGRRHIKNTLIT-------KH--P--D-RFAYPIPHT------
+--T-R--PPEENGKNYYFVSHDQM--MQDISN---------N----EYLEYGSHEDAMYGT----KLE--TIRKIHEQGL
+IAILDVEPQAL----------------------KVLR---T--A--EFAPFVVFIAAPTITPG------L----------
+----------------N-----------ED----------------E--SL-QRLQKES----D----------------
+--------------------------------------------------------------------------ILQ-R-
+---T--YAH-YFDLTII---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------NN-EIDETIRHLEEAVE-------------------------LVC
+>1DVR_A STRUCTURE OF A MUTANT ADENYLATE KINASE LIGATED WITH AN ATP-ANALOGUE SHOWING DOMAIN CLOSURE OVER ATP
+-----------S---------S--E-SIRMVLIGPPGAGKGTQAPNLQER----------F--H-AAH-LATGDMLRSQI
+AKG-T--QL-----------GLEA--KKIMDQG-----GLVS-DDIMVNM-------I----KDELTN----NPACK-NG
+FILVG-FPRTI---------P---Q----AEKLDQMLK--E--Q--GTPLEKAIELKVDDELLVARITGRLIHPASGRSY
+HKIFNPPKEDMKDDVTG--EALVQISDDNA---------DALK---KRLAAYHAQTEPI----V----------------
+--------------------------------------------------------------------------DFY-K-
+---K--T-G-IWAGVDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SQ-PPATVWADILNKL--------------------------GKN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE (O27793)
+---------------------------MYICFEGIDGSGKTTHAALTASWL----REN--G--Y-MVHEVREPT------
+--D-S--NI-----------GSLI--RSMLSSPD---ARTPDVQRMLALL-------FAADRLTL-RS--KIEGDW-AED
+VVVSDRCYYSSMVYQG--------P----EEWVCEINRF-------APRPDVVILLDIDVEVAMERCGGT----------
+----------------D-----------------------E----FEDPLYLAGVRERY----L----------------
+--------------------------------------------------------------------------ELA-D-
+---K--N---GFYTVNA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------ER-GVNLIQRDIRRILAPH--------FGI---------CSGGIM
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE (Q97CC8)
+---------------------------MFIAVEGIDGAGKTTLAKSLSSLL----EKE--G--F-RVFLTREPT------
+--D-D--I------------------R----N------YEGD-DVELFIK-------FTLDRYKHQK---EIRKKLNEGF
+VVISDRYIRSSYAYEMKGAAAALGS----EEKAKEWMDCVSNII--TIRPDINILVQVDVQVGLDRISKR----------
+----------------N----------GTI---------THF-------EQRERLNE-A----L----------------
+--------------------------------------------------------------------------KIY-N-
+---S--F-D-WDIKVDG---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------TD-PLDKITNEVYLYLKN-----------------------KIGL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9ZJE5)
+---------------------------MYVVLEGVDGAGKSTQVGLLKDR----------F--K-NALFTKEPG------
+--G-T--RM-----------GESL--RRIALNE------NIS-ELARAFL-------FLSDRAEHIES--VIKPALKEKK
+LIISDRSLISGMAYS---QFS---S----LE----LNLLAT--Q--SVLPEKIILLLINKENLKQRLSLK----------
+----------------------------SL---------DKIE--NQGIEKLLTIQQKLKTHAY----------------
+--------------------------------------------------------------------------ALQ-E-
+---K--FGC-EVLELDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------QK-SAKNLHEKIATFIE-------------------------CVV
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9PPF3)
+---------------------------MYVVFEGIDCVGKSTQISLLKEI----------Y--K-DAIFTLEPG------
+--G-T--EL-----------GKHL--REILLNKT----HPIN-KRAELLL-------FLADRAQHFEE--ILKTN--QNK
+LIISDRSFISGMAYA---KDF---E----NDLLFALNSFAL--E--NFFPQKIIFLKGDANLIQERLSQK----------
+----------------------------EL---------DSIE--KRGIEYFLSVQDKLEKVLH----------------
+--------------------------------------------------------------------------FLK-E-
+---K--ISV-EILTLDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------KE-SKEKLHQQIKE----------------------------FLQ
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE (Q9HNV4)
+---------------------------MLVTLEGLDGSGKTTVWESLRAS-------H--D--D-GVTFTAEPT------
+--D-S--QY-----------GQAV--RRSESAA------DAD-PIAELFL-------FTADHADHLSR--VVSPALDRGD
+VVISDRYSDSRYAYQGATLAD---TVPRAMEYVRGIHQP----W--TRPPDVTLYFDVDPDTGAARSGAT----------
+---------------------------------------NKF----ETAAFLADVRANY----E----------------
+--------------------------------------------------------------------------QLI-D-
+---Y--TPE-RFVRIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------TQ-SPEAVIADAEAALADA--------LP-----------DDAWA
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE (Q8THS9)
+-----------M------------R-GKLITLEGIDGSGKSTVAKKLQENS----ELR--V--F-EPVFTREPT------
+--R-G--TL----------TGNAV--ENAI-QS------DTD-QLAELFL-------FTADHAEHLAK--LVKPALEDGK
+TVISDRYSDSRYAYQGITLKN---RLDNPLEWVRDLHRG----W--TVIPDLTFLFDIEPEIAVKRCGKR----------
+----------------G-----------EQ---------TKF----EKIEFLRGVRELF----L----------------
+--------------------------------------------------------------------------GLA-A-
+---E--EPE-RFVIVDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SG-SPEDVEKAVVQKILDF--------V-------------QRIE
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE (Q975E6)
+-----------M--------------PRFISFEGIDGAGKTTLAKKVYEVL----KKK--G--Y-NVILTQEPF------
+--T-R--EI-----------TELI--KKAG---------WND-PVLLTLL-------FSADRAFHIKW--I---MEQKPE
+IVLMDRYFHSTIAYQSV-LGL---D----EKWIEEVNSK-------FPKPDIVFLLDIKVNEAIKRIRKD----------
+----------------D-----------QF---------NF----EEKIATLEAVRKKY----L----------------
+--------------------------------------------------------------------------ELA-R-
+---K--Y---NFIVLDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------MS-KIEELTEKTVQIICSL----------------------VKCS
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE 1 (Q9UXG7)
+-----------M--------------QKLIAIEGIDGSGKTTLANLLKEHL----ESK-MK--L-NVIVTREPF------
+--S-E--DI-----------IKLI--EKIG---------WND-PILLVLL-------FAADREIHVNW--L--SKIKDAD
+LIILDRYYFSSIAYQGA-LGV---D----EQWIKMVNSY-------FPKPDMVILLDLPIEVAISRIKND----------
+----------------K-----------FN----------F----EEKIKSLAKVREKY----L----------------
+--------------------------------------------------------------------------KLA-K-
+---E--Y---NFYVVDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SK-DKNEVLEQAIKIIQK------------------------NLF
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (P47252)
+-----------M---------N--K-GVFVVIEGVDGAGKTALIEGFKKLY----PTKFLN--Y-QLTYTREPG------
+--G-T--LL-----------AEKI--RQLLLNE------TME-PLTEAYL-------FAAARTEHISK--LIKPAIEKEQ
+LVISDRFVFSSFAYQGLSKKI---G----IDTVKQINHHAL--R--NMMPNFTFILDCNFKEALQRMQKR----------
+----------------G-----------ND---------NLLDEFIKGKNDFDTVRSYY----L----------------
+--------------------------------------------------------------------------SLV-D-
+------K-K-NCFLING---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------DN-K-QEHLEKFIELLTRC--------LQ-----------QPTHY
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (P75106)
+-----------M---------K--Q-GVFVAIEGVDGAGKTVLLEAFKQRF----PQSFLG--F-KTLFSREPG------
+--G-T--PL-----------AEKI--RALLLHE------AME-PLTEAYL-------FAASRTEHVRQ--LIQPALQQKQ
+LVIVDRFVWSSYAYQGLIKKV---G----LDVVKKLNADAV--G--DSMPDFTFIVDCDFETALNRMAKR----------
+----------------G-----------QD---------NLLDNTVKKQADFNTMRQYY----H----------------
+--------------------------------------------------------------------------SLV-D-
+------N-K-RVFLLDG---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------QN-Q-TGCLEQFIEQLSQC--------LT-----------QPTLS
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PUTATIVE THYMIDYLATE KINASE (O83373)
+-----------M---------N--ILHNFVVFEGIDGTGTSTQLRALERHF----QA---R--K-DMVFTQEPT------
+--G-G--EI-----------GTLI--RDVLQKR-----VIMS-SKALGLL-------FAADRHEHLEGAGGINDCLAEGK
+IVLCDRYVFSSLVYQGMA--V---S----GSFAYELNKE-------FPLPEVVFYFDAPIEVCVERITAR----------
+----------------G-----------LQ---------TELY---EYTSFQEKARKGY----E----------------
+--------------------------------------------------------------------------TIF-RK
+CRHL--YPAMKVIEIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------RE-EIEVVHERILHHLREY----------------------RRLK
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE (Q8U071)
+-----------M---------K--R-GLFIVLEGIDGSGKTTQARLLARWF----EDN--G--F-KVVLTKEPT------
+--D-T--EF-----------GKII--RKLVLEGSIIDGGRIS-LEAEALL-------FAADRAEHVKK--IIEPALREGK
+VVISDRYFYSSLAYQW-ARGL---N----LEWLIEINKF-------APHPDIAILLDIPPREGIKRIKKR----------
+----------------S-----------SQ---------TEFD---KLFKLQEKVRENY----I----------------
+--------------------------------------------------------------------------KLA-K-
+---M--F-D-EIKIIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------TK-SVEEVHREIISSIKEI--------WGK----------NYGSR
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE (Q9V1E9)
+-----------M------------R-GYFVVLEGIDGSGKTTQAKLLAEWF----EEQ--G--W-DVLLTKEPT------
+--D-T--EF-----------GRLI--RELVLKNSIIDGSRIS-YEAEALL-------FAADRAEHVKK--VILPALEKGK
+VVICDRYLYSSLAYQW-ARGL---S----LEWLMQINSF-------APRPDLAILLDLPVKESIRRTKAR----------
+----------------G-----------NM---------SEFD---KLLELQRKVRMNY----L----------------
+--------------------------------------------------------------------------KLA-E-
+---M--F-K-EMRIVNA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------MA-SVEEVHEDIVALVKHE----------------------LLGL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE (O59366)
+-----------M------------R-GYFIVLEGIDGSGKTTQAKLLAEWF----EDK--G--Y-EVLLTKEPT------
+--D-S--EL-----------GKLI--RRIILEESVIDGSKIS-YEAEALL-------FAADRAEHVKK--IILPALSEGK
+VVICDRYFYSSLAYQW-ARGL---D----LNWLIQVNSF-------APRPDLAILLDLPVKESLRRIKLR----------
+----------------G-----------TL---------TEFD---KIVELQRKVRHNY----L----------------
+--------------------------------------------------------------------------KLA-E-
+---M--F-P-EMRIVNA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------LS-SIEDIHSDIVALVKHE----------------------LLGL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE (O30175)
+---------------------------MLIAVEGIDGAGKTTIAAYIAELL----KEK--G--Y-KVKVLKEPG------
+--D-S--KF-----------GKKI--KSS--E------ERLS-PEEELEL-------FLKDREIDARE--NILPALQSGY
+AVVMDRYYFSNIAYQS-ARGI---D----ARLIREMNEKI------APKPDLTILLDVEPEIALERVRKR----------
+----------------G-----------KL---------SPF----EKLDYLRKVRKCF----L----------------
+--------------------------------------------------------------------------ENA---
+------D-E-TTVVVDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SK-PLEEVKEEVRKVIESF--------LNL----------KKNSN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9PFS7)
+---------------------------MLVAIEGIDGAGKTTLARSLALKL----RGV--G--L-ETVVSKEPT------
+--N-G--PW-----------GMLL--RQSAAT------GRFS-PEEEVDV-------LLRDRRQHVED--LIVPMIGRGA
+VVILDRYFPSMVAYQG-AAGL---P----VDALLEANAF-------APRPDVLLLLDVPPAIGLQRIWER----------
+----------------G-----------STP--------NHF----ETTENLSRCRDIF----L----------------
+--------------------------------------------------------------------------ALE---
+------L-P-SKRVIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------TA-NAETVLSAALALVMEV--------LRVRLGALGAVVLRRLAG
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PROBABLE THYMIDYLATE KINASE (Q8ZY35)
+-----------M---------------AFVAIEGIDGSGKSTVISLLEK--------K--L--P-RVYATREPS------
+--S-G--PI-----------GRLI--KEWALKGG-----SVD-PHVDALL-------FAADRIEHYKR--EIEPRVREGY
+IVISERYIESSIAYQGA-AGV---S----REFVKYINSLV-------PKPDLTIILDVDPSIAEARIRQR----------
+----------------G-----------GA---------EKYE----YLSFLRKVREIY----L----------------
+--------------------------------------------------------------------------ARA-A-
+---E--E---GYPVIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SR-RPEEVAADVAELIKRV----------------------VRFK
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q92GS5)
+-----------MN------NLK--Q-GKFITFEGGEGIGKSTQSQMLYEYL----QSQ--N--T-PVILTREVG------
+--G-T--IV-----------AEKM--REILVHE------ELL-PMSELLQ-------AMAARYDHMAR--KIIPALQEGH
+IVICDRFIESTVCYQGLELEN---G----IDLVYNLHKTLM--P--SLMPDITFFIDVEPDTAIKRVNSR----------
+----------------N-----------MN---------NKFD--IRGIDFYKKIYYCF----K----------------
+--------------------------------------------------------------------------ELS-N-
+---R--FPE-RIKTIKA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SDLSPLEVHELIK-----------------------------KHL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q98RF7)
+-----------MKIENKSDKEE--D-QMFITFEGIDASGKTSLLAKLKAHV----VQK--NLQG-KCTFTWEPG------
+--G-RKSPE-----------IQTI--RHLILNKE----SNLS-PIAEAFL-------YSSARRIHLDK--VILPNLAKNK
+VVFCDRFVDSSFAYQAFGRDL---G----FEKIKLLNELAT--D--KKYPDITFILKISYEESMERRKAR----------
+----------------Q----------EDE---------DRLE--KEENSFYQKVIKGY----D----------------
+--------------------------------------------------------------------------FLA-S-
+---YPEFQK-RIFVIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SK-NQEEIFESVLKILKDHKTFQTHPIYK------------DFFS
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q8KCU7)
+---------------------------MLISFEGIDGAGKSTQVMKLKRYL----QER--G--R-EVLALREPG------
+--G-T--PV-----------AEEI--RELLLERR----NDIT-PVGELLL-------FAASRAELVQQ--VIQPALENDS
+DVILDRFFDSTTAYQGYGRGL---D----LDMLAEINRIAS--C--RLVPDVTFYLDLTPEDALMRKFSE----------
+----------------K-----------SLPLAFESEELDRME--NSGLDFYRRVREGY----H----------------
+--------------------------------------------------------------------------KIG-G-
+---E--NPN-RIIIIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------LL-SPSEIHRKIISSIDAL--------C-------------TKTA
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9X0I3)
+---------------------------MFITFEGIDGSGKSTQIQLLAQYL----EKR--G--K-KVILKREPG------
+--G-T--ET-----------GEKI--RKILLE------EEVT-PKAELFL-------FLASRNLLVT---EIKQYLSEGY
+AVLLDRYTDSSVAYQGFGRNL---G----KEIVEELNDFAT--D--GLIPDLTFYIDVDVETALKRKGEL----------
+----------------N-----------R----------------FEKREFLERVREGY----L----------------
+--------------------------------------------------------------------------VLA-R-
+---E--HPE-RIVVLDG---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------KR-SIEEIHRDVVREVKRR--------W-------------KLDV
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (O67099)
+---------------------------MLIAFEGIDGSGKTTQAKKLYEYL----KQK--G--Y-FVSLYREPG------
+--G-T--KV-----------GEVL--REILLT------EELD-ERTELLL-------FEASRSKLIEE--KIIPDLKRDK
+VVILDRFVLSTIAYQGYGKGL---D----VEFIKNLNEFAT--R--GVKPDITLLLDIPVDIALRRLKEK----------
+----------------N-----------R----------------FENKEFLEKVRKGF----L----------------
+--------------------------------------------------------------------------ELA-K-
+---E--E-E-NVVVIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SG-EEEEVFKEILRALSG-----------------------VLRV
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q8XYH4)
+-----------M------------T-GKFITFEGIDGAGKSTHLAWFAQQLEARLAPQ--G--R-KVVVTREPG------
+--G-T--PL-----------GERL--REVLLHE------RMH-LETEALL-------MFASRREHIAE--VIQPALERGD
+WVISDRFTDATFAYQGGGRGL---A----IERLEALEQWVQ--Q--GLQPTRTLLFDLAPEVAAARLADA----------
+----------------R-----------TP---------DKFE--AESAQFFVRTRAEY----L----------------
+--------------------------------------------------------------------------RRA-A-
+---A--EPG-RFVVIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------AR-ARDDIRKDLEKLL--------------------------ASL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (P65248)
+-----------M--------------SAFITFEGPEGSGKTTVINEVYHRL----VK---D--Y-DVIMTREPG------
+--G-V--PT-----------GEEI--RKIVLEGN-----DMD-IRTEAML-------FAASRREHLVL--KVIPALKEGK
+VVLCDRYIDSSLAYQGYARGI---G----VEEVRALNEFAI--N--GLYPDLTIYLNVSAEVGRERIIKN----------
+----------------S----------RDQ---------NRLD--QEDLKFHEKVIEGY----Q----------------
+--------------------------------------------------------------------------EII-H-
+---N--ESQ-RFKSVNA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------DQ-PLENVVEDTYQTIIKY--------L--------------EKI
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q8CQT7)
+-----------M--------------STFITFEGPEGAGKTSVIKKVSERL----AK---E--Y-DIVTTREPG------
+--G-V--LT-----------SEEI--RRIVLDGD-----SID-IRTEAML-------FAASRREHLVE--KIIPSLQAGK
+IVLCDRYIDSSLAYQGYARGI---G----IKEVKLLNEFAI--N--GLYPDLTIYLDVDAEIGRQRILKN----------
+----------------N----------REQ---------NRLD--KEEKAFHEKVIEGY----Q----------------
+--------------------------------------------------------------------------KVI-S-
+---D--NPH-RFIKVNA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------NH-SLDKVVEETYQSIIK------------------------YLK
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q8YN62)
+-----------M------------G-GRFIVFEGVEGCGKTSQMQLCAEWL----QSL--G--I-SVVLTREPG------
+--G-T--EL-----------GLDL--RRLLLQKAE--DKPIA-EVTELLL-------YAADRAQHVAQ--ELKPKLAQGK
+YILCDRYVDSTIAYQGYGRNL---D----MNLIHQLNDIAT--G--GLTSDITIWLDVDVEVGLARKRGD----------
+----------------N----------VGL---------DRIE--QETIAFHRRVQQGY----A----------------
+--------------------------------------------------------------------------DLA-A-
+---S--SPK-RIIRVDG---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------QL-SKETVHKTIQEILSVH--------L-------------KQWL
+>4TMK_A COMPLEX OF E. COLI THYMIDYLATE KINASE WITH THE BISUBSTRATE INHIBITOR TP5A
+-----------R--------------SKYIVIEGLEGAGKTTARNVVVETL----EQL--G--IRDMVFTREPG------
+--G-T--QL-----------AEKL--RSLLLDIKSVGDEVIT-DKAEVLM-------FYAARVQLVET--VIKPALANGT
+WVIGDRHDLSTQAYQGGGRGI---D----QHMLATLRDAVL--G--DFRPDLTLYLDVTPEVGLKRARAR----------
+----------------G-----------EL---------DRIE--QESFDFFNRTRARY----L----------------
+--------------------------------------------------------------------------ELA-A-
+---Q--D-K-SIHTIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------TQ-PLEAVMDAIRTTVTHW--------V--------------KEL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q8D3A7)
+-----------M---------I--K-SKFIVIEGLEGSGKTNAISKIVNLL----NKQ--G--IKNVIFTREPG------
+--G-T--PL-----------AESL--RTLIKEGVG--YEKIT-DNAELLM-------IYAARIQLVES--VIKPALENGS
+WVVGDRHDLSSLAYQGGGRKI---D----TKILKMLREVFL--R--DFYPDLTFYLDIPPIMGLARIRAR---ATVRAQI
+RDKVNKIKRNHSHDIKN-----------AL---------DRIE--VEPISFFDRTRKKY----K----------------
+--------------------------------------------------------------------------ELA-S-
+---K--N-E-KIITIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SK-SLELVNKEIKHQLLKW--------L-------------KKQI
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9KQI2)
+-----------M------------N-AKFIVIEGLEGAGKSTAIQVVVETL----QQN--G--IDHITRTREPG------
+--G-T--LL-----------AEKL--RALVKEEHP--GEELQ-DITELLL-------VYAARVQLVEN--VIKPALARGE
+WVVGDRHDMSSQAYQGGGRQI---A----PSTMQSLKQTAL--G--DFKPDLTLYLDIDPKLGLERARGR----------
+----------------G-----------EL---------DRIE--KMDISFFERARERY----L----------------
+--------------------------------------------------------------------------ELA-N-
+---S--D-D-SVVMIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------AQ-SIEQVTADIRRALQDW--------LS-----------QVNRV
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (O69169)
+-----------M------------N-SKFIVIEGLEGAGKTTTRDTVVAVL----RAQ--G--INDIVFTREPG------
+--G-T--PL-----------AEKL--RDLIKQGID--GEVLT-DKAEVLM-------LYAARVQLVEN--VIKPALARGS
+WVVGDRHDLSSQAYQGGGRGI---D----SQLMASLRDTVL--G--EFRPDLTLYLDLPPAVGLARARAR----------
+----------------G-----------EL---------DRIE--QESLAFFERTRARY----L----------------
+--------------------------------------------------------------------------ELA-A-
+---S--D-A-SIKTIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SQ-PIEQVSASISQALAQW--------LT-----------NQEPV
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (P44719)
+-----------M------------K-GKFIVIEGLEGAGKSSAHQSVVRVL----HEL--G--IQDVVFTREPG------
+--G-T--PL-----------AEKL--RHLIKHET---EEPVT-DKAELLM-------LYAARIQLVEN--VIKPALMQGK
+WVVGDRHDMSSQAYQGGGRQL---D----PHFMLTLKETVL--G--NFEPDLTIYLDIDPSVGLARARGR----------
+----------------G-----------EL---------DRIE--QMDLDFFHRTRARY----L----------------
+--------------------------------------------------------------------------ELV-K-
+---D--N-P-KAVVINA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------EQ-SIELVQADIESAVKNW--------WK------------SNEK
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9CKE9)
+-----------M---------T--T-GKFIVLEGIEGAGKTTARDSIVRAL----HAH--G--IHDIVFTREPG------
+--G-T--PL-----------AEKL--RQLIKHET---EEPVT-DKAELLM-------LYAARIQLVEN--VIKPALAQGK
+WVIGDRHDMSSQAYQGGGRQL---D----QHLLHTLKQTIL--G--EFEPDLTLYLDIDPVLGLSRAKGR----------
+----------------G-----------AL---------DRIE--QQNLDFFHRTRQRY----Q----------------
+--------------------------------------------------------------------------ELV-R-
+---H--N-P-KAVTIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SQ-TMSKVAEDVESAIETW--------L--------------TTR
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q87N26)
+-----------M---------M--K-ANFIVVEGLEGAGKSTAIKTVLDTL----KQA--G--IENIVNTREPG------
+--G-T--PL-----------AEKM--RALVKEEHE--GEELK-DMTELLL-------LYAARVQLVEN--VIKPALANGQ
+WVVGDRHDLSSQAYQGGGRQI---D----ASLMKNLRDTTL--G--DFKPAFTLYMDIDPRIGLERARGR----------
+----------------G-----------EL---------DRIE--KMDISFFERTRERY----L----------------
+--------------------------------------------------------------------------EIA-N-
+---A--D-P-SIVVINA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------EQ-SIEEVSRDIQDALNEW--------L--------------SRQ
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (P59500)
+-----------M---------L--K-GKFIVIEGIEGSGKTTICKTLKNIL----YEH--G--IKNVICVRDPG------
+--S-T--PL-----------AEKI--RSLLITKDK--NEYMV-NETELLL-------FYAARIQLIKN--IIQPALNKGV
+WVISDRYFLSSLAYQCAGRKI---K----EEIVLLLQSLFL--K--NFNPNITFYLDVTPEIGLNRIKNR----------
+----------------N-----------EI---------DRIE--QNTKFFFNNVRNKY----L----------------
+--------------------------------------------------------------------------NLI-K-
+---T--K-P-GIIKINA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------NR-KIDKVKHSCKQQMLSW--------LN------------TENL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q8K9J3)
+-----------M---------I--K-SKFIVIEGLEGAGKTHACICVQRIL----KEN--N--IKNVILVRQPG------
+--S-T--PV-----------AEKI--RKLIKNNTY--IEDFE-KETELLL-------MYAARIQLVKK--IIQPALKKGT
+WVISDRHDLSSLAYQGGGLGI---K----RKLINKLKYLFL--Q--DFIPDLTIYLDVYPEIGLKRASKR----------
+----------------N-----------HL---------DRIE--HRSLTFFKKTRASY----L----------------
+--------------------------------------------------------------------------KNI-K-
+---L--D-K-KIIKINA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------NL-NIKIVTQNIKNQILKW--------LQ------------QKVV
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (P57434)
+-----------M---------I--K-SKFIVIEGLEGAGKTNACICIKNLL----KKN--S--IKNVLLVRQPG------
+--S-T--PI-----------AEDI--RRLIKKKFN--DDNLI-KETELLL-------MYAARIQLVEK--KIKPALKNGI
+WVISDRHDLSSLAYQGGGLGI---P----KKIIYQLQSLFL--N--NFIPDLTIYLDVSPEIGLARALKR----------
+----------------N-----------PL---------DLIE--SRSLFFFKKTRRCY----L----------------
+--------------------------------------------------------------------------EKS-K-
+---L--D-K-KTIIINA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------NL-NIKKVTQNITKKMLNW--------LN------------KQVI
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9PKK5)
+---------------------------MFIVVEGGEGAGKTQFTQALSKRL----MEE--G--K-EVVLTREPG------
+--G-S--AL-----------GEQL--RDLVLDVT----QEIS-SYAELLL-------FLAARAQHIQE--KILPALESGK
+TVICDRFHDSTIVYQGIAGGL---G----EAFVTDLCYRVV--GDEPFLPDITFLLDLPEKEGLLRKTRQ----------
+----------------K-----------NL---------DRFE--QKPTSFHRAAREGF----I----------------
+--------------------------------------------------------------------------SLA-E-
+---R--SPD-RYKILDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------LL-PTEVSVDQALLQI-------------------------RALI
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (O84191)
+---------------------------MFIVVEGGEGAGKTQFIQALSKRL----IEE--G--R-EIVTTREPG------
+--G-C--SL-----------GDSV--RGLLLDPE----QKIS-PYAELLL-------FLAARAQHIQE--KIIPALKSGK
+TVISDRFHDSTIVYQGIAGGL---G----ESFVTNLCYHVV--GDKPFLPDITFLLDIPAREGLLRKARQ----------
+----------------K-----------HL---------DKFE--QKPQIFHRSVREGF----L----------------
+--------------------------------------------------------------------------ALA-E-
+---K--APD-RYKVLDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------LL-PTEASVDQALLQI-------------------------RALI
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9Z8R5)
+---------------------------MFIVIEGGEGSGKSSLAKALGDQL----VAQ--D--R-KVLLTREPG------
+--G-C--LI-----------GERL--RDLILEPP---HLELS-RCCELFL-------FLGSRAQHIQE--VIIPALRDGY
+IVICERFHDSTIVYQGIAEGL---G----ADFVADLCSKVV--GPTPFLPNFVLLLDIPADIGLQRKHRQ----------
+----------------K-----------VF---------DKFE--KKPLSYHNRIREGF----L----------------
+--------------------------------------------------------------------------SLA-S-
+---A--DPS-RYLVLDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------RE-SLASLIDKVMLHT-QL----------------------GLCT
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q823B7)
+---------------------------MFIVIEGCEGSGKSSLTELLKDRL----IAE--G--K-AVVATREPG------
+--G-S--PL-----------GERV--RDLILEPS---TPSIS-PYTELFL-------FLAARAEHITK--KIFPALESGN
+IVICDRFHDSTIVYQGIAEGL---G----KEYVTSLCHHVV--GEKKFLPDLTCLLDIPADEGLRRKQQQ----------
+----------------K-----------SL---------DKFE--DKPLAYHTKIREGF----L----------------
+--------------------------------------------------------------------------SLA-E-
+---A--HPN-SYLILDG---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------RQ-PLEESLNKVMTAYTEL----------------------ALCK
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q8UFA0)
+-----------M---------AEKT-GLFISFEGGEGAGKSTQIRTLAEAL----RGR--G--F-EVVVTREPG------
+--G-S--PG-----------AEAV--RHVILSGA---AESFG-VRMEAIL-------FAAARNDHVEE--VIRPALARGE
+IVLCDRFLDSSRVYQGTTGNL---E----PDFIETLQRIAI--D--GVVPELTLIFDIAAEKGLARARKR----------
+----------------ADEG-------ATP---------DRFE--KEEIETHEKRREAY----L----------------
+--------------------------------------------------------------------------DIA-L-
+---A--EPR-RCRIVNA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------DQ-PEDKVTEDVMSFVEPL--------LERAG-----NAADAAHE
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q8RDE6)
+-----------M------------R-GKFISFEGIDGCGKTTQVKLLEEHL----KKE--G--Y-DLLVLREPG------
+--G-T--RV-----------GEKV--REILLDRE----NLIF-PVTEMLL-------YASSRAQLVEE--KILPALSKGQ
+MVIVDRFIDSSYVYQGYARGL---G----LEKVKIVNEIAT--K--GLFPDITVYIDITPEEAIKRRQGK----------
+----------------------------KA---------DRLE--GEDYEFHKKVREGY----L----------------
+--------------------------------------------------------------------------RLV-K-
+---D--FPE-RFILIDG---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------MQ-EVLAVHKMVVKAVEEY--------LK------------GAKV
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9JVE7)
+-----------M------------K-PQFITLDGIDGAGKSTNLAVIKAWF----ERR--G--L-PVLFTREPG------
+--G-T--PV-----------GEAL--REILLNPE----TKAG-LRAETLM-------MFAARMQHIED--VILPALSDGI
+HVVSDRFTDATFAYQGGGRGM---P----SEDIEILEHWVQ--G--GLRPDLTLLLDVPLEVSMARIGQT----------
+----------------R-----------EK---------DRFE--QEQADFFMRVRSVY----L----------------
+--------------------------------------------------------------------------NRA-A-
+---A--CPE-RYAVIDS---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------NL-GLDEVRNSIEKVLDR-----------------------HFGC
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q87YH1)
+-----------M------------T-GLFITLEGPEGAGKSTNRDYLAAQL----RAQ--G--V-QVLLTREPG------
+--G-T--PL-----------AERI--RELLLAPS---DEGMS-ADTELLL-------VFAARAQHLAE--VIRPALARGE
+VVLCDRFTDATYAYQGGGRGL---S----HERIAALEQFVQ--G--DLRPDLTLVFDLPVEIGLSRAAAR----------
+----------------G-----------RL---------DRFE--QEGRAFFDAVRSTY----L----------------
+--------------------------------------------------------------------------NRA-K-
+---A--EPA-RYRLVDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------AQ-SLADVQASLDKLLPEL--------LE------------LQRG
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9HZN8)
+-----------M------------T-GLFVTLEGPEGAGKSTNRDYLAERL----RER--G--I-EVQLTREPG------
+--G-T--PL-----------AERI--RELLLAPS---DEPMA-ADTELLL-------MFAARAQHLAG--VIRPALARGA
+VVLCDRFTDATYAYQGGGRGL---P----EARIAALESFVQ--G--DLRPDLTLVFDLPVEIGLARAAAR----------
+----------------G-----------RL---------DRFE--QEDRRFFEAVRQTY----L----------------
+--------------------------------------------------------------------------QRA-A-
+---Q--APE-RYQVLDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------GL-PLAEVQAGLDRLLPNL--------LE------------RLNG
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9RY40)
+-----------M---------S--Q-GLFITLEGPEGAGKTTQLARLEARL----RAA--G--H-AVTVTREPG------
+--G-T--PL-----------GTRV--REVVLDPA----VEIE-PLGEFLL-------YSASRAQLVRE--VLRPALERGE
+TVLCDRYADSSLAYQGAGRGL---S----LPLLRQITAEVT--G--GLTPGLTVLLDLDPALGLQRAARR----------
+----------------G-----------QP---------DRLE--QADLTFHRRVRQGF----L----------------
+--------------------------------------------------------------------------DLA-H-
+---A--EPQ-RFLVLDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------TR-PEDELEAEIWAAVSE------------------------RGH
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9RQJ9)
+-----------M---------T--Q-GFFISFEGGEGAGKSTQIRRLADRL----KAA--G--H-DVIVTREPG------
+--G-S--PG-----------AEAI--RELLVNGA---ADRWS-PVTESLL-------MYAARRDHIER--VIRPGLARGA
+VVLCDRFADSTRAYQGAGGDA---P----ASLIAALEEHVL--G--GTVPVLTLILDLPAEVGLQRAEAR----------
+----------------G-----------GA---------ARFE--SKGLAFHERLRAGY----L----------------
+--------------------------------------------------------------------------EIA-R-
+---R--EPD-RCVVIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------DA-ELDAVTAAISDVVVQR-----------------------LGL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q927E8)
+-----------M------------K-AIFITLEGPDGSGKTTVGTLLNQKM----EEA--G--I-DFIKTREPG------
+--G-S--PI-----------SEKV--RNIVLGIG---NEEMD-PKTEVLL-------IAGARRQHVVE--TIRPALAAGK
+TVLCDRFMDSSLAYQGAGRDM---N----MEQVLQVNLYAI--E--DTIPDRTYYLDVPAEVGLARIAAN----------
+----------------K--G-------REV---------NRLD--KEDITYHEKVQNGY----E----------------
+--------------------------------------------------------------------------KII-Q-
+---M--FPD-RFMRVDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------TK-TPEEITTIILADILK------------------------QLT
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q88YP6)
+-----------M---------L--T-GKLVTFEGPDGAGKTSALNAIVAKL----QPQ-LG--D-RLVVTREPG------
+--G-N--QI-----------SEAI--RKIILDRH---NTAMD-DRTEALL-------YAAARRQHIVQ--TIQPALQNDQ
+LVLCDRYIDSSVAYQGAGRGI---G----EQAVYDMNQFAT--A--GLTADLTLYFDVDAAVGLNRIQQH----------
+----------------R--Q-------NEI---------NRLD--VEALSFHHRVQAAY----L----------------
+--------------------------------------------------------------------------RLL-A-
+---D--HPD-RIKRVDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SQ-PLDQVVTQALEIMASQ--------LPTYV-----ASKGGEDQ
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (P0DC02)
+-----------M---------I--T-GKLITVEGPDGAGKTTVLEQLIPLL----KQK-VA--Q-EILTTREPG------
+--G-V--AI-----------SEYI--RELILDIN---HTTMD-PKTELLL-------YIAARRQHLVE--KVLPALEAGQ
+LVFIDRFIDSSVAYQGAGRGL---I----KADIQWLNEFAT--D--GLEPDLTLYFDVPSEIGLARINAN----------
+----------------Q--Q-------REV---------NRLD--LETIEIHQRVRKGY----L----------------
+--------------------------------------------------------------------------ALA-K-
+---E--HPK-RIVTIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------TK-PLKEVVSVALEHVLTL-----------------------LLA
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9KGL9)
+-----------M---------T--K-GCFITVEGGEGAGKTSALDAIEEML----REN--G--L-SVVRTREPG------
+--G-I--PI-----------AEQI--RSIILDVD---HTRMD-PRTEALL-------YAAARRQHLVE--KVLPALEAGH
+VVLCDRFIDSSLAYQGYARGI---G----FEDILAINEFAI--E--GRYPDLTLLFRVDPDVGLSRIHRD----------
+----------------Q--S-------REQ---------NRLD--QEALTFHQKVKEGY----E----------------
+--------------------------------------------------------------------------RIV-E-
+---T--YPE-RVVEIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------NQ-SFDQVVADAVRMIKQR-----------------------LSL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q9CIG4)
+-----------M------------N-GILISLEGPDGAGKTTVLKEILPEI----QKM--K--R-EIVPTREPG------
+--G-V--RV-----------AEEI--RQIILDPK---NTDID-SKTELML-------FAAARRLHMQE--KMLPALQAGK
+VVIVDRFIDSSVAYQGYGRDL---G----VEVVDWLNYFAT--D--GLKPDLTLYFDVDTDVALERIMKN----------
+----------------R--A-------DEV---------NRLD--LERAEMHRKVREGY----L----------------
+--------------------------------------------------------------------------EIV-V-
+---K--EPE-RFVKIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SQ-PLEKVVADTLSVLKKR--------F-------------VSEF
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q97R91)
+-----------M---------S--K-GFLVSLEGPEGAGKTSVLEALLPIL----EEK--G--V-EVLTTREPG------
+--G-V--LI-----------GEKI--REVILDPS---HTQMD-AKTELLL-------YIASRRQHLVE--KVLPALEAGK
+LVIMDRFIDSSVAYQGFGRGL---D----IEAIDWLNQFAT--D--GLKPDLTLYFDIEVEEGLARIAAN----------
+----------------S--D-------REV---------NRLD--LEGLDLHKKVRQGY----L----------------
+--------------------------------------------------------------------------SLL-D-
+---K--EGN-RIVKIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SL-PLEQVVETTKAVLFDG--------M-------------GLAK
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q98MV4)
+-----------M---------A--R-GFFITFEGGEGAGKSTQIERLARKM----HAK--K--Y-DVLLTREPG------
+--G-S--PG-----------AEAV--RHVLLSGA---AEPFG-PKMEALL-------FAAARSDHVEQ--VIRPAVERGS
+IVLCDRFLDSSRVYQGVTGGI---D----PAFMATLEQIAI--N--GMMPDMTLIFDIDPAEGLRRATLR----------
+----------------RGSD-------AGA---------DRFE--KETLAIHQARRAAF----L----------------
+--------------------------------------------------------------------------AIA-A-
+---A--EPE-RCIVVDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------SA-DPNTVEDVVTAAVFAA--------LEARA---PARNRQAAPV
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q92PW7)
+MHADPGIEVSLA------------K-GFFITFEGGEGTGKSTQMRLLAEAL----SAR--G--Y-RVLTTREPG------
+--G-S--VG-----------AEAV--RHVLLSGA---AESFG-VRMEAIL-------FAAARSDHVEE--VIRPALEQGT
+IVLCDRFMDSSRVYQGVTGNL---E----PAFVETLERVAV--N--GVIPDCTIIFDLPASVGLERARRR----------
+----------------AA-N-------DSP---------DRFE--KEQLETHEKRREAF----L----------------
+--------------------------------------------------------------------------DIA-A-
+---A--DPE-RCRVVDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------NR-PPTAIAAEVLSLVEAL--------LPLEG--KPQPSNAEATS
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR THYMIDYLATE KINASE (Q8YH15)
+-----------M------------S-GLFITFEGGEGAGKSTQIALLASHL----RNH--G--F-DPVITREPG------
+--G-S--PG-----------AEAI--RHVILSGN---AETYG-PAMEALL-------FAAARADHVDQ--LIRPTLAEGR
+IVLCDRFIDSSRAYQGVTGNL---D----ATYMAAIERIAI--D--GAMPDLTLVLDICAERGLSRAGKR----------
+----------------RG-S-------DTA---------DRFE--KEDIAVHEARRQAF----L----------------
+--------------------------------------------------------------------------EIA-R-
+---Q--EPA-RCKVIDA---------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------DR-SQEKIADEIRSVVDTI--------LT-----------EKGLL

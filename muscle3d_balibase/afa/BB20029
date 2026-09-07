@@ -1,0 +1,130 @@
+>1PRT_F THE CRYSTAL STRUCTURE OF PERTUSSIS TOXIN
+----------------------------------------------------------L---PT---H-L-Y-KNFTVQE
+LAL-KLKGKNQEFCLTAFMSG-R-SLVRACLSDAGHEHDTWFDTML----GFAIS-------------------------
+---------------------------------------------AYALKSRIALTVEDSPYPGTPGDLLELQICPLNGY
+CE
+>1LT5_D HEAT-LABILE ENTEROTOXIN B-PENTAMER COMPLEXED WITH THIODIGALACTOSIDE
+A-------------------------------------------------PQTITELCSEYRNT---Q-I-YTINDKILS
+YTE-SMAGK-R-EMVIITFKS-G-ETF--QVEVPGSQHIDSQKKAIERMKDTLRI-------------------------
+---------------------------------------------TYLTETKIDKLCVWN--NKTPNSIAAI------SM
+KN
+>1SAP_A HYPERTHERMOPHILE PROTEIN, RELAXATION MATRIX REFINEMENT STRUCTURE
+-----------------------------------------------------MVKVKF---KYKGEE-K-EVDTSKIKK
+V--WRVGK-M--VSFTYDDNG-K-TGR--GAVSEKD----APKELL----DMLAR-------------------------
+---------------------------------------------A-------------------------------ERE
+KK
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR C-X-C MOTIF CHEMOKINE 15 (Q9WVL7)
+MAAQG--W------------SMLL-LAVL-N-L--G-------IFVRPCDTQELRCLCI---QE---H-SEFIPLKLIKN
+IMVIFETIYCNRKEVIAVPKN-G-SMI--CLDPDAP----WVKATV----GPITNRFLPEDLKQKEFPPAMKLLYSVEHE
+KPLYLSFGRPENKRIFPFPIRETSRHFADLAHNSDRNFLRDSSEVSL------------------------------TGS
+DA
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR INTERLEUKIN-8 (P08317)
+MNGKL--G-----------A-VLA-LLLV-SAALSQ-------GRTLVKMGNELRCQCI---ST---H-SKFIHPKSIQD
+VKLTPSGPHCKNVEIIATLKD-G-REV--CLDPTAP----WVQLIV----KALMA-------------------------
+---------------------------------------------KAQ---------------------------LNSDA
+PL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR INTERLEUKIN-8 (P79255)
+MTSKL--A-----------VALLA-AFLL-SAALCE-------AAVLSRMSTELRCQCI---KT---H-STPFHPKFIKE
+LRVIESGPHCENSEIIVKLTN-G-NEV--CLNPKEK----WVQKVV----QVFVK-------------------------
+---------------------------------------------RA------------------------------EKQ
+DP
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR INTERLEUKIN-8 (P46653)
+MTSKL--A-----------VALLA-AFLL-SAALCE-------GAVLPRSAKELRCLCI---KT---Y-SKPFHPKFIKE
+LRVIESGPHCVNTEIIVKLSD-G-REL--CLDPKEP----WVQRVV----EKFLK-------------------------
+---------------------------------------------RA------------------------------ESQ
+NS
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR INTERLEUKIN-8 (P49113)
+MPSQL--R-----------VAVLA-AFLL-SAVLCE-------GMVVTKLVSELRCQCI---KI---H-TTPFHPKFIKE
+LKVIESGPRCANSEIIVKLSD-N-RQL--CLDPKKK----WVQDVV----SMFLK-------------------------
+---------------------------------------------RT------------------------------ESQ
+DS
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR C-X-C MOTIF CHEMOKINE 10 (P02778)
+MNQTA---------------ILIC-CLIF-LTL--S-------GIQGVPLSRTVRCTCI---SI---S-NQPVNPRSLEK
+LEIIPASQFCPRVEIIATMKKKG-EKR--CLNPESK----AIKNLL----KAVSK-------------------------
+---------------------------------------------ER------------------------------SKR
+SP
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR C-X-C MOTIF CHEMOKINE 9 (Q07325)
+MKKSG--V------------LFLL-GIIL-LVL--I-------GVQGTPVVRKGRCSCI---ST---N-QGTIHLQSLKD
+LKQFAPSPSCEKIEIIATLKN-G-VQT--CLNPDSA----DVKELI----KKWEK-------------------------
+---------------------------------------------QVS---QKKKQKNGKKHQKKKVLKVRKSQRSRQKK
+TT
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PLATELET FACTOR 4 (Q9Z126)
+MSVAA--VFR--GLRP-SPELLLL-GLLF-LPAVVA-----VTSAGPEESDGDLSCVCV---KT---ISS-GIHLKHITS
+LEVIKAGRHCAVPQLIATLKN-G-RKI--CLDRQAP----LYKKVI----KKI---------------------------
+-------------------------------------------------------------------------------L
+ES
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR C-X-C MOTIF CHEMOKINE 5 (P97885)
+MSFQL--RSSARIPSRSCSSFTLL-AFLLLFTLPQHRA---QAAPFSAMVATELRCVCL---TL---A-P-RINPKMIAN
+LEVIPAGPHCPKVEVIAKLKN-QKDNV--CLDPQAP----LIKKVI----QKILG-------------------------
+---------------------------------------------SEN---KKTKR--------------NALALVRSAS
+TQ
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PLATELET FACTOR 4 (P30034)
+QEWSL--PGT----------------------RVPP-------PADPEGGDANLRCVCV---KT---I-S-GVSPKHISS
+LEVIGAGPHCPSPQLIATLKK-G-HKI--CLDPQNL----LYKKII----KKLLK-------------------------
+---------------------------------------------S-------------------------------QLL
+TA
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PLATELET FACTOR 4 VARIANT (P10720)
+MSSAA--RSR--LTRATRQEMLFL-ALLLLPVVVAF-------ARAEAEEDGDLQCLCV---KT---T-S-QVRPRHITS
+LEVIKAGPHCPTAQLIATLKN-G-RKI--CLDLQAL----LYKKII----KEH---------------------------
+-------------------------------------------------------------------------------L
+ES
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PLATELET BASIC PROTEIN (P43030)
+MSLRLGAISSCTTSSPFPVLQVLLPLSLL-LTTLVPAT-MGAAKIEGRMAHVELRCLCL---NT---V-S-GIHPSNIQS
+LEVIRAGAHCAKVEVIATLKN-D-KKI--CLDPEAP----RIKKIV----QKIME-------------------------
+---------------------------------------------D-------------------------------GGS
+AA
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR ALVEOLAR MACROPHAGE CHEMOTACTIC FACTOR (P82535)
+G--------------------------------------------PVAAVVRELRCVCL---ST---T---AIHPKMIAR
+LQVIAAGPQCSKVEVVASLKN-G-KEI--CLDPEAP----LIKKAI----QKILE-------------------------
+---------------------------------------------S-------------------------------GNK
+EN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR C-X-C MOTIF CHEMOKINE 6 (P80162)
+MSLPS--SRAARVPGPSGSLCALL-ALLLLLTPPGPLA---S-AGPVSAVLTELRCTCL---RV---T-L-RVNPKTIGK
+LQVFPAGPQCSKVEVVASLKN-G-KQV--CLDPEAP----FLKKVI----QKILD-------------------------
+---------------------------------------------S-------------------------------GNK
+KN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR ALVEOLAR MACROPHAGE CHEMOTACTIC FACTOR 2 (P22952)
+MRLLT--SRATRVPSPSGLLCAVL-AMLL-LTPSGPLASASPIEAAEAAVVRELRCMCL---TT---T-P-GIHPKMISD
+LQVIPAGPQCSKAEVIATLKN-G-KEV--CLDPKAP----LIKKIV----QKMLD-------------------------
+---------------------------------------------S-------------------------------GKK
+KN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR GROWTH-REGULATED ALPHA PROTEIN (P09340)
+MAPAT--RS--------LLRAPLL-LLLL-LLATSR-------LATGAPVANELRCQCL---QT---M-T-GVHLKNIQS
+LKVTPPGPHCTQTEVIATLKN-G-QEA--CLNPEAP----MVQKIV----QKMLK-------------------------
+---------------------------------------------S--------------------------------GI
+RK
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR GROWTH-REGULATED ALPHA PROTEIN (P09341)
+MARAA--LSA--APSNPRLLRVAL-LLLL-LVAAGR-------RAAGASVATELRCQCL---QT---L-Q-GIHPKNIQS
+VNVKSPGPHCAQTEVIATLKN-G-RKA--CLNPASP----IVKKII----EKMLN-------------------------
+---------------------------------------------S--------------------------------DK
+SN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR C-X-C MOTIF CHEMOKINE 2 (P10889)
+MAPPT--C---------RLLSAAL-VLLL-LLATNH-------QATGAVVASELRCQCL---KT---L-P-RVDFKNIQS
+LSVTPPGPHCAQTEVIATLKG-G-QKV--CLDPEAP----LVQKII----QKILN-------------------------
+---------------------------------------------K--------------------------------GK
+AN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR GROWTH-REGULATED PROTEIN HOMOLOG (P47854)
+MAPAA--TAA--AP---RLLRAAL-LLLL-LVAAGR-------RAAGAPVVNELRCQCL---QT---L-Q-GIHLKNIQS
+VKVTTPGPHCDQTEVIASLKT-G-QEV--CLNPTAP----VVKKII----DKMLN-------------------------
+---------------------------------------------K--------------------------------AS
+AN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PERMEABILITY FACTOR 2 (P30782)
+-------------------------------------------------ALTELRCQCL---QT---V-Q-GIHLKNIQN
+LKVLSPGPHCAQTEVIATLKS-G-QEA--CRNPAAP----MVKKFL----QKRLS-------------------------
+---------------------------------------------N--------------------------------GN
+SS
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR GROWTH-REGULATED ALPHA PROTEIN (O55235)
+MAGAA--PKT--LR---FAPLLLL-LLLL-VLGTSR-------RAAGAPAASELRCRCL---RP---V-R-GLHPKNIQS
+VAVTAPGPHCHQTEVLATLKD-G-REA--CLDPEAP----MVQKVL----QRMLK-------------------------
+---------------------------------------------G--------------------------------SK
+AT
+>1TVX_A NEUTROPHIL ACTIVATING PEPTIDE-2 VARIANT FORM M6L WITH FIVE ADDITIONAL AMINO TERMINAL RESIDUES (DSDLY)
+-----------------------------------------------------LRCLCI---KT---T-S-GIHPKNIQS
+LEVIGKGTHCNQVEVIATLKD-G-RKI--CLDPDAP----RIKKIV----QKKL--------------------------
+-------------------------------------------------------------------------------A
+GD
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR PLATELET FACTOR 4 (P02777)
+ESSFP--AT---------------------F-VPLP-------ADSEGGEDEDLQCVCL---KT---T-S-GINPRHISS
+LEVIGAGTHCPSPQLLATKKT-G-RKI--CLDQQRP----LYKKIL----KKLLD-------------------------
+------------------------------------------------------------------------------GD
+ES

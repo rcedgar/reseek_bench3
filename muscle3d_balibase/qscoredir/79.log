@@ -1,0 +1,12 @@
+muscle 5.3.win64 [c2ab350] built Aug 20 2026 15:17:18
+Started Fri Aug 21 15:12:50 2026
+C:\src\muscle\src\x64\Release\muscle.exe -qscoredir ../info/sets.txt -testdir ../afa -refdir ../ref -bysequence -log 79 -output ../qscoredir/79 
+
+WARNING: Dupe seq >Q06319 in ref MSA BB30004
+
+WARNING: Dupe seq >TYSY_BPT4 in ref MSA BB50013
+00:01 24Mb    100.0% ../afa/  Q 0.91 TC 0.68
+
+Finished Fri Aug 21 15:12:51 2026
+Elapsed time 00:01
+Max memory 24Mb

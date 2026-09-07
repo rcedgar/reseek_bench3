@@ -1,0 +1,20 @@
+# cd /z/int/muscle_benchmark2/qscores/balibase
+# grep avgtc= *
+
+clustalo:testdir=/z/int/muscle_benchmark/output_msas/balibase/clustalo/ n=197   N=197   avgq=0.8394     avgtc=0.5770
+foldmason:testdir=/z/int/muscle_benchmark/output_msas/balibase/foldmason/ n=197 N=197   avgq=0.8164     avgtc=0.5255
+foldmason_def:testdir=/z/int/muscle_benchmark/output_msas/balibase/foldmason_def/ n=197 N=197   avgq=0.8308     avgtc=0.5328
+foldmason_iter:testdir=/z/int/muscle_benchmark/output_msas/balibase/foldmason_iter/     n=197   N=197   M=197   avgq=0.8164     avgtc=0.5255
+mafft:testdir=/z/int/muscle_benchmark/output_msas/balibase/mafft/ n=197 N=197   avgq=0.8235     avgtc=0.5081
+matt:testdir=/z/int/muscle_benchmark/output_msas/balibase/matt/ n=197   N=89    avgq=0.8509     avgtc=0.6680
+muscle3:testdir=/z/int/muscle_benchmark/output_msas/balibase/muscle3/ n=197     N=197   avgq=0.5011     avgtc=0.1095
+muscle5:testdir=/z/int/muscle_benchmark/output_msas/balibase/muscle5/ n=197     N=197   avgq=0.8682     avgtc=0.6060
+upp2:testdir=/z/int/muscle_benchmark/output_msas/balibase/upp2/ n=197   N=197   avgq=0.8322     avgtc=0.5492
+usalign:testdir=/z/int/muscle_benchmark/output_msas/balibase/usalign/ n=197     N=197   avgq=0.8035     avgtc=0.5113
+
+muscle5_mega:testdir=/z/int/muscle_benchmark/output_msas/balibase/muscle5_mega/ n=197   N=197   avgq=0.8959     avgtc=0.6522
+mustang:testdir=/z/int/muscle_benchmark/output_msas/balibase/mustang/ n=197     N=106   avgq=0.8724     avgtc=0.6761
+testdir=afa/    n=197   N=197   M=197   avgq=0.8981     avgtc=0.6627
+./run1.bash 63  "-m_is 0.060 -m_il 0.012 -is_is 0.89" # 0.9069     avgtc=0.6849 <<
+
+muscle5_mega on mustang subset Q=0.8783 TC=0.701

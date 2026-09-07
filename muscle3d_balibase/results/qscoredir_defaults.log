@@ -1,0 +1,12 @@
+muscle 5.3.linux64 [c2ab350] built Aug 18 2026 18:17:14
+Started Fri Aug 21 19:46:16 2026
+muscle -qscoredir ../info/sets.txt -testdir ../afa -refdir ../ref -bysequence -log ../results/qscoredir_defaults.log -output ../results/qscoredir_defaults.tsv 
+
+WARNING: Dupe seq >Q06319 in ref MSA
+
+WARNING: Dupe seq >TYSY_BPT4 in ref MSA
+00:02 22Mb    100.0% ../afa/  Q 0.91 TC 0.68
+
+Finished Fri Aug 21 19:46:18 2026
+Elapsed time 00:02
+Max memory 22Mb

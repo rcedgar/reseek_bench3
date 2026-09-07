@@ -1,0 +1,126 @@
+>2PIA_A PHTHALATE DIOXYGENASE REDUCTASE: A MODULAR STRUCTURE FOR ELECTRON TRANSFER FROM PYRIDINE NUCLEOTIDES TO [2FE-2S]
+TTPQEDGFLRLKIASKEKIARDIWSFELTDPQGA-PLPPFEAGANLTVAVPN---GSRRTYSLCNDSQERNRYVIAVKRD
+SNGRGGSISFIDDTSEGDAVEVSLPRNEFPLDKRA---KSFILVAGGIGITPMLSMAR-QLRAEGLRSFRLYYLTRDPEG
+TAFFDELTS--DEWRSDVKIHHDHGDPTKAFDF----------WS---VFEKSKPAQHVYCCGPQALMDTVRDMTGH--W
+PSGTVHFESFGATN--------T-NARENT-PFTVRLSR---SG-TSFEIPA-NRSILEVLRDANVR-V--PSSCES-GT
+CGSCKTALCSG-EADHRD-MVLR------D-DEKGTQIMVCVSRAKSA--ELVLDL------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+---------------------------------------------------------------------
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR 1,2-PHENYLACETYL-COA EPOXIDASE, SUBUNIT E (P76081)
+MTT----FHSLTVAKVESETRDAVTITFAVPQPLQEAYRFRPGQHLTLKASFDGEELRRCYSICRSY-LPGEISVAVKAI
+EGGRF-SRYAREHIRQGMTLEVMVPQGHFGYQPQAERQGRYLAIAAGSGITPMLAIIATTLQTEPESQFTLIYGNRTSQS
+MMFRQALADLKDKYPQRLQLLCIFSQETLDSDLLHGRIDGEKLQSLGASLINFRLYDEAFICGPAAMMDDAETALKALGM
+PDKTIHLERFNTPGTR--VKRSV-NVQSDG-QKVTVRQD---GRDREIVLNADDESILDAALRQGAD-L--PYACKG-GV
+CATCKCKVLRG-KVAMETNYSLE------PDELAAGYVLSCQALPLTS--DVVVDFDAK---------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+------------------------------------------------------------------GMA
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR TOLUATE 1,2-DIOXYGENASE ELECTRON TRANSFER COMPONENT (P23101)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------MTHKVATDFED---GVTRFIDANT-GETVADAAYRQGIN-L--PLDCR-DGA
+CGACKCFAESG-RYSLG--EEYIEDALSEA-EAEQGYVLTCQMRAES---DCVIRVPAASDVCKTQQAGYQAAISNVRQL
+SESTIALSIKSASLNQLAFLPGQYVNLQVPGSDQTRAYSFSSLQKDGEVSFLIRKLPGGLMSSFLTSLAKVGDSVSLAGP
+LGAFYLREIKRPLLLLAGGTGLAPFTAMLEKIAEQGGEHPLHLIYGVTHDHDLVEMDKLEAFAARIPNFSYSACVASPDS
+AYPQKGYVTQYIEPKQLNGGEVDIYLCGPPPMVEAVSQYIRAQGIQPANFYYEKF----------AASA
+>1I7H_A CRYSTAL STURCUTURE OF FDX
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+-----------------------------P-KIVILPHQDLCPDGAVLEANS-GETILDAALRNGIE-I--EHACEKSCA
+CTTCHCIVREG-FDSLPESSEQEDDMLDKAWGLEPESRLSCQARVTDE--DLVVEIPRYT--------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------INH-----------ARE
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR 2FE-2S FERREDOXIN (P57661)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------MP-KVLFLPHKILLPKSIECEAQT-GETILTVALRNNIK-L--EHACEQSCA
+CSTCHCIIKKG-FFSLSGWSEKEDDILDKAWGLQSESRLSCQAVIGKS--DIEVEIPLYN--------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------LNY----------TVEY
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR 2FE-2S FERREDOXIN (O51882)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------MP-KIFFLPHKLLLPKGGCFECKE-GETILNVALKNNIK-L--EHACEKSCA
+CSTCHCIIRKG-FLSLSGWSEKEEDVLDKAWGLESTSRLSCQAIIGNI--DIEVQIPLYN--------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------TNY----------IIEN
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR 2FE-2S FERREDOXIN (Q51383)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------MP-QIVILPHADHCPEGAVFEAKP-GETILDAALRNGIE-I--EHACEKSCA
+CTTCHVIVREG-LDSMEPSDELEDDMLDKAWGLEPDSRLSCQAVVADE--DLVVEIPKYT--------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------INQ---------VSEGH
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR 2FE-2S FERREDOXIN (Q89A15)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------MP-KLIILPHKILLPKGGVFNAMK-GESILNVALRNNVE-I--EHACEKSCV
+CTTCHCYIWKG-ASSLSICEEKEEDVLDKAWNLQFNSRLSCQAKINNK--DIEIEIPKYT--------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------I--------------NQ
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR ADRENODOXIN-LIKE PROTEIN 1, MITOCHONDRIAL (P37193)
+MFC----LLL----------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------RRSAVHNSC-----KLISKQI-------AKPAFY
+TPHNALHTTIPRRHGEFEW-QDPKSTDEIV-NITYVDKD---GKRTKVQGKV-GDNVLYLAHRHGIE-M--EGACEASLA
+CTTCHVYVQHDYLQKLKEAEEQEDDLLDMAPFLRENSRLGCQILLDKSMEGMELELPKAT--------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------RNFYVDG----HKPKPH
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR 2FE-2S FERREDOXIN (P37098)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------MA-KITYIQHD---GAEQVIDVKP-GLTVMEGAVKNNVPGI--DADCGGACA
+CATCHVYVDEAWLDKTGDKSAMEESMLDFAENVEPNSRLSCQIKVSDALDGLVVRLPES---------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+-------------------------------------------------------------------QH
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR 2FE-2S FERREDOXIN (Q92J08)
+M-------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------SGKI-KVTFIIND---GEEKTVEAPI-GLSILEIAHSNDLD-L--EGACEGSLA
+CATCHVILEEEFYNKLKKPTEAEEDMLDLAFGLTDTSRLGCQIILTEELDGIKVRIPATT--------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------R------------NIKL
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR ADRENODOXIN HOMOLOG, MITOCHONDRIAL (Q12184)
+MLK----IVT----------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------RAGHTARIS-----NIAAHLLRTSPSLLTRTTTT
+TRFLPFSTSSFLNHGH--L-KKP-KPGEEL-KITFILKD---GSQKTYEVCE-GETILDIAQGHNLD-M--EGACGGSCA
+CSTCHVIVDPDYYDALPEPEDDENDMLDLAYGLTETSRLGCQIKMSKDIDGIRVALPQMT--------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------RNVN--------NNDFS
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR ADRENODOXIN, MITOCHONDRIAL (P13216)
+CSA----VAV----------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------RTLR------------------------------
+---------PLSLSAR----AAC-SSEDKI-TVHFINRD---GDKLTAKGKP-GDSLLDVVVENNLD-IDGFGACEGTLA
+CSTCHLIFEDHIFEKLDAITDEEMDMLDLAYGLTETSRLGCQICLKKSMDNMTVRVPEAV--------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------ADARQSV----DLSKNS
+>    _A ALPHAFOLD MONOMER V2.0 PREDICTION FOR ADRENODOXIN, MITOCHONDRIAL (P00257)
+MAA----RLL----------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------RVASAALGDTAGRWRLLARPRAGAGGLRGSRGPG
+LGGGAVATRTLSVSGR----AQS-SSEDKI-TVHFINRD---GETLTTKGKI-GDSLLDVVVQNNLD-IDGFGACEGTLA
+CSTCHLIFEQHIFEKLEAITDEENDMLDLAYGLTDRSRLGCQICLTKAMDNMTVRVPDAV--------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------SDARESIDMGMNSSKIE

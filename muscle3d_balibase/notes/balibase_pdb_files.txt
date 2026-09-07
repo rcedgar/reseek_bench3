@@ -1,0 +1,24 @@
+head /z/int/muscle_benchmark2/all_files/balibase.files
+
+./pdb_files/balibase/AFDB_CA/C3NZU4.pdb
+./pdb_files/balibase/AFDB_CA/C3P3K3.pdb
+./pdb_files/balibase/AFDB_CA/C3P3T8.pdb
+./pdb_files/balibase/AFDB_CA/C3P655.pdb
+./pdb_files/balibase/AFDB_CA/C3PBP4.pdb
+./pdb_files/balibase/AFDB_CA/C3PCL8.pdb
+./pdb_files/balibase/AFDB_CA/O00058.pdb
+./pdb_files/balibase/AFDB_CA/O00087.pdb
+./pdb_files/balibase/AFDB_CA/O00097.pdb
+./pdb_files/balibase/AFDB_CA/O00506.pdb
+
+# tail /z/int/muscle_benchmark2/all_files/balibase.files
+./pdb_files/balibase/PDB_CA/2pna_.pdb
+./pdb_files/balibase/PDB_CA/2prk_.pdb
+./pdb_files/balibase/PDB_CA/2tmd_A.pdb
+./pdb_files/balibase/PDB_CA/3adk_.pdb
+./pdb_files/balibase/PDB_CA/3c2c_.pdb
+./pdb_files/balibase/PDB_CA/3grs_.pdb
+./pdb_files/balibase/PDB_CA/4enl_.pdb
+./pdb_files/balibase/PDB_CA/4tmk_A.pdb
+./pdb_files/balibase/PDB_CA/5hpg_A.pdb
+./pdb_files/balibase/PDB_CA/7upj_B.pdb
