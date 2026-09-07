@@ -1,0 +1,26 @@
+msa_prep_map	1
+orig_cols	5001
+seed_cols	248
+discard	orig_lo	0	orig_hi	1748
+block	0	orig_lo	1749	orig_hi	1758	seed_lo	0	seed_hi	9
+spacer	0	orig_lo	1759	orig_hi	2099	seed_lo	10	seed_hi	17	orig_cols	1925,1926,1927,1928,1929,1930,1931,1932
+block	1	orig_lo	2100	orig_hi	2115	seed_lo	18	seed_hi	33
+spacer	1	orig_lo	2116	orig_hi	2178	seed_lo	34	seed_hi	37	orig_cols	2145,2146,2147,2148
+block	2	orig_lo	2179	orig_hi	2212	seed_lo	38	seed_hi	71
+spacer	2	orig_lo	2213	orig_hi	2300	seed_lo	72	seed_hi	79	orig_cols	2253,2254,2255,2256,2257,2258,2259,2260
+block	3	orig_lo	2301	orig_hi	2319	seed_lo	80	seed_hi	98
+spacer	3	orig_lo	2320	orig_hi	2324	seed_lo	99	seed_hi	101	orig_cols	2321,2322,2323
+block	4	orig_lo	2325	orig_hi	2332	seed_lo	102	seed_hi	109
+spacer	4	orig_lo	2333	orig_hi	2531	seed_lo	110	seed_hi	117	orig_cols	2428,2429,2430,2431,2432,2433,2434,2435
+block	5	orig_lo	2532	orig_hi	2562	seed_lo	118	seed_hi	148
+spacer	5	orig_lo	2563	orig_hi	2620	seed_lo	149	seed_hi	155	orig_cols	2588,2589,2590,2591,2592,2593,2594
+block	6	orig_lo	2621	orig_hi	2642	seed_lo	156	seed_hi	177
+spacer	6	orig_lo	2643	orig_hi	2695	seed_lo	178	seed_hi	184	orig_cols	2666,2667,2668,2669,2670,2671,2672
+block	7	orig_lo	2696	orig_hi	2703	seed_lo	185	seed_hi	192
+spacer	7	orig_lo	2704	orig_hi	2737	seed_lo	193	seed_hi	200	orig_cols	2717,2718,2719,2720,2721,2722,2723,2724
+block	8	orig_lo	2738	orig_hi	2748	seed_lo	201	seed_hi	211
+spacer	8	orig_lo	2749	orig_hi	2759	seed_lo	212	seed_hi	215	orig_cols	2752,2753,2754,2755
+block	9	orig_lo	2760	orig_hi	2778	seed_lo	216	seed_hi	234
+spacer	9	orig_lo	2779	orig_hi	2796	seed_lo	235	seed_hi	239	orig_cols	2785,2786,2787,2788,2789
+block	10	orig_lo	2797	orig_hi	2804	seed_lo	240	seed_hi	247
+discard	orig_lo	2805	orig_hi	5000

@@ -1,0 +1,7 @@
+Self-test report:
+RdRp queries: 36
+True positives:  32
+False negatives: 4
+Sensitivity:     88.9%
+Decoy queries: 8
+Decoys classified as RdRp (FP): 0

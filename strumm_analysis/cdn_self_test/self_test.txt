@@ -1,0 +1,7 @@
+Self-test report:
+CDN queries: 8
+True positives:  8
+False negatives: 0
+Sensitivity:     100.0%
+Decoy queries: 6
+Decoys classified as CDN (FP): 2

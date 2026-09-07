@@ -1,0 +1,2 @@
+query	dbinfo	original	corrected	start	end
+4nru_A	D_seq	TMALRYGLLPT	TMALRRYGLLPT	359	370

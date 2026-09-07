@@ -1,0 +1,16 @@
+cdn_cif/4KLQ.cif	Fcath=4 Fpfam=4 Fscop2b=3
+cdn_cif/4LEY.cif	Fcath=5 Fpfam=2 Fscop2b=2
+cdn_cif/4LT6.cif	Fcath=4 Fpfam=4
+cdn_cif/4RWO.cif	(none)
+cdn_cif/4TY0.cif	Fpfam=2
+cdn_cif/4X4T.cif	Fcath=6 Fpfam=3 Fscop2b=3
+cdn_cif/4YD1.cif	Fcath=4 Fpfam=4
+cdn_cif/5EOG.cif	Fpfam=2 Fscop2b=2
+cdn_cif/6CTA.cif	Fcath=5 Fpfam=2 Fscop2b=2
+cdn_cif/6E0K.cif	(none)
+cdn_cif/6E0M.cif	(none)
+cdn_cif/6P80.cif	(none)
+cdn_cif/7LJL.cif	(none)
+cdn_cif/7LJN.cif	Fpfam=1
+cdn_cif/7LJO.cif	(none)
+cdn_cif/8YSC.cif	(none)

@@ -1,0 +1,118 @@
+Block0	0040A0
+Block1	A04000
+Block2	008040
+Block3	804000
+Block4	400080
+Block5	408000
+Block6	004080
+Block7	800040
+Block8	806000
+Block9	006080
+Block10	608000
+Block11	800060
+STARTGROUP	MSAPrep_CoreBlocks
+-	6E0K-CdnE	0	18	32	Block0
+-	6E0M-CdnE	1	20	36	Block0
+-	7LJN-CdnG	2	23	41	Block0
+-	4TY0-CdnA	3	26	44	Block0
+-	6P80-CdnC	4	21	39	Block0
+-	8YSC-CdnB	5	25	43	Block0
+-	7LJO-CdnB	6	20	38	Block0
+-	7LJL-CdnD	7	20	38	Block0
+-	6E0K-CdnE	0	37	56	Block1
+-	6E0M-CdnE	1	40	58	Block1
+-	7LJN-CdnG	2	48	69	Block1
+-	4TY0-CdnA	3	103	124	Block1
+-	6P80-CdnC	4	47	67	Block1
+-	8YSC-CdnB	5	52	73	Block1
+-	7LJO-CdnB	6	46	66	Block1
+-	7LJL-CdnD	7	44	65	Block1
+-	6E0K-CdnE	0	57	70	Block2
+-	6E0M-CdnE	1	59	72	Block2
+-	7LJN-CdnG	2	71	85	Block2
+-	4TY0-CdnA	3	126	140	Block2
+-	6P80-CdnC	4	68	80	Block2
+-	8YSC-CdnB	5	74	89	Block2
+-	7LJO-CdnB	6	67	81	Block2
+-	7LJL-CdnD	7	66	81	Block2
+-	6E0K-CdnE	0	87	97	Block3
+-	6E0M-CdnE	1	75	85	Block3
+-	7LJN-CdnG	2	86	95	Block3
+-	4TY0-CdnA	3	141	150	Block3
+-	6P80-CdnC	4	81	91	Block3
+-	8YSC-CdnB	5	90	100	Block3
+-	7LJO-CdnB	6	82	92	Block3
+-	7LJL-CdnD	7	82	92	Block3
+-	6E0K-CdnE	0	108	123	Block4
+-	6E0M-CdnE	1	95	110	Block4
+-	7LJN-CdnG	2	105	120	Block4
+-	4TY0-CdnA	3	164	179	Block4
+-	6P80-CdnC	4	105	120	Block4
+-	8YSC-CdnB	5	109	124	Block4
+-	7LJO-CdnB	6	102	117	Block4
+-	7LJL-CdnD	7	102	117	Block4
+-	6E0K-CdnE	0	124	135	Block5
+-	6E0M-CdnE	1	112	124	Block5
+-	7LJN-CdnG	2	121	133	Block5
+-	4TY0-CdnA	3	181	193	Block5
+-	6P80-CdnC	4	122	134	Block5
+-	8YSC-CdnB	5	125	136	Block5
+-	7LJO-CdnB	6	118	130	Block5
+-	7LJL-CdnD	7	118	129	Block5
+-	6E0K-CdnE	0	148	155	Block6
+-	6E0M-CdnE	1	134	141	Block6
+-	7LJN-CdnG	2	137	143	Block6
+-	4TY0-CdnA	3	213	220	Block6
+-	6P80-CdnC	4	138	144	Block6
+-	8YSC-CdnB	5	142	148	Block6
+-	7LJO-CdnB	6	136	142	Block6
+-	7LJL-CdnD	7	181	188	Block6
+-	6E0K-CdnE	0	161	180	Block7
+-	6E0M-CdnE	1	146	165	Block7
+-	7LJN-CdnG	2	148	167	Block7
+-	4TY0-CdnA	3	227	246	Block7
+-	6P80-CdnC	4	150	169	Block7
+-	8YSC-CdnB	5	158	177	Block7
+-	7LJO-CdnB	6	147	166	Block7
+-	7LJL-CdnD	7	194	213	Block7
+-	6E0K-CdnE	0	185	202	Block8
+-	6E0M-CdnE	1	170	187	Block8
+-	7LJN-CdnG	2	207	224	Block8
+-	4TY0-CdnA	3	251	267	Block8
+-	6P80-CdnC	4	174	191	Block8
+-	8YSC-CdnB	5	183	199	Block8
+-	7LJO-CdnB	6	170	186	Block8
+-	7LJL-CdnD	7	218	235	Block8
+-	6E0K-CdnE	0	205	225	Block9
+-	6E0M-CdnE	1	191	211	Block9
+-	7LJN-CdnG	2	226	245	Block9
+-	4TY0-CdnA	3	268	287	Block9
+-	6P80-CdnC	4	193	213	Block9
+-	8YSC-CdnB	5	200	218	Block9
+-	7LJO-CdnB	6	187	205	Block9
+-	7LJL-CdnD	7	236	256	Block9
+-	6E0K-CdnE	0	227	246	Block10
+-	6E0M-CdnE	1	213	234	Block10
+-	7LJN-CdnG	2	246	267	Block10
+-	4TY0-CdnA	3	290	311	Block10
+-	6P80-CdnC	4	215	237	Block10
+-	8YSC-CdnB	5	228	250	Block10
+-	7LJO-CdnB	6	206	226	Block10
+-	7LJL-CdnD	7	257	278	Block10
+-	6E0K-CdnE	0	247	261	Block11
+-	6E0M-CdnE	1	236	250	Block11
+-	7LJN-CdnG	2	273	289	Block11
+-	4TY0-CdnA	3	312	327	Block11
+-	6P80-CdnC	4	256	272	Block11
+-	8YSC-CdnB	5	261	277	Block11
+-	7LJO-CdnB	6	228	243	Block11
+-	7LJL-CdnD	7	284	300	Block11
+-	6E0K-CdnE	0	269	290	Block0
+-	6E0M-CdnE	1	254	269	Block0
+-	7LJN-CdnG	2	295	332	Block0
+-	4TY0-CdnA	3	333	373	Block0
+-	6P80-CdnC	4	276	316	Block0
+-	8YSC-CdnB	5	281	321	Block0
+-	7LJO-CdnB	6	247	287	Block0
+-	7LJL-CdnD	7	304	344	Block0
+ENDGROUP	MSAPrep_CoreBlocks

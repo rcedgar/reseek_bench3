@@ -1,0 +1,44 @@
+rdrp_cif/1hhs.cif	Fcath=5 Fpfam=1 Fscop2=3
+rdrp_cif/1khv.cif	Fcath=5 Fpfam=1 Fscop2=3
+rdrp_cif/1n1h.cif	(none)
+rdrp_cif/1ra6.cif	Fcath=3 Fpfam=1 Fscop2=3
+rdrp_cif/1s48.cif	Fcath=2 Fpfam=1 Fscop2=3
+rdrp_cif/2ajq.cif	Fcath=5 Fpfam=1 Fscop2b=3
+rdrp_cif/2ckw.cif	Fcath=4
+rdrp_cif/2gv9.cif	Fcath=2
+rdrp_cif/2r70.cif	Fcath=7 Fscop2b=2
+rdrp_cif/2r7o.cif	Fcath=12
+rdrp_cif/2xhw.cif	(none)
+rdrp_cif/3du5.cif	Fcath=9 Fpfam=3 Fscop2b=1
+rdrp_cif/3i5c.cif	Fcath=2 Fpfam=2 Fscop2b=1
+rdrp_cif/3jb7.cif	(none)
+rdrp_cif/3mmp.cif	(none)
+rdrp_cif/3vws.cif	Fcath=6
+rdrp_cif/4gzk.cif	(none)
+rdrp_cif/4hkq.cif	Fcath=6 Fpfam=3
+rdrp_cif/4nru.cif	Fcath=4
+rdrp_cif/4nz0.cif	Fcath=3
+rdrp_cif/4ol8.cif	Fcath=5 Fpfam=2
+rdrp_cif/4wrt.cif	(none)
+rdrp_cif/4xha.cif	(none)
+rdrp_cif/5amq.cif	Fscop2b=2
+rdrp_cif/5i61.cif	Fpfam=1
+rdrp_cif/5jxs.cif	Fcath=3
+rdrp_cif/6ar3.cif	(none)
+rdrp_cif/6f5p.cif	(none)
+rdrp_cif/6kld.cif	(none)
+rdrp_cif/6l42.cif	(none)
+rdrp_cif/6nur.cif	Fpfam=2 Fscop2=3
+rdrp_cif/6po2.cif	(none)
+rdrp_cif/6pzk.cif	(none)
+rdrp_cif/6qsn.cif	Fpfam=3 Fscop2b=1
+rdrp_cif/6qwt.cif	Fscop2=2
+rdrp_cif/6s8b.cif	(none)
+rdrp_cif/6ueb.cif	(none)
+rdrp_cif/6v86.cif	Fpfam=2
+rdrp_cif/7eei.cif	(none)
+rdrp_cif/7ekj.cif	(none)
+rdrp_cif/7f0s.cif	(none)
+rdrp_cif/7vw5.cif	Fpfam=1
+rdrp_cif/8c4s.cif	Fpfam=3
+rdrp_cif/8fjl.cif	Fpfam=1

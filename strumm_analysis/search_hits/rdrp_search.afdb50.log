@@ -1,0 +1,177 @@
+
+reseek v3.0.i86linux64 [b61d84d]
+../binaries/reseek -search ../data/rdrp_abc_palmcore.bcb -db ../big_search_dbs/afdb50.bcb -sensitive -stats sf -pvalue 1e-6 -columns query+target+pvalue -output afdb50.hits -log rdrp_search.afdb50.log 
+Started Sun Aug 23 14:07:52 2026
+[default_alphadir]: aa20+angle32+mendist32+nendist32+nensec32+pack32+pendist32+pm2+pmdd32+ppack32+rendist32+sec32+turnd32
+sensitive sf
+
+      0.89  open
+     0.089  ext
+      0.95  self_w
+      0.64  rev_w
+     0.045  lddt_w
+         0  lddtx_w
+  0.000175  dali_w
+         0  dalix_w
+       0.5  nu_filter_self_w
+      0.29  nu_filter_rev_w
+       114  nu_filter_min_fwd_score
+        40  nu_filter_min_combined_score
+         4  kappa_kmer_nrones
+         7  kappa_kmer_width
+   1048576  kappa_dict_size
+        55  kappa_min_kmerpairscore
+         0  kappa_min_diagscore
+        32  kappa_min_chainlength
+      3000  rsb_size
+         0  kappa_hsp_rsb_prune
+        33  kappa_max_pos_logodds
+         0  kappa_onehitdiag
+         0  kappa_twohitdiag
+         1  hsp_align
+         0  hsp_align_check
+       500  hsp_align_min_length
+        20  hsp_x2
+           kappa_diag_mode  unique_fine
+        12  nn_min_offset
+       256  distmx_bandwidth
+         5  turnd_w
+         4  angle_n
+LDDT: R0=15 thresholds 0.5 1.0 2.0 4.0
+
+13 alphas, sum_sizes=374
+      aa20    0.528  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ nendist32    0.118  ■■■■■■■■■
+    pack32    0.088  ■■■■■■■
+   angle32    0.087  ■■■■■■
+     sec32    0.059  ■■■■
+   turnd32    0.035  ■■
+ rendist32    0.022  ■
+  nensec32    0.016  ■
+ pendist32    0.015  ■
+       pm2    0.014  ■
+ mendist32    0.008  o
+    pmdd32    0.008  o
+   ppack32    0.002  o
+     TOTAL    1.000
+Index query k-mer neighborhoods
+Kappa diag mode unique_fine
+Kappa BCB batch_size=64  NDB=66307746 threads=80 units=1036059
+Kappa prefilter hits  87.0k
+Kappa filter stats  NQ=29 NDB=66307746 B=3000 idx_postings=594994
+  targets=66307746 skipped=0 postings_visited=294549565183 prehsp=176717835565
+  hsp=176717835565 hsp_prune=0 hsp_cells=44063088652046 rsb_qt=1922404487 rsb_sat=29
+Kappa thread balance  nthreads=80 busy=80 batches=1036059 max_secs=1933 min_busy_secs=1933 sum_secs=154640
+Kappa phases pct  seed=3 diag=2 hsp=93 rsb=0
+  thr0  batches=11824 targets=756736 hsp=2019806283 hsp_cells=504123814965 secs=1933
+  thr1  batches=10888 targets=696832 hsp=1859019741 hsp_cells=463983349287 secs=1933
+  thr2  batches=10932 targets=699648 hsp=1861056020 hsp_cells=463527272629 secs=1933
+  thr3  batches=13508 targets=864512 hsp=2304536988 hsp_cells=574320745243 secs=1933
+  thr4  batches=11995 targets=767680 hsp=2044115869 hsp_cells=509253709441 secs=1933
+  thr5  batches=12358 targets=790912 hsp=2105616011 hsp_cells=524746980505 secs=1933
+  thr6  batches=15677 targets=1003328 hsp=2670987400 hsp_cells=665316927216 secs=1933
+  thr7  batches=15525 targets=993600 hsp=2651131083 hsp_cells=661242328487 secs=1933
+  thr8  batches=12926 targets=827264 hsp=2205412333 hsp_cells=549912970722 secs=1933
+  thr9  batches=12503 targets=800192 hsp=2132331972 hsp_cells=531936446479 secs=1933
+  thr10  batches=12514 targets=800896 hsp=2133528124 hsp_cells=531900920984 secs=1933
+  thr11  batches=16330 targets=1045120 hsp=2783898193 hsp_cells=693919935026 secs=1933
+  thr12  batches=16293 targets=1042752 hsp=2780149751 hsp_cells=693337358841 secs=1933
+  thr13  batches=13581 targets=869184 hsp=2315006047 hsp_cells=577007156870 secs=1933
+  thr14  batches=13520 targets=865280 hsp=2311408568 hsp_cells=576883134911 secs=1933
+  thr15  batches=13477 targets=862528 hsp=2303046210 hsp_cells=574254589802 secs=1933
+  thr16  batches=15565 targets=996160 hsp=2657555305 hsp_cells=663083704281 secs=1933
+  thr17  batches=12887 targets=824738 hsp=2197191011 hsp_cells=547618039220 secs=1933
+  thr18  batches=11112 targets=711168 hsp=1895239422 hsp_cells=472437378394 secs=1933
+  thr19  batches=11856 targets=758784 hsp=2023809996 hsp_cells=505006164471 secs=1933
+  thr20  batches=12858 targets=822912 hsp=2193481761 hsp_cells=547272132854 secs=1933
+  thr21  batches=12968 targets=829952 hsp=2211657049 hsp_cells=551391934038 secs=1933
+  thr22  batches=12923 targets=827072 hsp=2208821514 hsp_cells=551231749745 secs=1933
+  thr23  batches=15646 targets=1001344 hsp=2666220837 hsp_cells=664697637057 secs=1933
+  thr24  batches=10910 targets=698240 hsp=1861235039 hsp_cells=464127047476 secs=1933
+  thr25  batches=11866 targets=759424 hsp=2023109514 hsp_cells=504314115720 secs=1933
+  thr26  batches=11834 targets=757376 hsp=2020781231 hsp_cells=504235721175 secs=1933
+  thr27  batches=15553 targets=995392 hsp=2653127651 hsp_cells=661692753950 secs=1933
+  thr28  batches=11816 targets=756224 hsp=2018904221 hsp_cells=504029694760 secs=1933
+  thr29  batches=10868 targets=695552 hsp=1856819823 hsp_cells=463661705052 secs=1933
+  thr30  batches=12928 targets=827392 hsp=2205721036 hsp_cells=550051918117 secs=1933
+  thr31  batches=13508 targets=864512 hsp=2301961075 hsp_cells=573702034335 secs=1933
+  thr32  batches=11989 targets=767296 hsp=2041829336 hsp_cells=509042428251 secs=1933
+  thr33  batches=11960 targets=765440 hsp=2041309256 hsp_cells=509269663230 secs=1933
+  thr34  batches=15665 targets=1002560 hsp=2668508188 hsp_cells=665059253811 secs=1933
+  thr35  batches=15628 targets=1000192 hsp=2667573152 hsp_cells=664689580502 secs=1933
+  thr36  batches=12925 targets=827200 hsp=2204537547 hsp_cells=549723617519 secs=1933
+  thr37  batches=12937 targets=827968 hsp=2204844353 hsp_cells=549338403884 secs=1933
+  thr38  batches=15531 targets=993984 hsp=2650207598 hsp_cells=660726674229 secs=1933
+  thr39  batches=12525 targets=801600 hsp=2135087874 hsp_cells=532188233534 secs=1933
+  thr40  batches=16279 targets=1041856 hsp=2778795390 hsp_cells=693001714120 secs=1933
+  thr41  batches=16359 targets=1046976 hsp=2785733078 hsp_cells=694009915153 secs=1933
+  thr42  batches=11099 targets=710336 hsp=1893199715 hsp_cells=471908739704 secs=1933
+  thr43  batches=13574 targets=868736 hsp=2313208316 hsp_cells=576607491218 secs=1933
+  thr44  batches=13536 targets=866304 hsp=2312044424 hsp_cells=576785197092 secs=1933
+  thr45  batches=15596 targets=998144 hsp=2660023334 hsp_cells=663373368982 secs=1933
+  thr46  batches=11221 targets=718144 hsp=1913830505 hsp_cells=477316103389 secs=1933
+  thr47  batches=12498 targets=799872 hsp=2135830161 hsp_cells=533100871036 secs=1933
+  thr48  batches=11090 targets=709760 hsp=1894351702 hsp_cells=472659253072 secs=1933
+  thr49  batches=12888 targets=824832 hsp=2195900479 hsp_cells=547020209513 secs=1933
+  thr50  batches=12863 targets=823232 hsp=2194576898 hsp_cells=547595470075 secs=1933
+  thr51  batches=12968 targets=829952 hsp=2210530597 hsp_cells=550885131633 secs=1933
+  thr52  batches=12954 targets=829056 hsp=2211843313 hsp_cells=551433784502 secs=1933
+  thr53  batches=10929 targets=699456 hsp=1861491710 hsp_cells=463462412388 secs=1933
+  thr54  batches=10922 targets=699008 hsp=1862955355 hsp_cells=464528479926 secs=1933
+  thr55  batches=13200 targets=844800 hsp=2250980978 hsp_cells=561171068489 secs=1933
+  thr56  batches=12434 targets=795776 hsp=2121312016 hsp_cells=528943329023 secs=1933
+  thr57  batches=11998 targets=767872 hsp=2043381630 hsp_cells=509104679930 secs=1933
+  thr58  batches=15524 targets=993536 hsp=2647708500 hsp_cells=660295859033 secs=1933
+  thr59  batches=11937 targets=763968 hsp=2035833797 hsp_cells=507460637884 secs=1933
+  thr60  batches=12043 targets=770752 hsp=2052906883 hsp_cells=511861540824 secs=1933
+  thr61  batches=10904 targets=697856 hsp=1860467595 hsp_cells=463868122481 secs=1933
+  thr62  batches=10872 targets=695808 hsp=1854684973 hsp_cells=462696100759 secs=1933
+  thr63  batches=11097 targets=710208 hsp=1895592577 hsp_cells=472993904459 secs=1933
+  thr64  batches=15545 targets=994880 hsp=2652374112 hsp_cells=661223268594 secs=1933
+  thr65  batches=11129 targets=712256 hsp=1896512163 hsp_cells=472805854826 secs=1933
+  thr66  batches=12946 targets=828544 hsp=2207684507 hsp_cells=550629950866 secs=1933
+  thr67  batches=12936 targets=827904 hsp=2204510065 hsp_cells=549338479074 secs=1933
+  thr68  batches=10923 targets=699072 hsp=1860592611 hsp_cells=463653760465 secs=1933
+  thr69  batches=11822 targets=756608 hsp=2018072533 hsp_cells=503643695963 secs=1933
+  thr70  batches=10927 targets=699328 hsp=1862672601 hsp_cells=464214761606 secs=1933
+  thr71  batches=13215 targets=845760 hsp=2251809707 hsp_cells=561025055175 secs=1933
+  thr72  batches=13206 targets=845184 hsp=2250422948 hsp_cells=560955093408 secs=1933
+  thr73  batches=13575 targets=868800 hsp=2310106061 hsp_cells=575657222714 secs=1933
+  thr74  batches=10886 targets=696704 hsp=1857220258 hsp_cells=463365922018 secs=1933
+  thr75  batches=13175 targets=843200 hsp=2247759149 hsp_cells=560686615671 secs=1933
+  thr76  batches=15592 targets=997888 hsp=2658100976 hsp_cells=662812043827 secs=1933
+  thr77  batches=12900 targets=825600 hsp=2199722514 hsp_cells=548781633658 secs=1933
+  thr78  batches=13501 targets=864064 hsp=2304948823 hsp_cells=574973525644 secs=1933
+  thr79  batches=10887 targets=696768 hsp=1857558229 hsp_cells=462979156839 secs=1933
+58208 targets, maxqpert 14
+Kappa filter 1933 secs
+         0  Nu filter max accepts
+     87000  Nu filter npair
+       121  Nu filter nreject_fwd
+      4882  Nu filter nreject_cmb
+     81997  Nu filter pass
+     14141  Mega filter reject
+     59183  Mega filter pass
+     31240  HSP Mega try
+     29520  HSP Mega used
+      1720  HSP Mega reject (no full-SW fallback)
+      1720  HSP Mega reject low score/empty
+         0  HSP Mega reject bad path
+         0  HSP Mega long pair no seed
+     31240  XDropHSP calls
+     26440  XDropHSP ok merged
+      4683  XDropHSP ok fwd-only
+        72  XDropHSP ok bwd-only
+        33  XDropHSP fail empty
+        11  XDropHSP fail span
+       386  XDropHSP fail bwd lo
+         0  XDropHSP fail not local (no terminal M)
+      4216  XDropHSP fwd no seed abut
+       385  XDropHSP merge fell back to fwd
+      2267  XDropHSP path trimmed leading/trailing gaps
+Nu filter 34 secs
+
+Elapsed time 33:13
+Max memory 11.4Gb
+Finished Sun Aug 23 14:41:05 2026
+Peak mem 11.4Gb, avg. CPU 130.7%
