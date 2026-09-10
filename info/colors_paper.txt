@@ -1,5 +1,6 @@
 reseek3_fast=gray,1.5,dotted,Reseek-fast
 reseek3_sensitive=black,1.5,solid,Reseek-sensitive
+reseek28_sensitive=gray,1,solid,Reseek28-sensitive
 foldseek=orange,1.5,dashed,Foldseek
 tm=magenta,1.5,solid,TM-align
 dali=cyan,1.5,dashdot,DALI
