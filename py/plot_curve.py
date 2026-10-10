@@ -339,6 +339,8 @@ def main() -> int:
         default="linear",
         help="X axis scale (default linear)",
     )
+    ap.add_argument("--panelwidth", help="panel width inches", type=float, default=4)
+    ap.add_argument("--panelheight", help="panel height inches", type=float, default=3)
     ap.add_argument(
         "--yscale",
         choices=("linear", "log"),
@@ -421,7 +423,7 @@ def main() -> int:
 
     assert truth is not None and kind is not None
 
-    fig, ax = plt.subplots(figsize=(4, 3))
+    fig, ax = plt.subplots(figsize=(args.panelwidth, args.panelheight))
 
     for idx, (label, points) in enumerate(series):
         if not points:
