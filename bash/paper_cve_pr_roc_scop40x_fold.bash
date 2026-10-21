@@ -7,12 +7,12 @@ python ../py/plot_curve.py \
 	--input foldseek.scop40x.fold \
 	--input dali.scop40x.fold \
 	--input tm.scop40x.fold \
-	--input reseek3_fast.scop40x.fold \
 	--input reseek3_sensitive.scop40x.fold \
 	--yscale log \
 	--ylim 1e-2,10 \
-	--xlim 0,0.4 \
-	--title "CVE SCOP40c fold" \
+	--xlim 0,0.3 \
+	--nolegend \
+	--title "CVE SCOP40 fold (coll.)" \
 	--colors ../info/colors_paper.txt \
 	--output ../paper_plots/cve_scop40x_fold.svg
 
@@ -21,11 +21,11 @@ python ../py/plot_curve.py \
 	--input foldseek.scop40x.fold \
 	--input dali.scop40x.fold \
 	--input tm.scop40x.fold \
-	--input reseek3_fast.scop40x.fold \
 	--input reseek3_sensitive.scop40x.fold \
-	--ylim 0.7,1 \
-	--xlim 0,0.4 \
-	--title "PR SCOP40c fold" \
+	--ylim 0.8,1 \
+	--xlim 0.0,0.3 \
+	--nolegend \
+	--title "PR SCOP40 fold (coll.)" \
 	--colors ../info/colors_paper.txt \
 	--output ../paper_plots/pr_scop40x_fold.svg
 
@@ -34,12 +34,12 @@ python ../py/plot_curve.py \
 	--input foldseek.scop40x.fold \
 	--input dali.scop40x.fold \
 	--input tm.scop40x.fold \
-	--input reseek3_fast.scop40x.fold \
 	--input reseek3_sensitive.scop40x.fold \
 	--xscale log \
-	--ylim 0,0.4 \
+	--ylim 0,0.3 \
 	--xlim 1e-7,1e-4 \
-	--title "ROC SCOP40c fold" \
+	--nolegend \
+	--title "ROC SCOP40 fold (coll.)" \
 	--colors ../info/colors_paper.txt \
 	--output ../paper_plots/roc_scop40x_fold.svg
 

@@ -9,13 +9,14 @@ python ../py/plot_curve.py \
 	--input tm.scop40x.topsf \
 	--input reseek3_fast.scop40x.topsf \
 	--input reseek3_sensitive.scop40x.topsf \
-	--panelwidth 3 \
-	--nolegend \
+	--panelwidth 2 \
+	--panelheight 1.6 \
+	--nolegend  --notitle --fontsize 6 \
 	--yscale log \
 	--ylim 0.001,0.1 \
 	--xlim 0,0.7 \
 	--decimal-yticks \
-	--nolegend \
+	--nolegend  --notitle --fontsize 6 \
 	--ylabel "Errors per query" \
 	--title "CVE SCOP40c topsf" \
 	--colors ../info/colors_paper.txt \
@@ -28,11 +29,12 @@ python ../py/plot_curve.py \
 	--input tm.scop40x.topsf \
 	--input reseek3_fast.scop40x.topsf \
 	--input reseek3_sensitive.scop40x.topsf \
-	--panelwidth 3 \
-	--nolegend \
+	--panelwidth 2 \
+	--panelheight 1.6 \
+	--nolegend  --notitle --fontsize 6 \
 	--ylim 0.8,1 \
-	--xlim 0,1 \
-	--nolegend \
+	--xlim 0,0.7 \
+	--nolegend  --notitle --fontsize 6 \
 	--title "PR SCOP40c topsf" \
 	--colors ../info/colors_paper.txt \
 	--output ../paper_plots/pr_scop40x_topsf_narrow.svg
@@ -44,13 +46,14 @@ python ../py/plot_curve.py \
 	--input tm.scop40x.topsf \
 	--input reseek3_fast.scop40x.topsf \
 	--input reseek3_sensitive.scop40x.topsf \
-	--panelwidth 3 \
-	--nolegend \
+	--panelwidth 2 \
+	--panelheight 1.6 \
+	--nolegend  --notitle --fontsize 6 \
 	--xscale log \
 	--ylim 0,0.7 \
 	--xlim 0.001,0.1 \
 	--decimal-xticks \
-	--nolegend \
+	--nolegend  --notitle --fontsize 6 \
 	--title "ROC SCOP40c topsf" \
 	--colors ../info/colors_paper.txt \
 	--output ../paper_plots/roc_scop40x_topsf_narrow.svg

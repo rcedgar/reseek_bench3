@@ -7,7 +7,6 @@ python ../py/plot_curve.py \
 	--input foldseek.scop40x.topsf \
 	--input dali.scop40x.topsf \
 	--input tm.scop40x.topsf \
-	--input reseek3_fast.scop40x.topsf \
 	--input reseek3_sensitive.scop40x.topsf \
 	--yscale log \
 	--ylim 0.001,0.1 \
@@ -15,7 +14,7 @@ python ../py/plot_curve.py \
 	--decimal-yticks \
 	--nolegend \
 	--ylabel "Errors per query" \
-	--title "CVE SCOP40c topsf" \
+	--title "CVE SCOP40 sf (cat.)" \
 	--colors ../info/colors_paper.txt \
 	--output ../paper_plots/cve_scop40x_topsf.svg
 
@@ -24,12 +23,11 @@ python ../py/plot_curve.py \
 	--input foldseek.scop40x.topsf \
 	--input dali.scop40x.topsf \
 	--input tm.scop40x.topsf \
-	--input reseek3_fast.scop40x.topsf \
 	--input reseek3_sensitive.scop40x.topsf \
 	--ylim 0.8,1 \
-	--xlim 0,1 \
+	--xlim 0,0.8 \
 	--nolegend \
-	--title "PR SCOP40c topsf" \
+	--title "PR SCOP40 sf (cat.)" \
 	--colors ../info/colors_paper.txt \
 	--output ../paper_plots/pr_scop40x_topsf.svg
 
@@ -38,14 +36,13 @@ python ../py/plot_curve.py \
 	--input foldseek.scop40x.topsf \
 	--input dali.scop40x.topsf \
 	--input tm.scop40x.topsf \
-	--input reseek3_fast.scop40x.topsf \
 	--input reseek3_sensitive.scop40x.topsf \
 	--xscale log \
 	--ylim 0,0.7 \
 	--xlim 0.001,0.1 \
 	--decimal-xticks \
 	--nolegend \
-	--title "ROC SCOP40c topsf" \
+	--title "ROC SCOP40 sf (cat.)" \
 	--colors ../info/colors_paper.txt \
 	--output ../paper_plots/roc_scop40x_topsf.svg
 
@@ -54,7 +51,6 @@ python ../py/plot_curve.py \
 	--input foldseek.scop40x.topsf \
 	--input dali.scop40x.topsf \
 	--input tm.scop40x.topsf \
-	--input reseek3_fast.scop40x.topsf \
 	--input reseek3_sensitive.scop40x.topsf \
 	--colors ../info/colors_paper.txt \
 	--output ../paper_plots/legend_scop40x_topsf.svg

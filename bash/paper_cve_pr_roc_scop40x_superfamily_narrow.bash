@@ -9,8 +9,9 @@ python ../py/plot_curve.py \
 	--input tm.scop40x.superfamily \
 	--input reseek3_fast.scop40x.superfamily \
 	--input reseek3_sensitive.scop40x.superfamily \
-	--panelwidth 3 \
-	--nolegend \
+	--panelwidth 2 \
+	--panelheight 1.6 \
+	--nolegend  --notitle --fontsize 6\
 	--yscale log \
 	--ylim 1e-2,10 \
 	--xlim 0,0.4 \
@@ -25,8 +26,9 @@ python ../py/plot_curve.py \
 	--input tm.scop40x.superfamily \
 	--input reseek3_fast.scop40x.superfamily \
 	--input reseek3_sensitive.scop40x.superfamily \
-	--panelwidth 3 \
-	--nolegend \
+	--panelwidth 2 \
+	--panelheight 1.6 \
+	--nolegend  --notitle --fontsize 6\
 	--ylim 0.7,1 \
 	--xlim 0,0.4 \
 	--title "PR SCOP40c superfamily" \
@@ -40,8 +42,9 @@ python ../py/plot_curve.py \
 	--input tm.scop40x.superfamily \
 	--input reseek3_fast.scop40x.superfamily \
 	--input reseek3_sensitive.scop40x.superfamily \
-	--panelwidth 3 \
-	--nolegend \
+	--panelwidth 2 \
+	--panelheight 1.6 \
+	--nolegend  --notitle --fontsize 6\
 	--xscale log \
 	--ylim 0,0.4 \
 	--xlim 1e-7,1e-4 \

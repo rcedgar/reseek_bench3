@@ -1,0 +1,4 @@
+algo	n	mean_pct	rank_sum_cve	rank_sum_pr	rank_sum_roc	signed_rank_p	ttest_p
+Foldseek	12	46.0568	0.1	0.1	0.171429	0.000244141	4.0422e-05
+DALI	12	61.7334	0.1	0.242857	0.0571429	0.000244141	0.00181471
+TM-align	12	49.647	0.1	0.1	0.1	0.000244141	0.0018812

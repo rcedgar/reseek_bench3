@@ -201,7 +201,8 @@ def axis_labels(curve_type: CurveType, kind: SummaryKind) -> Tuple[str, str]:
 
 
 def plot_title(curve_type: CurveType, truth: str) -> str:
-    return f"{curve_type.upper()} ({truth})"
+    if not ap.notitle:
+        return f"{curve_type.upper()} ({truth})"
 
 
 def parse_series_style(spec: str) -> SeriesStyle:
@@ -353,6 +354,16 @@ def main() -> int:
         "--title",
         help="Plot title (default: CURVE_TYPE (truth standard))",
     )
+    ap.add_argument(
+        "--notitle",
+        action="store_true",
+        help="Do not draw a plot title",
+    )
+    ap.add_argument(
+        "--fontsize",
+        type=float,
+        help="Font size for axis labels and tick labels",
+    )
     ap.add_argument("--ylabel", help="Y axis label (default depends on curve type)")
     ap.add_argument(
         "--colors",
@@ -386,6 +397,8 @@ def main() -> int:
 
     if not args.legend_only and args.type is None:
         ap.error("--type is required unless --legend-only is set")
+    # if args.notitle and args.title is not None:
+        # ap.error("--notitle and --title cannot be used together")
 
     styles = load_series_styles(args.colors)
 
@@ -458,10 +471,14 @@ def main() -> int:
     xlabel, ylabel = axis_labels(args.type, kind)
     if args.ylabel is not None:
         ylabel = args.ylabel
-    ax.set_xlabel(xlabel)
-    ax.set_ylabel(ylabel)
-    title = args.title if args.title is not None else plot_title(args.type, truth)
-    ax.set_title(title)
+    label_kw = {} if args.fontsize is None else {"fontsize": args.fontsize}
+    ax.set_xlabel(xlabel, **label_kw)
+    ax.set_ylabel(ylabel, **label_kw)
+    if args.fontsize is not None:
+        ax.tick_params(axis="both", which="both", labelsize=args.fontsize)
+    if not args.notitle:
+        title = args.title if args.title is not None else plot_title(args.type, truth)
+        ax.set_title(title)
     ax.grid(True, which="major", linewidth=0.5, alpha=0.5)
 
     if not args.nolegend and (len(series) > 1 or args.type == "roc"):
