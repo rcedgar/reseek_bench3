@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+echo "error --alignment-type 3 from release foldseek"
+echo ##############################################
+exit 1
+
 ref=scop40
 
 db=../big_foldseek_dbs/$ref/$ref
