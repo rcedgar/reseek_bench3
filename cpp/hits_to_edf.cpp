@@ -474,38 +474,23 @@ Sum3Stats compute_sum3(const std::vector<CurveRow>& rows, int ndom, uint64_t n_p
     if (n_possible_tp == 0 || rows.empty())
         return out;
 
-    bool have01 = false, have1 = false, have10 = false;
-    bool have_last = false;
-    double last_score = 0.0;
-    for (const CurveRow& r : rows) {
-        if (have_last && r.score != last_score) {
-            const double cov = static_cast<double>(r.cum_tp) / static_cast<double>(n_possible_tp);
-            const double err = static_cast<double>(r.cum_fp) / static_cast<double>(ndom);
-            if (err <= 0.1) {
-                out.sepq01 = cov;
-                have01 = true;
-            }
-            if (err <= 1.0) {
-                out.sepq1 = cov;
-                have1 = true;
-            }
-            if (err <= 10.0) {
-                out.sepq10 = cov;
-                have10 = true;
-            }
-        }
-        have_last = true;
-        last_score = r.score;
-    }
+    if (ndom <= 0)
+        return out;
 
-    const double final_cov =
-        static_cast<double>(rows.back().cum_tp) / static_cast<double>(n_possible_tp);
-    if (!have01)
-        out.sepq01 = final_cov;
-    if (!have1)
-        out.sepq1 = final_cov;
-    if (!have10)
-        out.sepq10 = final_cov;
+    // Each row is already the end of one distinct score. Sampling only on a
+    // score change skipped the best score, and filling an unreached threshold
+    // with final coverage reported the high-error end of the curve whenever
+    // the best score had already jumped past that error budget.
+    for (const CurveRow& r : rows) {
+        const double cov = static_cast<double>(r.cum_tp) / static_cast<double>(n_possible_tp);
+        const double err = static_cast<double>(r.cum_fp) / static_cast<double>(ndom);
+        if (err <= 0.1)
+            out.sepq01 = cov;
+        if (err <= 1.0)
+            out.sepq1 = cov;
+        if (err <= 10.0)
+            out.sepq10 = cov;
+    }
     out.sum3 = out.sepq01 * 2.0 + out.sepq1 * 1.5 + out.sepq10;
     return out;
 }

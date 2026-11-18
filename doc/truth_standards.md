@@ -252,8 +252,12 @@ Sum3 = 2 * SEPQ0.1  +  1.5 * SEPQ1  +  1 * SEPQ10
 ```
 
 Higher Sum3 is better. The strict, low-error point carries the most weight
-because that is the regime that matters in practice. (If a threshold is never
-reached, the final coverage value is used in its place.)
+because that is the regime that matters in practice. Each reported score is
+one operating point: every hit at that score is accepted together. If the
+curve never accumulates enough false positives to reach a threshold, the
+last point is still inside the budget and its coverage (the final coverage)
+is used. If the best score already exceeds a threshold, no cutoff can stay
+inside the budget, and coverage at that threshold is 0.
 
 ### SFFP: sensitivity above first false positive
 

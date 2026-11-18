@@ -138,36 +138,25 @@ def sort_scores_best_first(scores):
 
 
 # ---------------------------------------------------------------------------
-# Sum3 (FastBench::BenchPairCVE): coverage when error <= threshold, recorded
-# at last point before each score change
+# Sum3: coverage at the last distinct-score point with error <= threshold.
+# A budget the best score already exceeds stays at 0.
 # ---------------------------------------------------------------------------
 
 def compute_sum3(curve_rows, ndom, n_possible_tp):
-    """curve_rows: list of (score, cum_tp, cum_fp) best-first."""
-    if n_possible_tp <= 0 or not curve_rows:
+    """curve_rows: list of (score, cum_tp, cum_fp) best-first, one row per score."""
+    if n_possible_tp <= 0 or ndom <= 0 or not curve_rows:
         return None, None, None, None
 
-    sepq01 = sepq1 = sepq10 = None
-    last_score = None
-    for score, cum_tp, cum_fp in curve_rows:
-        if last_score is not None and score != last_score:
-            cov = cum_tp / n_possible_tp
-            err = cum_fp / ndom
-            if err <= 0.1:
-                sepq01 = cov
-            if err <= 1:
-                sepq1 = cov
-            if err <= 10:
-                sepq10 = cov
-        last_score = score
-
-    final_cov = curve_rows[-1][1] / n_possible_tp
-    if sepq01 is None:
-        sepq01 = final_cov
-    if sepq1 is None:
-        sepq1 = final_cov
-    if sepq10 is None:
-        sepq10 = final_cov
+    sepq01 = sepq1 = sepq10 = 0.0
+    for _score, cum_tp, cum_fp in curve_rows:
+        cov = cum_tp / n_possible_tp
+        err = cum_fp / ndom
+        if err <= 0.1:
+            sepq01 = cov
+        if err <= 1:
+            sepq1 = cov
+        if err <= 10:
+            sepq10 = cov
     sum3 = sepq01 * 2 + sepq1 * 1.5 + sepq10
     return sepq01, sepq1, sepq10, sum3
 

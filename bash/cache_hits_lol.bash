@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+echo "OBSOLETE use ../py/hits_to_edf.py"
+echo "#################################"
+exit 1
+
 # algo=$1
 # searchref=$2
 # ref=$3

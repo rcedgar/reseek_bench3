@@ -209,6 +209,7 @@ def parse_series_style(spec: str) -> SeriesStyle:
     """Parse color[,lw][,ls][,label]; lw defaults to 1, ls to solid."""
     parts = [p.strip() for p in spec.split(",", 3)]
     color = parts[0]
+    # print("spec", spec, "color", color)
     if not color:
         raise ValueError("expected color[,lw][,ls][,label]")
     lw_s = parts[1] if len(parts) > 1 else ""
@@ -245,6 +246,7 @@ def load_series_styles(path: Optional[str]) -> Dict[str, SeriesStyle]:
                 styles[name] = parse_series_style(spec)
             except ValueError as exc:
                 raise ValueError(f"{path}:{lineno}: {exc}") from exc
+            # print("name", name, "path", path, "style", styles[name])
     return styles
 
 

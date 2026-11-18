@@ -37,40 +37,32 @@ def compute_sum3(
     """
     Compute SEPQ0.1, SEPQ1, SEPQ10, Sum3 from EDF rows (score, cum_tp, cum_fp).
 
-    rows must be sorted best-first.  Matches FastBench::BenchPairCVE: record
-    coverage at the last point before each score change where error <= threshold.
-    Unreached thresholds back-fill with final coverage.
+    rows are one per distinct score, sorted best-first. Each row is the
+    operating point after accepting every hit at that score. SEPQ is the
+    coverage of the last point whose error is still <= the threshold.
+
+    A threshold the curve never reaches keeps the last point, which is the
+    final coverage. A threshold the best score already exceeds has no legal
+    operating point, so its coverage is 0. Substituting final coverage in
+    that case reports the high-error end of the curve as a low-error result
+    and breaks SEPQ0.1 <= SEPQ1 <= SEPQ10.
     """
-    if n_possible_tp <= 0:
+    if n_possible_tp <= 0 or ndom <= 0 or not rows:
         return None, None, None, None
 
-    sepq01: Optional[float] = None
-    sepq1: Optional[float] = None
-    sepq10: Optional[float] = None
-    last_score: Optional[float] = None
+    sepq01 = 0.0
+    sepq1 = 0.0
+    sepq10 = 0.0
 
-    for score, cum_tp, cum_fp in rows:
-        if last_score is not None and score != last_score:
-            cov = cum_tp / n_possible_tp
-            err = cum_fp / ndom
-            if err <= 0.1:
-                sepq01 = cov
-            if err <= 1:
-                sepq1 = cov
-            if err <= 10:
-                sepq10 = cov
-        last_score = score
-
-    if not rows:
-        return None, None, None, None
-
-    final_cov = rows[-1][1] / n_possible_tp
-    if sepq01 is None:
-        sepq01 = final_cov
-    if sepq1 is None:
-        sepq1 = final_cov
-    if sepq10 is None:
-        sepq10 = final_cov
+    for _score, cum_tp, cum_fp in rows:
+        cov = cum_tp / n_possible_tp
+        err = cum_fp / ndom
+        if err <= 0.1:
+            sepq01 = cov
+        if err <= 1:
+            sepq1 = cov
+        if err <= 10:
+            sepq10 = cov
 
     sum3 = sepq01 * 2 + sepq1 * 1.5 + sepq10
     return sepq01, sepq1, sepq10, sum3
